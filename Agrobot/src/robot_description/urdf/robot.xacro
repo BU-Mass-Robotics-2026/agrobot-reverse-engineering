@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+
+<robot name="robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- Robot links -->
+
+    <link name="world_frame"/>  <!-- World frame link (no visual or collision geometry, serves as the root of the robot) -->
+
+    <link name="linear_rail_link">
+        <visual>
+            <geometry>
+                <box size="2.97 0.45 0.082"/>                                                                                <!-- Visual geometry for the linear rail (box shape) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="grey"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="2.97 0.45 0.082"/>                                                                                <!-- Collision geometry for the linear rail (box shape) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Base Link Visual.stl" scale="0.001 0.001 0.001"/>         <!-- Visual geometry for the base link (STL file) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="grey"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Base Link Collision.stl" scale="0.001 0.001 0.001"/>      <!-- Collision geometry for the base link (STL file) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <link name="link1">
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Link 1 Visual.stl" scale="0.001 0.001 0.001"/>            <!-- Visual geometry for the link 1 (STL file) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="light_blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Link 1 Collision.stl" scale="0.001 0.001 0.001"/>         <!-- Collision geometry for the link 1 (STL file) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <link name="link2">
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Link 2 Visual.stl" scale="0.001 0.001 0.001"/>            <!-- Visual geometry for the link 2 (STL file) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="orange"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Link 2 Collision.stl" scale="0.001 0.001 0.001"/>         <!-- Collision geometry for the link 2 (STL file) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <link name="link3">
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Link 3 Visual.stl" scale="0.001 0.001 0.001"/>            <!-- Visual geometry for the link 3 (STL file) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Link 3 Collision.stl" scale="0.001 0.001 0.001"/>         <!-- Collision geometry for the link 3 (STL file) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <link name="link4">
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Link 4 Visual.stl" scale="0.001 0.001 0.001"/>            <!-- Visual geometry for the link 4 (STL file) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="pink"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Link 4 Visual.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <link name="link5">
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Link 5 Visual.stl" scale="0.001 0.001 0.001"/>            <!-- Visual geometry for the link 5 (STL file) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="blue"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Link 5 Visual.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <link name="link6">
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/End Effector Geometry.stl" scale="0.001 0.001 0.001"/>    <!-- Visual geometry for the end-effector link (STL file) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="grey"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/End Effector Geometry.stl" scale="0.001 0.001 0.001"/>    <!-- Collision geometry for the end-effector link (STL file) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <link name="fin_link1">
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Gripper fin.stl" scale="0.001 0.001 0.001"/>              <!-- Visual geometry for the fin link 1 (STL file) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="grey"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Gripper fin.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <link name="fin_link2">
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Gripper fin.stl" scale="0.001 0.001 0.001"/>              <!-- Visual geometry for the fin link 1 (STL file) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="grey"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Gripper fin.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <link name="fin_link3">
+        <visual>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Gripper fin.stl" scale="0.001 0.001 0.001"/>              <!-- Visual geometry for the fin link 1 (STL file) -->
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <material name="grey"/>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://robot_description/meshes/Gripper fin.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+
+    <!-- Robot joints -->
+
+    <joint name="world_to_linear_rail" type="fixed">
+        <parent link="world_frame"/>                                            <!-- Parent link for the fixed joint (world frame) -->
+        <child link="linear_rail_link"/>                                        <!-- Child link for the fixed joint (linear rail) -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>                                       <!-- Origin of the joint (position and orientation of the linear rail in the world frame) -->
+    </joint>
+
+    <joint name="joint0" type="prismatic">
+        <parent link="linear_rail_link"/>                                       <!-- Parent link for joint0 -->
+        <child link="base_link"/>                                               <!-- Child link for joint0 -->
+        <origin xyz="0.7825 0 0.0508" rpy="0 0 3.14159"/>                       <!-- Origin of the joint -->
+        <axis xyz="1 0 0"/>                                                     <!-- Axis of translation for the prismatic joint (x-axis) -->
+        <limit effort="100" velocity="0.5" lower="0" upper="1.565"/>            <!-- Joint limits are 0 = home end, 1.565 m = far end -->
+    </joint>
+
+    <joint name="joint1" type="revolute">
+        <parent link="base_link"/>                                              <!-- Parent link for joint1 -->
+        <child link="link1"/>                                                   <!-- Child link for joint1 -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>                                       <!-- Origin of the joint -->
+        <axis xyz="0 0 1"/>                                                     <!-- Axis of rotation for the revolute joint (z-axis) -->
+        <limit effort="37" velocity="0.4" lower="-3.14159" upper="3.14159"/>    <!-- Joint limits (effort, velocity, lower and upper angle limits in radians) -->
+    </joint>
+
+    <joint name="joint2" type="revolute">
+        <parent link="link1"/>                                                  <!-- Parent link for joint2 -->
+        <child link="link2"/>                                                   <!-- Child link for joint2 -->
+        <origin xyz="-0.145 0 0.212599" rpy="0 0 0"/>                           <!-- Origin of the joint -->
+        <axis xyz="1 0 0"/>                                                     <!-- Axis of rotation for the revolute joint (z-axis) -->
+        <limit effort="144" velocity="1.96" lower="-1.57079" upper="1.57079"/>  <!-- Joint limits (effort, velocity, lower and upper angle limits in radians) -->
+    </joint>
+
+    <joint name="joint3" type="revolute">
+        <parent link="link2"/>                                                  <!-- Parent link for joint3 -->
+        <child link="link3"/>                                                   <!-- Child link for joint3 -->
+        <origin xyz="-0.017125 0 0.663309" rpy="0 -1.57079 3.14195"/>           <!-- Origin of the joint -->
+        <axis xyz="0 0 1"/>                                                     <!-- Axis of rotation for the revolute joint (z-axis) -->
+        <limit effort="77" velocity="3.65" lower="-4.5" upper="1.5"/>           <!-- Joint limits (effort, velocity, lower and upper angle limits in radians) -->
+    </joint>
+
+    <joint name="joint4" type="revolute">
+        <parent link="link3"/>                                                  <!-- Parent link for joint4 -->
+        <child link="link4"/>                                                   <!-- Child link for joint4 -->
+        <origin xyz="0 0.083285 0.08" rpy="-1.57079 0 0"/>                      <!-- Origin of the joint -->
+        <axis xyz="0 0 1"/>                                                     <!-- Axis of rotation for the revolute joint (z-axis) -->
+        <limit effort="25" velocity="2" lower="-3.14159" upper="3.14159"/>      <!-- Joint limits (effort, velocity, lower and upper angle limits in radians) -->
+    </joint>
+
+    <joint name="joint5" type="revolute">
+        <parent link="link4"/>                                                  <!-- Parent link for joint5 -->
+        <child link="link5"/>                                                   <!-- Child link for joint5 -->
+        <origin xyz="-0.054 0 0.4645" rpy="0 1.57079 0"/>                       <!-- Origin of the joint -->
+        <axis xyz="0 0 1"/>                                                     <!-- Axis of rotation for the revolute joint (z-axis) -->
+        <limit effort="24" velocity="3.5" lower="-5" upper="5"/>                <!-- Joint limits (effort, velocity, lower and upper angle limits in radians) -->
+    </joint>
+
+    <joint name="joint6" type="revolute">
+        <parent link="link5"/>                                                  <!-- Parent link for joint6 -->
+        <child link="link6"/>                                                   <!-- Child link for joint6 -->
+        <origin xyz="-0.057 0 -0.055033" rpy="0 -1.57079 0"/>                   <!-- Origin of the joint -->
+        <axis xyz="0 0 1"/>                                                     <!-- Axis of rotation for the revolute joint (z-axis) -->
+        <limit effort="24" velocity="3.5" lower="0" upper="2.0944"/>            <!-- Joint limits (effort, velocity, lower and upper angle limits in radians) -->
+    </joint>
+    
+    <joint name="fin_joint1" type="revolute">
+        <parent link="link6"/>                                                  <!-- Parent link for fin_joint1 -->
+        <child link="fin_link1"/>                                               <!-- Child link for fin_joint1 -->
+        <origin xyz="0.05052 0 0.1355" rpy="0 0 3.14159"/>                      <!-- Origin of the joint (hinge hole center at r=50.52mm, z=135.5mm) -->
+        <axis xyz="0 1 0"/>                                                     <!-- Axis of rotation for the revolute joint (y-axis) -->
+        <limit effort="10" velocity="1.0" lower="-0.25" upper="0.175"/>         <!-- Joint limits (effort, velocity, lower and upper angle limits in radians) -->
+    </joint>
+
+    <joint name="fin_joint2" type="revolute">
+        <parent link="link6"/>                                                  <!-- Parent link for fin_joint2 -->
+        <child link="fin_link2"/>                                               <!-- Child link for fin_joint2 -->
+        <origin xyz="-0.02526 0.04375 0.1355" rpy="0 0 5.23599"/>               <!-- Origin of the joint (hinge hole center at r=50.52mm, 120°, z=135.5mm) -->
+        <axis xyz="0 1 0"/>                                                     <!-- Axis of rotation for the revolute joint (y-axis) -->
+        <limit effort="10" velocity="1.0" lower="-0.25" upper="0.175"/>         <!-- Joint limits (effort, velocity, lower and upper angle limits in radians) -->
+        <mimic joint="fin_joint1" multiplier="1.0" offset="0.0"/>               <!-- Mimic joint definition to mirror the motion of fin_joint1 -->
+    </joint>
+
+    <joint name="fin_joint3" type="revolute">
+        <parent link="link6"/>                                                  <!-- Parent link for fin_joint3 -->
+        <child link="fin_link3"/>                                               <!-- Child link for fin_joint3 -->
+        <origin xyz="-0.02526 -0.04375 0.1355" rpy="0 0 7.33039"/>              <!-- Origin of the joint (hinge hole center at r=50.52mm, 240°, z=135.5mm) -->
+        <axis xyz="0 1 0"/>                                                     <!-- Axis of rotation for the revolute joint (y-axis) -->
+        <limit effort="10" velocity="1.0" lower="-0.25" upper="0.175"/>         <!-- Joint limits (effort, velocity, lower and upper angle limits in radians) -->
+        <mimic joint="fin_joint1" multiplier="1.0" offset="0.0"/>               <!-- Mimic joint definition to mirror the motion of fin_joint1 -->
+    </joint>
+
+</robot>

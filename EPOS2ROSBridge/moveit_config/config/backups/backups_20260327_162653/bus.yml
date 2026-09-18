@@ -1,0 +1,28 @@
+options:
+  dcf_path: "/home/robotics-club/agrobot_ws/src/moveit_config/config"
+
+master:
+  node_id: 100
+  driver: "ros2_canopen::MasterDriver"
+  package: "canopen_master_driver"
+  sync_period: 20000
+
+# src/moveit_config/config/bus.yml
+node_1:
+  node_id: 1
+  vendor_id: 0x000000FB
+  product_code: 0x64400000
+  dcf: "epos2_slave.dcf"
+  driver: "ros2_canopen::Cia402Driver"
+  package: "canopen_402_driver"
+  period: 10
+  switching_state: 5
+  boot:
+    - {index: 0x1017, sub_index: 0, value: 250}
+    - {index: 0x6060, sub_index: 0, value: 1} 
+  dcf_objects: # This is the "Safety Filter"
+    - {index: 0x6040, sub_index: 0, name: "Controlword"}
+    - {index: 0x6041, sub_index: 0, name: "Statusword"}
+    - {index: 0x6064, sub_index: 0, name: "Position actual value"}
+    - {index: 0x606C, sub_index: 0, name: "Velocity actual value"}
+    - {index: 0x607A, sub_index: 0, name: "Target position"}

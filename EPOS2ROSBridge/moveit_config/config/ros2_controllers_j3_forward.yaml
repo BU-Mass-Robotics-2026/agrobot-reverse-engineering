@@ -1,0 +1,15 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 50
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    j3_forward_position_controller:
+      type: forward_command_controller/ForwardCommandController
+
+j3_forward_position_controller:
+  ros__parameters:
+    joints:
+      - joint3
+    interface_name: position

@@ -1,0 +1,19 @@
+# MoveIt uses this configuration for controller management
+
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - armjoints_controller
+
+  armjoints_controller:
+    action_ns: follow_joint_trajectory    # Routes the math to the specific ROS 2 action server topic
+    default: true                         # Authorizes MoveIt to use this as the primary hardware interface
+    type: FollowJointTrajectory
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
+      - joint6

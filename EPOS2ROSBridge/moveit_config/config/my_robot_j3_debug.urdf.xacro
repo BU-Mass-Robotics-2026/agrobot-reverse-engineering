@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_robot">
+  <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+  <xacro:include filename="$(find my_robot_description)/urdf/arm.urdf.xacro" />
+  <xacro:include filename="my_robot.ros2_control.j3_only.xacro" />
+
+  <xacro:my_robot_j3_ros2_control
+      name="RealHardware"
+      initial_positions_file="$(arg initial_positions_file)"/>
+</robot>

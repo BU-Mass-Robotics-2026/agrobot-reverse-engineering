@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <material name="red">
+        <color rgba="0.5 0.0 0.0 1.0"/>   <!-- Red color with full opacity -->
+    </material>
+
+    <material name="orange">
+        <color rgba="1.0 0.5 0.0 1.0"/>   <!-- Orange color with full opacity -->
+    </material>
+
+    <material name="green">
+        <color rgba="0.0 1.0 0.0 1.0"/>   <!-- Green color with full opacity -->
+    </material>
+
+    <material name="light_blue">
+        <color rgba="0.54 0.81 0.94 1.0"/>   <!-- Light blue color with full opacity -->
+    </material>
+
+    <material name="blue">
+        <color rgba="0.0 0.0 0.5 1.0"/>   <!-- Blue color with full opacity -->
+    </material>
+
+    <material name="pink">
+        <color rgba="0.97 0.78 0.86 1.0"/>   <!-- Pink color with full opacity -->
+    </material>
+
+    <material name="grey">
+        <color rgba="0.5 0.5 0.5 1.0"/>   <!-- Grey color with full opacity -->
+    </material>
+
+</robot>

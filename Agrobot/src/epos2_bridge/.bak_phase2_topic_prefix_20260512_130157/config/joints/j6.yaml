@@ -1,0 +1,31 @@
+/**:
+  ros__parameters:
+    # ---------------- Identity ----------------
+    joint_id: "j6"
+    drive_node_id: 6
+    joint_name: "joint6"
+
+    # ---------------- CAN / kinematics ----------------
+    can_interface: "can0"
+    encoder_qc_per_motor_rev: 25600.0
+    gear_ratio_motor_per_joint_rev: 100.0
+    sign: 1.0
+    zero_offset_qc: 0.0
+
+    # ---------------- Safe startup defaults ----------------
+    force_ipm_on_startup: false
+    enable_on_startup: false
+    fault_clear_on_startup: false
+    allow_legacy_ipm_services: false
+    allow_unhomed_motion: true  # TODO: set false after homing routines are implemented/proven
+
+    # ---------------- IPM trajectory tuning ----------------
+    ipm_default_segment_ms: 100
+    ipm_debug_profile_velocity_rpm: 1960
+    ipm_debug_profile_acceleration_rpm_s: 100000
+
+    # ---------------- Homing placeholder ----------------
+    homing_enabled: false
+    homing_profile: "manual_confirm"
+    home_offset_rad: 0.0
+    home_hold_rad: 0.0

@@ -1,0 +1,26 @@
+epos2_fjt_fanout:
+  ros__parameters:
+    # This is the action MoveIt already targets through moveit_controllers.yaml:
+    # controller name arm_controller + action_ns follow_joint_trajectory.
+    controller_action_name: "/arm_controller/follow_joint_trajectory"
+
+    # Staged EPOS2 subset. Current MoveIt config found in this workspace includes
+    # joint0..joint5, while the EPOS2 generic bridges are currently J2..J6.
+    # Start with joint2..joint5 so MoveIt's current arm_controller goal can be accepted.
+    # Add joint6 after the MoveIt model/controller config includes joint6.
+    controlled_joint_names: ["joint2", "joint3", "joint4", "joint5"]
+    child_action_names:
+      - "/j2_position_controller/follow_joint_trajectory"
+      - "/j3_position_controller/follow_joint_trajectory"
+      - "/j4_position_controller/follow_joint_trajectory"
+      - "/j5_position_controller/follow_joint_trajectory"
+
+    # During staged integration, MoveIt may still send joint0/joint1 in the same goal.
+    # This EPOS2-only fanout ignores those extras for now. For production, either extend
+    # this fanout to include J0/J1 child actions or set this false once the controller
+    # split is finalized.
+    allow_extra_goal_joints: true
+    require_all_controlled_joints: true
+
+    child_server_timeout_sec: 10.0
+    result_timeout_margin_sec: 5.0

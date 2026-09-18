@@ -1,0 +1,8 @@
+epos2_arm_controller:
+  ros__parameters:
+    joint_names: ["joint_3"]
+    arm_services: ["/epos2/j3/arm_ipm"]
+    disarm_services: ["/epos2/j3/disarm_ipm"]
+    move_services: ["/epos2/j3/move_delta"]
+    goal_position_tolerance_rad: 0.01
+    wait_for_joint_state_sec: 5.0

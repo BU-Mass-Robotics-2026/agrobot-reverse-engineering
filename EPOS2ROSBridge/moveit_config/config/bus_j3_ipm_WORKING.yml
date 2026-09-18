@@ -1,0 +1,85 @@
+options:
+  dcf_path: "/home/robotics-club/agrobot_ws/src/moveit_config/config"
+
+master:
+  node_id: 100
+  namespace: "/"
+  driver: "ros2_canopen::MasterDriver"
+  package: "canopen_master_driver"
+  sync_period: 20000
+
+node_1:
+  node_id: 1
+  namespace: "/"
+  vendor_id: 0x000000FB
+  product_code: 0x64400000
+
+  dcf: "epos2_slave_ipm.dcf"
+  driver: "ros2_canopen::Cia402Driver"
+  package: "canopen_402_driver"
+
+  period: 10
+  polling: false
+  position_mode: 1
+  switching_state: 5
+
+  sdo:
+    - {index: 0x1017, sub_index: 0, value: 250}   # heartbeat [ms]
+    - {index: 0x6060, sub_index: 0, value: 1}     # profile position mode
+    - {index: 0x6081, sub_index: 0, value: 1000}  # profile velocity
+    - {index: 0x6083, sub_index: 0, value: 2000}  # profile acceleration
+    - {index: 0x6084, sub_index: 0, value: 2000}  # profile deceleration
+
+    # Least-intrusive EPOS2 startup sequence:
+    - {index: 0x6040, sub_index: 0, value: 6}     # Shutdown
+    - {index: 0x6040, sub_index: 0, value: 15}    # Switch on + Enable operation
+
+  tpdo:
+    1:
+      enabled: true
+      cob_id: "auto"
+      transmission: 0x01
+      mapping:
+        - {index: 0x6041, sub_index: 0}
+        - {index: 0x6061, sub_index: 0}
+    2:
+      enabled: true
+      cob_id: "auto"
+      transmission: 0x01
+      mapping:
+        - {index: 0x6064, sub_index: 0}
+        - {index: 0x606C, sub_index: 0}
+    3:
+      enabled: false
+      cob_id: "auto"
+    4:
+      enabled: false
+      cob_id: "auto"
+
+  rpdo:
+    1:
+      enabled: true
+      cob_id: "auto"
+      mapping:
+        - {index: 0x6040, sub_index: 0}
+        - {index: 0x6060, sub_index: 0}
+    2:
+      enabled: true
+      cob_id: "auto"
+      mapping:
+        - {index: 0x607A, sub_index: 0}
+    3:
+      enabled: false
+      cob_id: "auto"
+    4:
+      enabled: false
+      cob_id: "auto"
+
+  dcf_objects:
+    - {index: 0x6040, sub_index: 0, name: "Controlword"}
+    - {index: 0x6041, sub_index: 0, name: "Statusword"}
+    - {index: 0x6060, sub_index: 0, name: "Modes of operation"}
+    - {index: 0x6061, sub_index: 0, name: "Modes of operation display"}
+    - {index: 0x6064, sub_index: 0, name: "Position actual value"}
+    - {index: 0x606C, sub_index: 0, name: "Velocity actual value"}
+    - {index: 0x607A, sub_index: 0, name: "Target position"}

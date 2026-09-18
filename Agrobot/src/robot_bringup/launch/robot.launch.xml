@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <!-- Publish the robot description -->
+        <let name="urdf_path" value="$(find-pkg-share robot_description)/urdf/robot.urdf.xacro"/>
+
+        <node pkg="robot_state_publisher" exec="robot_state_publisher">
+            <param name="robot_description" value="$(command 'xacro $(var urdf_path)')"/>
+        </node>
+
+    <!-- Start the ros2_control node -->
+    <node pkg="controller_manager" exec="ros2_control_node">
+        <param name="robot_description" value="$(command 'xacro $(var urdf_path)')"/>
+        <param from="$(find-pkg-share robot_bringup)/config/ros2_controllers.yaml"/>
+    </node>
+
+    <!-- Spawn the controllers -->
+        <node pkg="controller_manager" exec="spawner" args="joint_state_broadcaster"/>
+        <node pkg="controller_manager" exec="spawner" args="arm_controller"/>
+
+    <!-- Publish virtual joint TF (world -> world_frame, required by MoveIt SRDF) -->
+        <include file="$(find-pkg-share moveit_config)/launch/static_virtual_joint_tfs.launch.py"/>
+
+    <!-- Start MoveIt -->
+        <include file="$(find-pkg-share moveit_config)/launch/move_group.launch.py"/>
+
+    <!-- Start RViz -->
+    <let name="rviz_config_path" value="$(find-pkg-share robot_bringup)/config/robot_moveit.rviz"/>
+
+    <node pkg="rviz2" exec="rviz2" output="screen"  args="-d $(var rviz_config_path)">
+        <param name="robot_description_kinematics.arm.kinematics_solver" value="kdl_kinematics_plugin/KDLKinematicsPlugin"/>
+        <param name="robot_description_kinematics.arm.kinematics_solver_search_resolution" value="0.005"/>
+        <param name="robot_description_kinematics.arm.kinematics_solver_timeout" value="0.005"/>
+    </node>
+
+</launch>

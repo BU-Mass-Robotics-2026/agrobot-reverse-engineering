@@ -1,0 +1,12 @@
+# Goal
+geometry_msgs/PoseArray targets
+---
+# Result
+bool success
+string message
+---
+# Feedback
+uint32 tomato_index
+uint32 total_tomatoes
+string step
+bool awaiting_confirm

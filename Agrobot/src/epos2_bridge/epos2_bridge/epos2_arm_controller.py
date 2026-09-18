@@ -1,0 +1,390 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import threading
+import time
+from typing import Dict, List
+
+import rclpy
+from rclpy.action import ActionServer, GoalResponse, CancelResponse
+from rclpy.callback_groups import ReentrantCallbackGroup
+from rclpy.executors import MultiThreadedExecutor
+from rclpy.node import Node
+
+from control_msgs.action import FollowJointTrajectory
+from sensor_msgs.msg import JointState
+from std_srvs.srv import Trigger
+from epos2_bridge_interfaces.srv import MoveAbsoluteTimed
+from .pvt_reduce import reduce_joint_trajectory
+from std_msgs.msg import Float64MultiArray
+
+
+class Epos2ArmController(Node):
+    def __init__(self) -> None:
+        super().__init__("epos2_arm_controller")
+
+        self.declare_parameter("joint_names", ["joint3"])
+        self.declare_parameter("clear_fault_services", ["/epos2/j3/clear_fault"])
+        self.declare_parameter("arm_services", ["/epos2/j3/arm_ipm"])
+        self.declare_parameter("disarm_services", ["/epos2/j3/disarm_ipm"])
+        self.declare_parameter("move_services", ["/epos2/j3/move_absolute_timed"])
+        self.declare_parameter("goal_position_tolerance_rad", 0.03)
+        self.declare_parameter("wait_for_joint_state_sec", 5.0)
+
+        self.joint_names: List[str] = list(self.get_parameter("joint_names").value)
+        self.clear_fault_service_names: List[str] = list(self.get_parameter("clear_fault_services").value)
+        self.arm_service_names: List[str] = list(self.get_parameter("arm_services").value)
+        self.disarm_service_names: List[str] = list(self.get_parameter("disarm_services").value)
+        self.move_service_names: List[str] = list(self.get_parameter("move_services").value)
+        self.goal_position_tolerance_rad: float = float(
+            self.get_parameter("goal_position_tolerance_rad").value
+        )
+        self.wait_for_joint_state_sec: float = float(
+            self.get_parameter("wait_for_joint_state_sec").value
+        )
+
+        if not (
+            len(self.joint_names)
+            == len(self.clear_fault_service_names)
+            == len(self.arm_service_names)
+            == len(self.disarm_service_names)
+            == len(self.move_service_names)
+        ):
+            raise RuntimeError("joint_names and service-name arrays must have equal length")
+
+        self.joint_pos_lock = threading.Lock()
+        self.latest_joint_pos: Dict[str, float] = {}
+        self.latest_joint_vel: Dict[str, float] = {}
+
+        self.sub_joint_states = self.create_subscription(
+            JointState,
+            "/joint_states",
+            self._joint_states_cb,
+            50,
+        )
+
+        self.cb_group = ReentrantCallbackGroup()
+
+        self.clear_fault_clients = {
+            j: self.create_client(Trigger, s, callback_group=self.cb_group)
+            for j, s in zip(self.joint_names, self.clear_fault_service_names)
+        }
+        self.arm_clients = {
+            j: self.create_client(Trigger, s, callback_group=self.cb_group)
+            for j, s in zip(self.joint_names, self.arm_service_names)
+        }
+        self.disarm_clients = {
+            j: self.create_client(Trigger, s, callback_group=self.cb_group)
+            for j, s in zip(self.joint_names, self.disarm_service_names)
+        }
+        self.move_clients = {
+            j: self.create_client(MoveAbsoluteTimed, s, callback_group=self.cb_group)
+            for j, s in zip(self.joint_names, self.move_service_names)
+        }
+        self.reduced_traj_pub = self.create_publisher(
+            Float64MultiArray,
+            "/epos2/j3/reduced_traj",
+            10,
+        )
+
+
+        self.action_server = ActionServer(
+            self,
+            FollowJointTrajectory,
+            "/arm_controller/follow_joint_trajectory",
+            execute_callback=self._execute_goal,
+            goal_callback=self._goal_callback,
+            cancel_callback=self._cancel_callback,
+            callback_group=self.cb_group,
+        )
+
+        self.get_logger().info("Waiting for per-joint bridge services...")
+        for j in self.joint_names:
+            self.clear_fault_clients[j].wait_for_service(timeout_sec=10.0)
+            self.arm_clients[j].wait_for_service(timeout_sec=10.0)
+            self.disarm_clients[j].wait_for_service(timeout_sec=10.0)
+            self.move_clients[j].wait_for_service(timeout_sec=10.0)
+        self.get_logger().info("All arm/disarm/move services are available")
+
+    def _joint_states_cb(self, msg: JointState) -> None:
+        with self.joint_pos_lock:
+            for i, name in enumerate(msg.name):
+                if name in self.joint_names:
+                    if i < len(msg.position):
+                        self.latest_joint_pos[name] = float(msg.position[i])
+                    if i < len(msg.velocity):
+                        self.latest_joint_vel[name] = float(msg.velocity[i])
+
+    def _wait_future(self, future, timeout_sec: float):
+        deadline = time.monotonic() + timeout_sec
+        while time.monotonic() < deadline:
+            if future.done():
+                return future.result()
+            time.sleep(0.005)
+        return None
+
+    def _call_trigger(self, client, label: str) -> bool:
+        req = Trigger.Request()
+        future = client.call_async(req)
+        result = self._wait_future(future, timeout_sec=10.0)
+        if result is None:
+            self.get_logger().error(f"{label}: timeout")
+            return False
+        if not result.success:
+            self.get_logger().error(f"{label}: failed: {result.message}")
+            return False
+        self.get_logger().info(f"{label}: {result.message}")
+        return True
+
+    def _call_move_absolute_timed(self, client, target_rad: float, duration_sec: float, label: str) -> bool:
+        req = MoveAbsoluteTimed.Request()
+        req.target_rad = float(target_rad)
+        req.duration_sec = float(duration_sec)
+        future = client.call_async(req)
+        result = self._wait_future(future, timeout_sec=max(60.0, duration_sec + 5.0))
+        if result is None:
+            self.get_logger().error(f"{label}: timeout")
+            return False
+        if not result.success:
+            self.get_logger().error(f"{label}: failed: {result.message}")
+            return False
+        self.get_logger().info(f"{label}: {result.message}")
+        return True
+
+    def _wait_for_current_state(self) -> bool:
+        deadline = time.monotonic() + self.wait_for_joint_state_sec
+        while time.monotonic() < deadline:
+            with self.joint_pos_lock:
+                ready = all(j in self.latest_joint_pos for j in self.joint_names)
+            if ready:
+                return True
+            time.sleep(0.05)
+        return False
+
+    def _wait_until_targets_reached(
+        self,
+        target_map: Dict[str, float],
+        timeout_sec: float,
+        tolerance_rad: float,
+    ) -> bool:
+        deadline = time.monotonic() + timeout_sec
+        while time.monotonic() < deadline:
+            with self.joint_pos_lock:
+                ok = True
+                for j, target in target_map.items():
+                    actual = self.latest_joint_pos.get(j)
+                    if actual is None or abs(actual - target) > tolerance_rad:
+                        ok = False
+                        break
+            if ok:
+                return True
+            time.sleep(0.02)
+        return False
+
+    def _goal_callback(self, goal_request: FollowJointTrajectory.Goal) -> int:
+        joints = list(goal_request.trajectory.joint_names)
+        if joints != self.joint_names:
+            self.get_logger().warning(
+                f"Rejecting goal: expected joint_names={self.joint_names}, got {joints}"
+            )
+            return GoalResponse.REJECT
+        if len(goal_request.trajectory.points) < 1:
+            self.get_logger().warning("Rejecting goal: no trajectory points")
+            return GoalResponse.REJECT
+        return GoalResponse.ACCEPT
+
+    def _cancel_callback(self, goal_handle) -> int:
+        return CancelResponse.ACCEPT
+    async def _execute_goal(self, goal_handle):
+        result = FollowJointTrajectory.Result()
+        feedback = FollowJointTrajectory.Feedback()
+        feedback.joint_names = self.joint_names
+
+        if not self._wait_for_current_state():
+            result.error_code = FollowJointTrajectory.Result.INVALID_GOAL
+            result.error_string = "No current joint state available"
+            goal_handle.abort()
+            return result
+
+        # Clear fault + arm once
+        for j in self.joint_names:
+            self._call_trigger(self.clear_fault_clients[j], f"{j} clear_fault pre-arm")
+            if not self._call_trigger(self.arm_clients[j], f"{j} arm_ipm"):
+                result.error_code = FollowJointTrajectory.Result.PATH_TOLERANCE_VIOLATED
+                result.error_string = f"Failed to arm {j}"
+                goal_handle.abort()
+                return result
+
+        raw_points = list(goal_handle.request.trajectory.points)
+        self.get_logger().info(f"Received {len(raw_points)} trajectory points from MoveIt")
+
+        segments = reduce_joint_trajectory(
+            raw_points,
+            nominal_dt_sec=0.08,
+            max_dt_sec=0.14,
+            max_abs_dq_rad=0.05,
+            max_abs_dv_rad_s=0.60,
+            max_slope_change_rad_s=2.5,
+        )
+
+        self.get_logger().info(
+            f"Reduced PVT trajectory for bridge streaming: {len(raw_points)} input points -> {len(segments)} segments"
+        )
+
+        # Merge tiny adjacent segments first so the bridge gets fewer, more meaningful commands.
+        merged_segments = []
+        min_pub_dt = 0.12
+        acc_target = None
+        acc_dt = 0.0
+        acc_src = None
+
+        for seg in segments:
+            if acc_target is None:
+                acc_target = float(seg.target_rad)
+                acc_dt = float(seg.duration_sec)
+                acc_src = seg
+            else:
+                acc_target = float(seg.target_rad)
+                acc_dt += float(seg.duration_sec)
+
+            if acc_dt >= min_pub_dt:
+                merged_segments.append(type(acc_src)(
+                    target_rad=acc_target,
+                    target_vel_rad_s=float(seg.target_vel_rad_s),
+                    duration_sec=acc_dt,
+                    source_index=seg.source_index,
+                    source_point=seg.source_point,
+                ))
+                acc_target = None
+                acc_dt = 0.0
+                acc_src = None
+
+        if acc_target is not None and acc_src is not None:
+            merged_segments.append(type(acc_src)(
+                target_rad=acc_target,
+                target_vel_rad_s=float(acc_src.target_vel_rad_s),
+                duration_sec=acc_dt,
+                source_index=acc_src.source_index,
+                source_point=acc_src.source_point,
+            ))
+
+        segments = merged_segments
+
+        max_segments = 14
+        if len(segments) > max_segments:
+            keep_idxs = sorted({
+                round(i * (len(segments) - 1) / (max_segments - 1))
+                for i in range(max_segments)
+            })
+            segments = [segments[i] for i in keep_idxs]
+            self.get_logger().info(
+                f"Capped reduced trajectory to {len(segments)} segments for bridge stability"
+            )
+
+
+
+
+        if not segments:
+            for j in self.joint_names:
+                self._call_trigger(self.disarm_clients[j], f"{j} disarm_ipm after empty goal")
+            goal_handle.succeed()
+            result.error_code = FollowJointTrajectory.Result.SUCCESSFUL
+            result.error_string = "Empty / zero-motion goal"
+            return result
+
+        msg = Float64MultiArray()
+        payload = []
+        for seg in segments:
+            q = float(seg.target_rad)
+            v = float(getattr(seg, "target_vel_rad_s", 0.0))
+            dt = max(0.02, float(seg.duration_sec))
+            payload.extend([q, v, dt])
+        msg.data = payload
+
+        self.get_logger().info(
+            f"Publishing native PVT trajectory with {len(segments)} knots to /epos2/j3/reduced_traj"
+        )
+        self.reduced_traj_pub.publish(msg)
+
+        final_target = {self.joint_names[0]: float(segments[-1].target_rad)}
+        total_duration = sum(max(0.02, float(seg.duration_sec)) for seg in segments)
+        deadline = time.monotonic() + max(total_duration + 1.5, 2.0)
+
+        reached = False
+        while time.monotonic() < deadline:
+            if goal_handle.is_cancel_requested:
+                for j in self.joint_names:
+                    self._call_trigger(self.disarm_clients[j], f"{j} disarm_ipm after cancel")
+                goal_handle.canceled()
+                result.error_code = FollowJointTrajectory.Result.PATH_TOLERANCE_VIOLATED
+                result.error_string = "Goal canceled"
+                return result
+
+            with self.joint_pos_lock:
+                actual_positions = [self.latest_joint_pos.get(j, 0.0) for j in self.joint_names]
+                actual_velocities = [self.latest_joint_vel.get(j, 0.0) for j in self.joint_names]
+
+            pt = segments[-1].source_point
+            feedback.desired = pt
+            feedback.actual = pt.__class__(
+                positions=actual_positions,
+                velocities=actual_velocities,
+            )
+            feedback.error = pt.__class__(
+                positions=[final_target[j] - self.latest_joint_pos.get(j, 0.0) for j in self.joint_names],
+                velocities=[0.0 - self.latest_joint_vel.get(j, 0.0) for j in self.joint_names],
+            )
+            goal_handle.publish_feedback(feedback)
+
+            err = abs(final_target[self.joint_names[0]] - actual_positions[0])
+            if err <= self.goal_position_tolerance_rad:
+                reached = True
+                break
+
+            time.sleep(0.05)
+
+        for j in self.joint_names:
+            self._call_trigger(self.disarm_clients[j], f"{j} disarm_ipm after goal")
+
+        if not reached:
+            result.error_code = FollowJointTrajectory.Result.GOAL_TOLERANCE_VIOLATED
+            result.error_string = "Final position tolerance not reached before timeout"
+            goal_handle.abort()
+            return result
+
+        goal_handle.succeed()
+        result.error_code = FollowJointTrajectory.Result.SUCCESSFUL
+        result.error_string = "Success"
+        return result
+
+
+
+
+
+def main(args=None) -> None:
+    rclpy.init(args=args)
+    node = Epos2ArmController()
+    executor = MultiThreadedExecutor(num_threads=4)
+    executor.add_node(node)
+    try:
+        executor.spin()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        try:
+            executor.shutdown()
+        except Exception:
+            pass
+        try:
+            node.destroy_node()
+        except Exception:
+            pass
+        try:
+            if rclpy.ok():
+                rclpy.shutdown()
+        except Exception:
+            pass
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,24 @@
+epos2_fjt_fanout:
+  ros__parameters:
+    controller_action_name: "/arm_controller/follow_joint_trajectory"
+
+    # Staged integration:
+    #   J0 = existing Ingenia bridge
+    #   J2 = generic EPOS2 bridge
+    controlled_joint_names: ["joint0", "joint2"]
+    child_action_names:
+      - "/joint0_position_controller/follow_joint_trajectory"
+      - "/j2_position_controller/follow_joint_trajectory"
+
+    # Allow MoveIt to include not-yet-integrated joints during staged testing.
+    allow_extra_goal_joints: true
+
+    # For J0+J2 sync tests, require both controlled joints to be in the parent goal.
+    require_all_controlled_joints: true
+
+    # If the parent trajectory has header.stamp = 0, stamp child goals into the future
+    # so J0 and J2 receive the same scheduled start time.
+    child_sync_delay_sec: 0.25
+
+    child_server_timeout_sec: 10.0
+    result_timeout_margin_sec: 5.0

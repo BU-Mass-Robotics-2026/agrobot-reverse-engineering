@@ -1,0 +1,5 @@
+string  indicator_id
+bool    state
+---
+bool    success
+string  message

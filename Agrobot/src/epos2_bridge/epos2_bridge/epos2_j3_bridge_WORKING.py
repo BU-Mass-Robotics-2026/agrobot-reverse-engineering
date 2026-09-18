@@ -1,0 +1,1086 @@
+#!/usr/bin/env python3
+"""
+First-pass EPOS2 J3 bridge node for ROS 2 Jazzy.
+
+Goals:
+- Keep SDO for setup / fault clear / mode selection.
+- Use direct SocketCAN for runtime PDO TX/RX.
+- Publish rich drive telemetry for visualization.
+- Publish /joint_states for robot_state_publisher + MoveIt current-state tracking.
+- Expose a FollowJointTrajectory action for MoveIt execution.
+
+This is intentionally a practical skeleton: the structure, topic contract, object mapping,
+state conversion, and IPM record packing are laid out so it can be wired into the user's
+existing workspace and iterated quickly.
+"""
+
+from __future__ import annotations
+
+import math
+import socket
+import struct
+import threading
+import time
+from dataclasses import dataclass, field
+from typing import Dict, List, Optional, Tuple
+
+import rclpy
+from rclpy.action import ActionServer, CancelResponse, GoalResponse
+from rclpy.callback_groups import MutuallyExclusiveCallbackGroup, ReentrantCallbackGroup
+from rclpy.duration import Duration
+from rclpy.executors import MultiThreadedExecutor
+from rclpy.node import Node
+from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy, HistoryPolicy
+
+from builtin_interfaces.msg import Duration as DurationMsg
+from diagnostic_msgs.msg import DiagnosticArray, DiagnosticStatus, KeyValue
+from sensor_msgs.msg import JointState
+from std_msgs.msg import Bool, Float64, Float64MultiArray, Int64MultiArray, String
+from trajectory_msgs.msg import JointTrajectoryPoint
+from control_msgs.action import FollowJointTrajectory
+from action_msgs.msg import GoalStatus
+
+from canopen_interfaces.srv import CORead, COWrite
+
+
+# -----------------------------
+# Constants: object dictionary
+# -----------------------------
+IDX_CONTROLWORD = 0x6040
+IDX_STATUSWORD = 0x6041
+IDX_MODES_OF_OPERATION = 0x6060
+IDX_MODES_OF_OPERATION_DISPLAY = 0x6061
+IDX_POSITION_DEMAND = 0x6062
+IDX_POSITION_ACTUAL = 0x6064
+IDX_MAX_FOLLOWING_ERROR = 0x6065
+IDX_VELOCITY_SENSOR = 0x6069
+IDX_VELOCITY_DEMAND = 0x606B
+IDX_VELOCITY_ACTUAL = 0x606C
+IDX_CURRENT_ACTUAL = 0x6078
+IDX_TARGET_POSITION = 0x607A
+IDX_MAX_PROFILE_VELOCITY = 0x607F
+IDX_PROFILE_VELOCITY = 0x6081
+IDX_PROFILE_ACCELERATION = 0x6083
+IDX_PROFILE_DECELERATION = 0x6084
+IDX_QUICKSTOP_DECELERATION = 0x6085
+IDX_MOTION_PROFILE_TYPE = 0x6086
+IDX_ERROR_REGISTER = 0x1001
+IDX_ERROR_HISTORY = 0x1003
+IDX_PRODUCER_HEARTBEAT = 0x1017
+IDX_CURRENT_ACTUAL_AVG = 0x2027
+IDX_VELOCITY_ACTUAL_AVG = 0x2028
+IDX_CURRENT_DEMAND = 0x2031
+IDX_INTERPOLATION_DATA_RECORD = 0x20C1
+IDX_INTERPOLATION_BUFFER = 0x20C4
+IDX_FOLLOWING_ERROR_ACTUAL = 0x20F4
+IDX_INTERPOLATION_SUBMODE = 0x60C0
+IDX_INTERPOLATION_TIME_PERIOD = 0x60C2
+IDX_MAX_ACCELERATION_IPM = 0x60C5
+
+MODE_PROFILE_POSITION = 1
+MODE_INTERPOLATED_POSITION = 7
+
+# COB-IDs for node ID 1 under the current DCF split
+COB_HEARTBEAT = 0x701
+COB_RPDO1 = 0x201  # 0x20C1 interpolation data record
+COB_RPDO2 = 0x301  # 0x6040 + 0x6060
+COB_TPDO1 = 0x181  # 0x20C4:01 + 0x6041 + 0x6061
+COB_TPDO2 = 0x281  # 0x6064 + 0x606C
+COB_EMCY = 0x081
+
+# Interpolation buffer status bits (0x20C4:01)
+IPM_BUF_WARN_UNDERFLOW = 0
+IPM_BUF_WARN_OVERFLOW = 1
+IPM_BUF_ERR_UNDERFLOW = 8
+IPM_BUF_ERR_OVERFLOW = 9
+IPM_BUF_ERR_VELOCITY = 10
+IPM_BUF_ERR_ACCELERATION = 11
+IPM_BUF_ENABLED = 14
+IPM_ACTIVE = 15
+
+# Statusword helpers
+SW_FAULT_BIT = 3
+SW_OPERATION_ENABLED_BIT = 2
+
+
+@dataclass
+class JointKinematics:
+    joint_name: str = "joint_3"
+    encoder_qc_per_motor_rev: float = 4096.0
+    gear_ratio_motor_per_joint_rev: float = 100.0
+    sign: float = 1.0
+    zero_offset_qc: float = 0.0
+
+    def motor_qc_to_joint_rad(self, motor_qc: int) -> float:
+        return (
+            self.sign
+            * (float(motor_qc) - self.zero_offset_qc)
+            * 2.0
+            * math.pi
+            / (self.encoder_qc_per_motor_rev * self.gear_ratio_motor_per_joint_rev)
+        )
+
+    def joint_rad_to_motor_qc(self, joint_rad: float) -> int:
+        motor_qc = (
+            self.zero_offset_qc
+            + self.sign
+            * joint_rad
+            * (self.encoder_qc_per_motor_rev * self.gear_ratio_motor_per_joint_rev)
+            / (2.0 * math.pi)
+        )
+        return int(round(motor_qc))
+
+    def motor_rpm_to_joint_rad_s(self, motor_rpm: int) -> float:
+        joint_rpm = self.sign * float(motor_rpm) / self.gear_ratio_motor_per_joint_rev
+        return joint_rpm * 2.0 * math.pi / 60.0
+
+    def joint_rad_s_to_motor_rpm(self, joint_rad_s: float) -> int:
+        joint_rpm = joint_rad_s * 60.0 / (2.0 * math.pi)
+        motor_rpm = self.sign * joint_rpm * self.gear_ratio_motor_per_joint_rev
+        return int(round(motor_rpm))
+
+
+@dataclass
+class DriveState:
+    statusword: int = 0
+    mode_display: int = 0
+    interpolation_buffer_status: int = 0
+    position_demand_qc: int = 0
+    position_actual_qc: int = 0
+    velocity_actual_rpm: int = 0
+    current_actual_mA: int = 0
+    current_actual_avg_mA: int = 0
+    velocity_actual_avg_rpm: int = 0
+    current_demand_mA: int = 0
+    error_register: int = 0
+    error_history_count: int = 0
+    last_error_1: int = 0
+    last_error_2: int = 0
+    heartbeat_state: int = 0
+    last_emcy_code: int = 0
+    last_emcy_reg: int = 0
+    bus_operational: bool = False
+    last_update_ns: int = 0
+
+    def faulted(self) -> bool:
+        return bool((self.statusword >> SW_FAULT_BIT) & 0x1)
+
+    def operation_enabled(self) -> bool:
+        return self.statusword == 0x0737 or bool((self.statusword >> SW_OPERATION_ENABLED_BIT) & 0x1)
+
+    def ipm_buffer_enabled(self) -> bool:
+        return bool((self.interpolation_buffer_status >> IPM_BUF_ENABLED) & 0x1)
+
+    def ipm_active(self) -> bool:
+        return bool((self.interpolation_buffer_status >> IPM_ACTIVE) & 0x1)
+
+
+@dataclass
+class PVTPoint:
+    time_ms: int
+    velocity_rpm: int
+    position_qc: int
+
+
+def sign_extend_24(v: int) -> int:
+    v &= 0xFFFFFF
+    if v & 0x800000:
+        return v - 0x1000000
+    return v
+
+
+def to_unsigned_24(v: int) -> int:
+    if v < 0:
+        v = (1 << 24) + v
+    return v & 0xFFFFFF
+
+
+def to_signed_32(v: int) -> int:
+    v &= 0xFFFFFFFF
+    if v & 0x80000000:
+        return v - 0x100000000
+    return v
+
+
+def pack_interpolation_record(point: PVTPoint) -> bytes:
+    """
+    EPOS2 0x20C1 layout in the firmware/app notes is shown as:
+        MSB ........................................ LSB
+        Time (unsigned8) | Velocity (signed24) | Position (signed32)
+
+    The EPOS communication guide states multi-byte values are transmitted LSB-first.
+    Therefore the on-wire CAN payload for the 64-bit complex record is packed as:
+        Position[31:0] little-endian,
+        Velocity[23:0] little-endian,
+        Time[7:0]
+
+    This ordering should be validated by the first successful motion test.
+    """
+    if not (1 <= point.time_ms <= 255):
+        raise ValueError(f"time_ms out of range: {point.time_ms}")
+
+    vel_u24 = to_unsigned_24(point.velocity_rpm)
+    pos_u32 = point.position_qc & 0xFFFFFFFF
+
+    payload = bytes([
+        pos_u32 & 0xFF,
+        (pos_u32 >> 8) & 0xFF,
+        (pos_u32 >> 16) & 0xFF,
+        (pos_u32 >> 24) & 0xFF,
+        vel_u24 & 0xFF,
+        (vel_u24 >> 8) & 0xFF,
+        (vel_u24 >> 16) & 0xFF,
+        point.time_ms & 0xFF,
+    ])
+    return payload
+
+class RawSocketCAN:
+    def __init__(self, channel: str) -> None:
+        self.channel = channel
+        self.sock = socket.socket(socket.AF_CAN, socket.SOCK_RAW, socket.CAN_RAW)
+        self.sock.bind((channel,))
+        self.sock.settimeout(0.02)
+        self.lock = threading.Lock()
+
+    def send(self, cob_id: int, data: bytes) -> None:
+        if len(data) > 8:
+            raise ValueError("CAN payload must be <= 8 bytes")
+        frame = struct.pack("=IB3x8s", cob_id, len(data), data.ljust(8, b"\x00"))
+        with self.lock:
+            self.sock.send(frame)
+
+    def recv(self) -> Optional[Tuple[int, bytes]]:
+        try:
+            raw = self.sock.recv(16)
+        except TimeoutError:
+            return None
+        except socket.timeout:
+            return None
+        can_id, dlc, data = struct.unpack("=IB3x8s", raw)
+        return can_id, data[:dlc]
+
+    def close(self) -> None:
+        self.sock.close()
+
+
+class Epos2J3Bridge(Node):
+    def __init__(self) -> None:
+        super().__init__("epos2_j3_bridge")
+
+        # ---------------- Parameters ----------------
+        self.declare_parameter("can_interface", "can0")
+        self.declare_parameter("joint_name", "joint_3")
+        self.declare_parameter("encoder_qc_per_motor_rev", 4096.0)
+        self.declare_parameter("gear_ratio_motor_per_joint_rev", 100.0)
+        self.declare_parameter("sign", 1.0)
+        self.declare_parameter("zero_offset_qc", 0.0)
+        self.declare_parameter("joint_state_rate_hz", 50.0)
+        self.declare_parameter("telemetry_rate_hz", 10.0)
+        self.declare_parameter("pdo_rx_thread_hz", 500.0)
+        self.declare_parameter("ipm_default_segment_ms", 10)
+        self.declare_parameter("goal_position_tolerance_rad", 0.01)
+        self.declare_parameter("goal_velocity_tolerance_rad_s", 0.10)
+        self.declare_parameter("fault_clear_on_startup", False)
+        self.declare_parameter("enable_on_startup", False)
+        self.declare_parameter("force_ipm_on_startup", True)
+
+        self.kin = JointKinematics(
+            joint_name=self.get_parameter("joint_name").value,
+            encoder_qc_per_motor_rev=float(self.get_parameter("encoder_qc_per_motor_rev").value),
+            gear_ratio_motor_per_joint_rev=float(self.get_parameter("gear_ratio_motor_per_joint_rev").value),
+            sign=float(self.get_parameter("sign").value),
+            zero_offset_qc=float(self.get_parameter("zero_offset_qc").value),
+        )
+
+        self.state = DriveState()
+        self.state_lock = threading.Lock()
+        self.active_goal_lock = threading.Lock()
+        self.active_goal_handle = None
+        self.ipm_armed = False
+        self.last_hold_qc = 0
+
+        # ---------------- ROS clients ----------------
+        self.cb_sdo = MutuallyExclusiveCallbackGroup()
+        self.read_cli = self.create_client(CORead, "/node_1/sdo_read", callback_group=self.cb_sdo)
+        self.write_cli = self.create_client(COWrite, "/node_1/sdo_write", callback_group=self.cb_sdo)
+
+        # ---------------- CAN runtime ----------------
+        self.can = RawSocketCAN(self.get_parameter("can_interface").value)
+        self.rx_thread_running = True
+        self.rx_thread = threading.Thread(target=self._can_rx_loop, daemon=True)
+        self.rx_thread.start()
+
+        # ---------------- Publishers ----------------
+        qos = QoSProfile(
+            reliability=ReliabilityPolicy.RELIABLE,
+            durability=DurabilityPolicy.VOLATILE,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=10,
+        )
+        self.pub_joint_states = self.create_publisher(JointState, "/joint_states", qos)
+        self.pub_drive_raw = self.create_publisher(Int64MultiArray, "/epos2/j3/state_raw", qos)
+        self.pub_drive_engineering = self.create_publisher(Float64MultiArray, "/epos2/j3/state_engineering", qos)
+        self.pub_drive_summary = self.create_publisher(String, "/epos2/j3/state_summary", qos)
+        self.pub_fault = self.create_publisher(Bool, "/epos2/j3/fault", qos)
+        self.pub_diag = self.create_publisher(DiagnosticArray, "/diagnostics", qos)
+
+        # ---------------- Subscriptions ----------------
+        self.sub_joint_target = self.create_subscription(
+            JointState,
+            "/epos2/j3/joint_target",
+            self._joint_target_cb,
+            qos,
+        )
+        self.sub_arm_ipm = self.create_subscription(
+            Bool,
+            "/epos2/j3/arm_ipm_now",
+            self._arm_ipm_cb,
+            qos,
+        )
+        self.sub_test_move = self.create_subscription(
+            Float64,
+            "/epos2/j3/test_move_rad",
+            self._test_move_cb,
+            qos,
+        )
+
+        # ---------------- Action server ----------------
+        self.cb_action = ReentrantCallbackGroup()
+        self.action_server = ActionServer(
+            self,
+            FollowJointTrajectory,
+            "/j3_position_controller/follow_joint_trajectory",
+            execute_callback=self._execute_follow_joint_trajectory,
+            goal_callback=self._goal_callback,
+            cancel_callback=self._cancel_callback,
+            callback_group=self.cb_action,
+        )
+
+        # ---------------- Timers ----------------
+        js_rate = float(self.get_parameter("joint_state_rate_hz").value)
+        tel_rate = float(self.get_parameter("telemetry_rate_hz").value)
+        self.timer_js = self.create_timer(1.0 / js_rate, self._publish_joint_state)
+        self.timer_tel = self.create_timer(1.0 / tel_rate, self._poll_slow_state_and_publish)
+        self.timer_ipm_keepalive = self.create_timer(0.05, self._ipm_keepalive_cb)
+        self.get_logger().info("Waiting for SDO services...")
+        read_ready = self.read_cli.wait_for_service(timeout_sec=5.0)
+        write_ready = self.write_cli.wait_for_service(timeout_sec=5.0)
+        if read_ready and write_ready:
+            self.get_logger().info("SDO services available")
+        else:
+            self.get_logger().warning(
+                f"SDO services not ready yet (read_ready={read_ready}, write_ready={write_ready})"
+            )
+
+        self.startup_complete = False
+        self.startup_timer = self.create_timer(0.5, self._startup_once)
+
+
+    # ---------------- SDO helpers ----------------
+    def _wait_future(self, future, timeout_sec: float):
+        deadline = time.monotonic() + timeout_sec
+        while time.monotonic() < deadline:
+            if future.done():
+                return future.result()
+            time.sleep(0.005)
+        return None
+
+    def sdo_read(self, index: int, subindex: int = 0, warn: bool = True) -> Optional[int]:
+        if not self.read_cli.service_is_ready():
+            if warn:
+                self.get_logger().warning(f"SDO read service not ready: 0x{index:04X}:{subindex}")
+            return None
+        req = CORead.Request()
+        req.index = index
+        req.subindex = subindex
+        future = self.read_cli.call_async(req)
+        result = self._wait_future(future, timeout_sec=2.0)
+        if result is None or not result.success:
+            if warn:
+                self.get_logger().warning(f"SDO read failed: 0x{index:04X}:{subindex}")
+            return None
+        return int(result.data)
+
+    def sdo_write(self, index: int, subindex: int, value: int, warn: bool = True) -> bool:
+        if not self.write_cli.service_is_ready():
+            if warn:
+                self.get_logger().warning(f"SDO write service not ready: 0x{index:04X}:{subindex} value={value}")
+            return False
+        req = COWrite.Request()
+        req.index = index
+        req.subindex = subindex
+        req.data = value
+        future = self.write_cli.call_async(req)
+        result = self._wait_future(future, timeout_sec=2.0)
+        ok = bool(result is not None and result.success)
+        if not ok and warn:
+            self.get_logger().warning(f"SDO write failed: 0x{index:04X}:{subindex} value={value}")
+        return ok
+
+    def _startup_once(self) -> None:
+        if self.startup_complete:
+            return
+        if not (self.read_cli.service_is_ready() and self.write_cli.service_is_ready()):
+            return
+        self.get_logger().info("Running one-time startup sequence")
+        if bool(self.get_parameter("fault_clear_on_startup").value):
+            self.clear_fault()
+        if bool(self.get_parameter("force_ipm_on_startup").value):
+            self.set_mode(MODE_INTERPOLATED_POSITION)
+            self.clear_and_enable_ipm_buffer()
+        if bool(self.get_parameter("enable_on_startup").value):
+            self.enable_operation()
+        self.startup_complete = True
+        self.startup_timer.cancel()
+
+    def clear_fault(self) -> bool:
+        ok = self.sdo_write(IDX_CONTROLWORD, 0, 128)
+        time.sleep(0.02)
+        sw = self.sdo_read(IDX_STATUSWORD, 0, warn=False)
+        if sw is not None:
+            self.get_logger().info(f"clear_fault statusword=0x{(sw & 0xFFFF):04X}")
+        return ok
+
+    def set_mode(self, mode: int) -> bool:
+        return self.sdo_write(IDX_MODES_OF_OPERATION, 0, mode)
+
+    def enable_operation(self) -> bool:
+        ok = self.sdo_write(IDX_CONTROLWORD, 0, 6)
+        time.sleep(0.01)
+        ok &= self.sdo_write(IDX_CONTROLWORD, 0, 15)
+        time.sleep(0.02)
+
+        sw = self.sdo_read(IDX_STATUSWORD, 0, warn=False)
+        if sw is None:
+            self.get_logger().error("Could not read statusword after enable_operation")
+            return False
+
+        sw &= 0xFFFF
+        self.get_logger().info(f"enable_operation statusword=0x{sw:04X}")
+
+        if ((sw >> SW_FAULT_BIT) & 0x1):
+            self.get_logger().error(f"Drive faulted during enable_operation, sw=0x{sw:04X}")
+            return False
+
+        return ok and (sw == 0x0737 or bool((sw >> SW_OPERATION_ENABLED_BIT) & 0x1))
+    def clear_and_enable_ipm_buffer(self) -> bool:
+        ok0 = self.sdo_write(IDX_INTERPOLATION_BUFFER, 6, 0)
+        time.sleep(0.01)
+        ok1 = self.sdo_write(IDX_INTERPOLATION_BUFFER, 6, 1)
+        time.sleep(0.01)
+
+        ipm_buf = self.sdo_read(IDX_INTERPOLATION_BUFFER, 1, warn=False)
+        if ipm_buf is not None:
+            ipm_buf &= 0xFFFF
+            self.get_logger().info(
+                f"clear_and_enable_ipm_buffer ok0={ok0} ok1={ok1} ipm=0x{ipm_buf:04X}"
+            )
+            # Treat "buffer enabled" as enough to proceed.
+            # Underflow bits may be latched from the prior attempt; do not fail here.
+            if ((ipm_buf >> IPM_BUF_ENABLED) & 0x1):
+                return True
+
+        return ok0 and ok1
+
+    def enable_ipm_active(self) -> bool:
+        ok = self.sdo_write(IDX_CONTROLWORD, 0, 31)
+        time.sleep(0.02)
+
+        sw = self.sdo_read(IDX_STATUSWORD, 0, warn=False)
+        ipm_buf = self.sdo_read(IDX_INTERPOLATION_BUFFER, 1, warn=False)
+
+        self.get_logger().info(
+            f"enable_ipm_active sw=0x{((sw or 0) & 0xFFFF):04X} "
+            f"ipm=0x{((ipm_buf or 0) & 0xFFFF):04X}"
+        )
+        return ok
+
+    def read_error_summary(self) -> Dict[str, int]:
+        result = {
+            "error_register": self.sdo_read(IDX_ERROR_REGISTER, 0, warn=False) or 0,
+            "error_history_count": self.sdo_read(IDX_ERROR_HISTORY, 0, warn=False) or 0,
+            "last_error_1": self.sdo_read(IDX_ERROR_HISTORY, 1, warn=False) or 0,
+            "last_error_2": self.sdo_read(IDX_ERROR_HISTORY, 2, warn=False) or 0,
+        }
+        return result
+
+    def startup_ipm(self) -> bool:
+        ok = True
+        ok &= self.set_mode(MODE_INTERPOLATED_POSITION)
+        ok &= self.enable_operation()
+        ok &= self.clear_and_enable_ipm_buffer()
+        return ok
+
+    def arm_ipm_hold(self) -> bool:
+        self.get_logger().info("Arming IPM with staged hold points")
+        self.ipm_armed = False
+
+        sw = self.sdo_read(IDX_STATUSWORD, 0, warn=False)
+        if sw is not None and ((sw >> SW_FAULT_BIT) & 0x1):
+            if not self.clear_fault():
+                self.get_logger().error("Failed to clear fault before IPM arm")
+                return False
+            time.sleep(0.05)
+
+        if not self.startup_ipm():
+            self.get_logger().error("startup_ipm() failed")
+            return False
+
+        current_pos = self.sdo_read(IDX_POSITION_ACTUAL, 0, warn=False)
+        if current_pos is None:
+            self.get_logger().error("Failed reading current position for IPM arm")
+            return False
+
+        current_pos_qc = to_signed_32(current_pos)
+        self.last_hold_qc = current_pos_qc
+        seg_ms = int(self.get_parameter("ipm_default_segment_ms").value)
+
+        hold = PVTPoint(time_ms=seg_ms, velocity_rpm=0, position_qc=current_pos_qc)
+
+        try:
+            # Pre-fill before activation
+            for _ in range(6):
+                self.send_rpdo1_interpolation_record(hold, verbose=True)
+                time.sleep(0.002)
+        except Exception as exc:
+            self.get_logger().error(f"Failed staging pre-activation hold points: {exc}")
+            return False
+
+        if not self.enable_ipm_active():
+            self.get_logger().error("Failed to set controlword 0x001F")
+            return False
+
+        try:
+            # Top up again immediately after activation
+            for _ in range(6):
+                self.send_rpdo1_interpolation_record(hold, verbose=False)
+                time.sleep(0.002)
+        except Exception as exc:
+            self.get_logger().error(f"Failed staging post-activation hold points: {exc}")
+            return False
+
+        time.sleep(0.05)
+
+        sw2 = self.sdo_read(IDX_STATUSWORD, 0, warn=False)
+        ipm_buf = self.sdo_read(IDX_INTERPOLATION_BUFFER, 1, warn=False)
+
+        if sw2 is not None:
+            self.state.statusword = sw2 & 0xFFFF
+        if ipm_buf is not None:
+            self.state.interpolation_buffer_status = ipm_buf & 0xFFFF
+
+        if sw2 is not None and ((sw2 >> SW_FAULT_BIT) & 0x1):
+            self.get_logger().error(f"Drive faulted during IPM arm, sw=0x{sw2:04X}")
+            return False
+
+        if ipm_buf is None:
+            self.get_logger().error("Could not read interpolation buffer status after arm")
+            return False
+
+        if not ((ipm_buf >> IPM_BUF_ENABLED) & 0x1):
+            self.get_logger().error(f"IPM buffer not enabled after arm, ipm=0x{ipm_buf:04X}")
+            return False
+
+        if not ((ipm_buf >> IPM_ACTIVE) & 0x1):
+            self.get_logger().error(f"IPM did not become active after arm, ipm=0x{ipm_buf:04X}")
+            return False
+
+        # At this point: active + enabled + not faulted = success.
+        # Underflow bits may still be latched transiently; keepalive will continue feeding.
+        self.ipm_armed = True
+        self.get_logger().info(f"IPM armed successfully, sw=0x{(sw2 or 0):04X} ipm=0x{ipm_buf:04X}")
+        return True
+    
+    def send_test_move_delta(self, delta_rad: float) -> bool:
+        if not self.ipm_armed:
+            self.get_logger().warning("IPM not armed; call arm_ipm_hold() first")
+            return False
+
+        current_pos = self.sdo_read(IDX_POSITION_ACTUAL, 0, warn=False)
+        if current_pos is None:
+            self.get_logger().error("Failed reading current position for test move")
+            return False
+
+        current_pos_qc = to_signed_32(current_pos)
+
+        target_qc = self.kin.joint_rad_to_motor_qc(
+            self.kin.motor_qc_to_joint_rad(current_pos_qc) + delta_rad
+        )
+
+        seg_ms = int(self.get_parameter("ipm_default_segment_ms").value)
+        seg_s = seg_ms / 1000.0
+
+        motor_rpm = max(
+            1,
+            abs(
+                int(
+                    round(
+                        (target_qc - current_pos_qc) * 60.0
+                        / (self.kin.encoder_qc_per_motor_rev * seg_s)
+                    )
+                )
+            ),
+        )
+        if target_qc < current_pos_qc:
+            motor_rpm = -motor_rpm
+
+        p_start = PVTPoint(time_ms=seg_ms, velocity_rpm=0, position_qc=current_pos_qc)
+        p_move  = PVTPoint(time_ms=seg_ms, velocity_rpm=motor_rpm, position_qc=target_qc)
+        p_hold  = PVTPoint(time_ms=seg_ms, velocity_rpm=0, position_qc=target_qc)
+
+        try:
+            self.send_rpdo1_interpolation_record(p_start, verbose=True)
+            time.sleep(0.002)
+            self.send_rpdo1_interpolation_record(p_move, verbose=True)
+            time.sleep(0.002)
+
+            for _ in range(6):
+                self.send_rpdo1_interpolation_record(p_hold, verbose=False)
+                time.sleep(0.002)
+
+            self.last_hold_qc = target_qc
+
+            self.get_logger().info(
+                f"Queued test move delta_rad={delta_rad:.6f} "
+                f"current_qc={current_pos_qc} target_qc={target_qc} motor_rpm={motor_rpm}"
+            )
+            return True
+        except Exception as exc:
+            self.get_logger().error(f"Failed sending test move: {exc}")
+            return False
+    # ---------------- PDO runtime ----------------
+    def send_rpdo2_control_mode(self, controlword: int, mode: int) -> None:
+        # RPDO2 mapping: 0x6040 (16b) + 0x6060 (8b)
+        data = struct.pack("<HB", controlword & 0xFFFF, mode & 0xFF)
+        self.can.send(COB_RPDO2, data)
+
+    def send_rpdo1_interpolation_record(self, point: PVTPoint, verbose: bool = True) -> None:
+        payload = pack_interpolation_record(point)
+        if verbose:
+            self.get_logger().info(
+                f"RPDO1 0x20C1 send time_ms={point.time_ms} "
+                f"vel_rpm={point.velocity_rpm} pos_qc={point.position_qc} "
+                f"payload={payload.hex()}"
+            )
+        self.can.send(COB_RPDO1, payload)
+
+    def _ipm_keepalive_cb(self) -> None:
+        if not self.ipm_armed:
+            return
+
+        seg_ms = int(self.get_parameter("ipm_default_segment_ms").value)
+        if seg_ms < 20:
+            seg_ms = 20
+
+        hold = PVTPoint(
+            time_ms=seg_ms,
+            velocity_rpm=0,
+            position_qc=self.last_hold_qc,
+        )
+
+        try:
+            self.send_rpdo1_interpolation_record(hold, verbose=False)
+        except Exception as exc:
+            self.get_logger().error(f"IPM keepalive send failed: {exc}")
+    
+    def _can_rx_loop(self) -> None:
+        while self.rx_thread_running:
+            try:
+                msg = self.can.recv()
+            except OSError:
+                if not self.rx_thread_running:
+                    break
+                continue
+            if msg is None:
+                continue
+            can_id, data = msg
+            now_ns = self.get_clock().now().nanoseconds
+
+            with self.state_lock:
+                self.state.last_update_ns = now_ns
+                if can_id == COB_HEARTBEAT and len(data) >= 1:
+                    self.state.heartbeat_state = data[0]
+                    self.state.bus_operational = (data[0] == 0x05)
+                elif can_id == COB_TPDO1:
+                    # TPDO1: 0x20C4:01 (16b), 0x6041 (16b), 0x6061 (8b)
+                    if len(data) >= 5:
+                        ipm_buf, sw, mode = struct.unpack("<HHB", data[:5])
+                        self.state.interpolation_buffer_status = ipm_buf
+                        self.state.statusword = sw
+                        self.state.mode_display = mode
+                elif can_id == COB_TPDO2:
+                    # TPDO2: 0x6064 (32b), 0x606C (32b)
+                    if len(data) >= 8:
+                        pos_u32, vel_u32 = struct.unpack("<II", data[:8])
+                        self.state.position_actual_qc = to_signed_32(pos_u32)
+                        self.state.velocity_actual_rpm = to_signed_32(vel_u32)
+                elif can_id == COB_EMCY and len(data) >= 3:
+                    emcy_code = data[0] | (data[1] << 8)
+                    emcy_reg = data[2]
+                    self.state.last_emcy_code = emcy_code
+                    self.state.last_emcy_reg = emcy_reg
+
+    # ---------------- Publishers ----------------
+    def _publish_joint_state(self) -> None:
+        with self.state_lock:
+            motor_qc = self.state.position_actual_qc
+            motor_rpm = self.state.velocity_actual_rpm
+            faulted = self.state.faulted()
+
+        msg = JointState()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.name = [self.kin.joint_name]
+        msg.position = [self.kin.motor_qc_to_joint_rad(motor_qc)]
+        msg.velocity = [self.kin.motor_rpm_to_joint_rad_s(motor_rpm)]
+        msg.effort = []
+        self.pub_joint_states.publish(msg)
+
+        fmsg = Bool()
+        fmsg.data = faulted
+        self.pub_fault.publish(fmsg)
+
+    def _poll_slow_state_and_publish(self) -> None:
+        with self.state_lock:
+            # Core state fallback via SDO so the node is useful even before TPDOs are observed.
+            sw = self.sdo_read(IDX_STATUSWORD, 0, warn=False)
+            if sw is not None:
+                self.state.statusword = sw & 0xFFFF
+
+            mode_disp = self.sdo_read(IDX_MODES_OF_OPERATION_DISPLAY, 0, warn=False)
+            if mode_disp is not None:
+                self.state.mode_display = mode_disp & 0xFF
+
+            ipm_buf = self.sdo_read(IDX_INTERPOLATION_BUFFER, 1, warn=False)
+            if ipm_buf is not None:
+                self.state.interpolation_buffer_status = ipm_buf & 0xFFFF
+
+            pos_actual = self.sdo_read(IDX_POSITION_ACTUAL, 0, warn=False)
+            if pos_actual is not None:
+                self.state.position_actual_qc = to_signed_32(pos_actual)
+
+            vel_actual = self.sdo_read(IDX_VELOCITY_ACTUAL, 0, warn=False)
+            if vel_actual is not None:
+                self.state.velocity_actual_rpm = to_signed_32(vel_actual)
+
+            pos_demand = self.sdo_read(IDX_POSITION_DEMAND, 0, warn=False)
+            if pos_demand is not None:
+                self.state.position_demand_qc = to_signed_32(pos_demand)
+
+            self.state.current_actual_mA = self._to_signed_16(self.sdo_read(IDX_CURRENT_ACTUAL, 0, warn=False))
+            self.state.current_actual_avg_mA = self._to_signed_16(self.sdo_read(IDX_CURRENT_ACTUAL_AVG, 0, warn=False))
+            vel_avg = self.sdo_read(IDX_VELOCITY_ACTUAL_AVG, 0, warn=False)
+            self.state.velocity_actual_avg_rpm = to_signed_32(vel_avg or 0)
+            self.state.current_demand_mA = self._to_signed_16(self.sdo_read(IDX_CURRENT_DEMAND, 0, warn=False))
+            errs = self.read_error_summary()
+            self.state.error_register = errs["error_register"]
+            self.state.error_history_count = errs["error_history_count"]
+            self.state.last_error_1 = errs["last_error_1"]
+            self.state.last_error_2 = errs["last_error_2"]
+
+            st = self.state
+            joint_pos = self.kin.motor_qc_to_joint_rad(st.position_actual_qc)
+            joint_vel = self.kin.motor_rpm_to_joint_rad_s(st.velocity_actual_rpm)
+
+        raw = Int64MultiArray()
+        raw.data = [
+            st.statusword,
+            st.mode_display,
+            st.interpolation_buffer_status,
+            st.position_demand_qc,
+            st.position_actual_qc,
+            st.velocity_actual_rpm,
+            st.current_actual_mA,
+            st.current_actual_avg_mA,
+            st.velocity_actual_avg_rpm,
+            st.current_demand_mA,
+            st.error_register,
+            st.error_history_count,
+            st.last_error_1,
+            st.last_error_2,
+            st.heartbeat_state,
+            st.last_emcy_code,
+            st.last_emcy_reg,
+        ]
+        self.pub_drive_raw.publish(raw)
+
+        eng = Float64MultiArray()
+        eng.data = [
+            joint_pos,
+            joint_vel,
+            float(st.position_actual_qc),
+            float(st.velocity_actual_rpm),
+            float(st.current_actual_mA),
+            float(st.current_actual_avg_mA),
+            float(st.current_demand_mA),
+        ]
+        self.pub_drive_engineering.publish(eng)
+
+        s = String()
+        s.data = (
+            f"mode={st.mode_display} sw=0x{st.statusword:04X} "
+            f"ipm=0x{st.interpolation_buffer_status:04X} "
+            f"fault={st.faulted()} enabled={st.operation_enabled()} "
+            f"ipm_buf_enabled={st.ipm_buffer_enabled()} ipm_active={st.ipm_active()} ipm_armed={self.ipm_armed} "
+            f"joint_pos_rad={joint_pos:.6f} joint_vel_rad_s={joint_vel:.6f} "
+            f"curr_mA={st.current_actual_mA} curr_avg_mA={st.current_actual_avg_mA} "
+            f"err_reg=0x{st.error_register:02X} hb=0x{st.heartbeat_state:02X}"
+        )
+        self.pub_drive_summary.publish(s)
+
+        self._publish_diagnostics(st, joint_pos, joint_vel)
+
+    def _publish_diagnostics(self, st: DriveState, joint_pos: float, joint_vel: float) -> None:
+        arr = DiagnosticArray()
+        arr.header.stamp = self.get_clock().now().to_msg()
+
+        status = DiagnosticStatus()
+        status.name = "epos2/j3"
+        if st.faulted():
+            status.level = DiagnosticStatus.ERROR
+            status.message = "Drive faulted"
+        elif not st.bus_operational:
+            status.level = DiagnosticStatus.WARN
+            status.message = "Bus not operational"
+        elif st.ipm_buffer_enabled() and not st.ipm_active() and st.mode_display == MODE_INTERPOLATED_POSITION:
+            status.level = DiagnosticStatus.WARN
+            status.message = "IPM configured but not active"
+        else:
+            status.level = DiagnosticStatus.OK
+            status.message = "Drive healthy"
+
+        def kv(k: str, v: str) -> KeyValue:
+            item = KeyValue()
+            item.key = k
+            item.value = v
+            return item
+
+        status.values = [
+            kv("statusword", f"0x{st.statusword:04X}"),
+            kv("mode_display", str(st.mode_display)),
+            kv("interpolation_buffer_status", f"0x{st.interpolation_buffer_status:04X}"),
+            kv("position_actual_qc", str(st.position_actual_qc)),
+            kv("velocity_actual_rpm", str(st.velocity_actual_rpm)),
+            kv("current_actual_mA", str(st.current_actual_mA)),
+            kv("current_actual_avg_mA", str(st.current_actual_avg_mA)),
+            kv("current_demand_mA", str(st.current_demand_mA)),
+            kv("joint_position_rad", f"{joint_pos:.9f}"),
+            kv("joint_velocity_rad_s", f"{joint_vel:.9f}"),
+            kv("error_register", f"0x{st.error_register:02X}"),
+            kv("error_history_count", str(st.error_history_count)),
+            kv("last_error_1", f"0x{st.last_error_1:08X}"),
+            kv("last_error_2", f"0x{st.last_error_2:08X}"),
+            kv("heartbeat_state", f"0x{st.heartbeat_state:02X}"),
+            kv("last_emcy_code", f"0x{st.last_emcy_code:04X}"),
+            kv("last_emcy_reg", f"0x{st.last_emcy_reg:02X}"),
+        ]
+        arr.status = [status]
+        self.pub_diag.publish(arr)
+
+    # ---------------- Direct command subscription ----------------
+    def _joint_target_cb(self, msg: JointState) -> None:
+        if self.kin.joint_name not in msg.name:
+            return
+        idx = msg.name.index(self.kin.joint_name)
+        if idx >= len(msg.position):
+            return
+        target_rad = msg.position[idx]
+        if not self.ipm_armed:
+            self.get_logger().warning("Ignoring /joint_target because IPM is not armed")
+            return
+        current_rad = self.kin.motor_qc_to_joint_rad(self.state.position_actual_qc)
+        delta_rad = target_rad - current_rad
+        self.send_test_move_delta(delta_rad)
+
+    def _arm_ipm_cb(self, msg: Bool) -> None:
+        if not msg.data:
+            return
+        ok = self.arm_ipm_hold()
+        self.get_logger().info(f"/arm_ipm_now result={ok}")
+
+    def _test_move_cb(self, msg: Float64) -> None:
+        ok = self.send_test_move_delta(float(msg.data))
+        self.get_logger().info(f"/test_move_rad result={ok}")
+
+    # ---------------- Action server ----------------
+    def _goal_callback(self, goal_request: FollowJointTrajectory.Goal) -> int:
+        joints = goal_request.trajectory.joint_names
+        if joints != [self.kin.joint_name]:
+            self.get_logger().warning(
+                f"Rejecting goal: expected [{self.kin.joint_name}] only, got {joints}"
+            )
+            return GoalResponse.REJECT
+        if len(goal_request.trajectory.points) < 1:
+            self.get_logger().warning("Rejecting goal: no trajectory points")
+            return GoalResponse.REJECT
+        return GoalResponse.ACCEPT
+
+    def _cancel_callback(self, goal_handle) -> int:
+        return CancelResponse.ACCEPT
+
+    async def _execute_follow_joint_trajectory(self, goal_handle):
+        with self.active_goal_lock:
+            self.active_goal_handle = goal_handle
+
+        result = FollowJointTrajectory.Result()
+        feedback = FollowJointTrajectory.Feedback()
+        feedback.joint_names = [self.kin.joint_name]
+
+        # Setup path: SDO
+        if not self.startup_ipm():
+            result.error_code = FollowJointTrajectory.Result.INVALID_GOAL
+            result.error_string = "Failed startup_ipm sequence"
+            goal_handle.abort()
+            return result
+
+        # Require 2-point minimum for IPM FIFO startup.
+        points = list(goal_handle.request.trajectory.points)
+        if len(points) == 1:
+            points = [points[0], points[0]]
+
+        # Stage two points before IPM active.
+        try:
+            staged = self._convert_trajectory_points_to_pvt(points[:2])
+            for p in staged:
+                self.send_rpdo1_interpolation_record(p)
+            if not self.enable_ipm_active():
+                raise RuntimeError("Failed to set controlword 0x001F")
+        except Exception as exc:
+            result.error_code = FollowJointTrajectory.Result.INVALID_GOAL
+            result.error_string = f"Failed initial PVT staging: {exc}"
+            goal_handle.abort()
+            return result
+
+        # Stream the rest.
+        try:
+            remaining = self._convert_trajectory_points_to_pvt(points[2:])
+            for p in remaining:
+                if goal_handle.is_cancel_requested:
+                    goal_handle.canceled()
+                    result.error_code = FollowJointTrajectory.Result.PATH_TOLERANCE_VIOLATED
+                    result.error_string = "Goal canceled"
+                    return result
+                self.send_rpdo1_interpolation_record(p)
+                time.sleep(max(p.time_ms / 1000.0 * 0.5, 0.001))
+
+            # Wait for final convergence.
+            if not self._wait_for_goal(goal_handle, feedback):
+                result.error_code = FollowJointTrajectory.Result.GOAL_TOLERANCE_VIOLATED
+                result.error_string = "Failed to reach final target within tolerance"
+                goal_handle.abort()
+                return result
+
+        except Exception as exc:
+            result.error_code = FollowJointTrajectory.Result.PATH_TOLERANCE_VIOLATED
+            result.error_string = f"Execution exception: {exc}"
+            goal_handle.abort()
+            return result
+
+        goal_handle.succeed()
+        result.error_code = FollowJointTrajectory.Result.SUCCESSFUL
+        result.error_string = "Success"
+        return result
+
+    def _convert_trajectory_points_to_pvt(self, points: List[JointTrajectoryPoint]) -> List[PVTPoint]:
+        out: List[PVTPoint] = []
+        prev_t = 0.0
+        default_seg_ms = int(self.get_parameter("ipm_default_segment_ms").value)
+        for pt in points:
+            if len(pt.positions) != 1:
+                raise ValueError("Each point must have exactly one position")
+            target_qc = self.kin.joint_rad_to_motor_qc(pt.positions[0])
+            vel_rpm = 0
+            if len(pt.velocities) == 1:
+                vel_rpm = self.kin.joint_rad_s_to_motor_rpm(pt.velocities[0])
+            t = self._duration_msg_to_sec(pt.time_from_start)
+            dt = t - prev_t
+            prev_t = t
+            seg_ms = max(1, int(round(dt * 1000.0))) if dt > 0.0 else default_seg_ms
+            out.append(PVTPoint(seg_ms, vel_rpm, target_qc))
+        return out
+
+    def _wait_for_goal(self, goal_handle, feedback: FollowJointTrajectory.Feedback) -> bool:
+        tol_pos = float(self.get_parameter("goal_position_tolerance_rad").value)
+        timeout_s = 5.0
+        start = time.monotonic()
+        final_target_rad = goal_handle.request.trajectory.points[-1].positions[0]
+
+        while time.monotonic() - start < timeout_s:
+            with self.state_lock:
+                st = self.state
+                actual_rad = self.kin.motor_qc_to_joint_rad(st.position_actual_qc)
+                actual_vel = self.kin.motor_rpm_to_joint_rad_s(st.velocity_actual_rpm)
+                faulted = st.faulted()
+                ipm_status = st.interpolation_buffer_status
+
+            feedback.actual = JointTrajectoryPoint(
+                positions=[actual_rad],
+                velocities=[actual_vel],
+                time_from_start=Duration(seconds=time.monotonic() - start).to_msg(),
+            )
+            feedback.desired = goal_handle.request.trajectory.points[-1]
+            feedback.error = JointTrajectoryPoint(
+                positions=[final_target_rad - actual_rad],
+                velocities=[0.0 - actual_vel],
+            )
+            goal_handle.publish_feedback(feedback)
+
+            if faulted:
+                self.get_logger().error(f"Drive fault during execution, ipm_status=0x{ipm_status:04X}")
+                return False
+            if abs(final_target_rad - actual_rad) <= tol_pos:
+                return True
+            time.sleep(0.01)
+        return False
+
+    @staticmethod
+    def _duration_msg_to_sec(msg: DurationMsg) -> float:
+        return float(msg.sec) + float(msg.nanosec) * 1e-9
+
+    @staticmethod
+    def _to_signed_16(v: Optional[int]) -> int:
+        if v is None:
+            return 0
+        v &= 0xFFFF
+        if v & 0x8000:
+            return v - 0x10000
+        return v
+    def destroy_node(self) -> bool:
+        self.rx_thread_running = False
+        try:
+            self.can.close()
+        except Exception:
+            pass
+        try:
+            if self.rx_thread.is_alive():
+                self.rx_thread.join(timeout=0.2)
+        except Exception:
+            pass
+        return super().destroy_node()
+
+def main(args=None) -> None:
+    rclpy.init(args=args)
+    node = Epos2J3Bridge()
+    executor = MultiThreadedExecutor(num_threads=4)
+    executor.add_node(node)
+    try:
+        executor.spin()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        try:
+            executor.shutdown()
+        except Exception:
+            pass
+        try:
+            node.destroy_node()
+        except Exception:
+            pass
+        try:
+            if rclpy.ok():
+                rclpy.shutdown()
+        except Exception:
+            pass
+
+
+if __name__ == "__main__":
+    main()

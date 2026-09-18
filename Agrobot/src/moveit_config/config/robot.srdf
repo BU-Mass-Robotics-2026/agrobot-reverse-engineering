@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="robot">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+
+    <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
+    <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="world_frame"/>
+
+    <!-- Arm group -->
+    <group name="arm">
+        <chain base_link="linear_rail_link" tip_link="link6"/>
+    </group>
+
+    <!-- Gripper group (only fin joint 1 is needed because of mimicry) -->
+    <group name="gripper">
+        <joint name="fin_joint1"/>
+    </group>
+
+    <end_effector name="gripper" parent_link="link6" group="gripper" parent_group="arm"/>
+
+    <passive_joint name="fin_joint2"/>
+    <passive_joint name="fin_joint3"/>
+
+     <!-- Arm group states -->
+    <group_state name="crouch" group="arm">
+        <joint name="joint0" value="0"/>
+        <joint name="joint1" value="0"/>
+        <joint name="joint2" value="-0.25"/>
+        <joint name="joint3" value="1.4"/>
+        <joint name="joint4" value="1.55"/>
+        <joint name="joint5" value="0.25"/>
+        <joint name="joint6" value="0"/>
+    </group_state>
+
+    <group_state name="attention" group="arm">
+        <joint name="joint0" value="0"/>
+        <joint name="joint1" value="0"/>
+        <joint name="joint2" value="0"/>
+        <joint name="joint3" value="0"/>
+        <joint name="joint4" value="0"/>
+        <joint name="joint5" value="0"/>
+        <joint name="joint6" value="0"/>
+    </group_state>
+
+    <group_state name="vertical" group="arm">
+        <joint name="joint0" value="0"/>
+        <joint name="joint1" value="0"/>
+        <joint name="joint2" value="0"/>
+        <joint name="joint3" value="-1.5708"/>
+        <joint name="joint4" value="0"/>
+        <joint name="joint5" value="0"/>
+        <joint name="joint6" value="0"/>
+    </group_state>
+
+    <group_state name="bin" group="arm">
+        <joint name="joint0" value="0"/>
+        <joint name="joint1" value="3.14159"/>
+        <joint name="joint2" value="1.22173"/>
+        <joint name="joint3" value="-0.959931"/>
+        <joint name="joint4" value="1.5708"/>
+        <joint name="joint5" value="-1.309"/>
+        <joint name="joint6" value="0"/>
+    </group_state>
+
+    <!-- Gripper group states -->
+    <group_state name="gripper_open" group="gripper">
+        <joint name="fin_joint1" value="0"/>
+    </group_state>
+
+    <group_state name="gripper_closed" group="gripper">
+        <joint name="fin_joint1" value="1.0"/>
+    </group_state>
+
+    <!-- Arm disable collisions -->
+    <disable_collisions link1="base_link" link2="linear_rail_link" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="link1" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="link2" reason="Never"/>
+    <disable_collisions link1="base_link" link2="link3" reason="Never"/>
+    <disable_collisions link1="linear_rail_link" link2="link1" reason="Default"/>
+    <disable_collisions link1="linear_rail_link" link2="link2" reason="Never"/>
+    <disable_collisions link1="linear_rail_link" link2="link3" reason="Never"/>
+    <disable_collisions link1="link1" link2="link2" reason="Adjacent"/>
+    <disable_collisions link1="link1" link2="link3" reason="Never"/>
+    <disable_collisions link1="link1" link2="link4" reason="Never"/>
+    <disable_collisions link1="link2" link2="link3" reason="Adjacent"/>
+    <disable_collisions link1="link2" link2="link4" reason="Never"/>
+    <disable_collisions link1="link3" link2="link4" reason="Adjacent"/>
+    <disable_collisions link1="link3" link2="link5" reason="Never"/>
+    <disable_collisions link1="link4" link2="link5" reason="Adjacent"/>
+    <disable_collisions link1="link5" link2="link6" reason="Adjacent"/>
+
+    <!-- Gripper disable collisions -->
+    <disable_collisions link1="link6" link2="fin_link1" reason="Adjacent"/>
+    <disable_collisions link1="link6" link2="fin_link2" reason="Adjacent"/>
+    <disable_collisions link1="link6" link2="fin_link3" reason="Adjacent"/>
+    <disable_collisions link1="fin_link1" link2="fin_link2" reason="Never"/>
+    <disable_collisions link1="fin_link1" link2="fin_link3" reason="Never"/>
+    <disable_collisions link1="fin_link2" link2="fin_link3" reason="Never"/>
+    
+</robot>

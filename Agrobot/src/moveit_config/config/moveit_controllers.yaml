@@ -1,0 +1,31 @@
+# Trajectory execution monitoring tuned for staged J0/J2 hardware bringup.
+# The EPOS2 bridge's IPM endpoint-wait + Maxon Position Mode hold entry
+# adds ~0.9s of deterministic finalization time AFTER the planned trajectory
+# end. Without this block, MoveIt defaults give a budget of roughly
+# planned_duration * 1.1 + 0.5s, which cancels the action mid-finalization.
+trajectory_execution:
+  allowed_execution_duration_scaling: 1.2
+  allowed_goal_duration_margin: 1.5
+  allowed_start_tolerance: 0.05
+  execution_duration_monitoring: true
+
+# MoveIt uses this configuration for controller management
+
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - arm_controller
+
+  arm_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - joint0
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
+      - joint6
