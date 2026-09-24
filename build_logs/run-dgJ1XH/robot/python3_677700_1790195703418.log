@@ -1,0 +1,3 @@
+[INFO] [1790195703.933882630] [spawner_arm_controller]: waiting for service /controller_manager/list_controllers to become available...
+[INFO] [1790195704.215143133] [spawner_arm_controller]: Loaded arm_controller
+[INFO] [1790195704.254847814] [spawner_arm_controller]: Configured and activated arm_controller

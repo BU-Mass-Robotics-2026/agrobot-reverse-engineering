@@ -1,0 +1,375 @@
+[0.856s] Invoking command in '/home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_tests': AMENT_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_ros2_controllers:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_402_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_base_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_fake_slaves:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_ros2_controllers:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_402_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_base_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_fake_slaves:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_ros2_controllers/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_402_driver/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_base_driver/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/bin:${PATH} PYTHONPATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib/python3.12/site-packages:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_tests -- -j16 -l16
+[0.901s] Built target cia402_diagnostics_prepare
+[0.901s] Built target simple_diagnostics_prepare
+[0.901s] Built target simple_prepare
+[0.901s] Built target canopen_system_prepare
+[0.901s] Built target cia402_prepare
+[0.901s] Built target cia402_system_prepare
+[0.901s] Built target cia402_lifecycle_prepare
+[0.902s] Built target cia402_namespaced_system_prepare
+[0.902s] Built target simple_lifecycle_prepare
+[0.902s] Built target robot_control_prepare
+[1.144s] cia402_device_1: writing 4 bytes to 0x1400/1: 02 02 00 80
+[1.144s] cia402_device_1: writing 1 bytes to 0x1600/0: 00
+[1.144s] cia402_device_1: writing 4 bytes to 0x1600/1: 10 00 40 60
+[1.144s] cia402_device_1: writing 4 bytes to 0x1600/2: 08 00 60 60
+[1.144s] cia402_device_1: writing 1 bytes to 0x1600/0: 02
+[1.144s] cia402_device_1: writing 4 bytes to 0x1400/1: 02 02 00 00
+[1.144s] cia402_device_1: writing 4 bytes to 0x1401/1: 02 03 00 80
+[1.144s] cia402_device_1: writing 1 bytes to 0x1601/0: 00
+[1.144s] cia402_device_1: writing 4 bytes to 0x1601/1: 20 00 7A 60
+[1.144s] cia402_device_1: writing 4 bytes to 0x1601/2: 20 00 FF 60
+[1.144s] cia402_device_1: writing 1 bytes to 0x1601/0: 02
+[1.144s] cia402_device_1: writing 4 bytes to 0x1401/1: 02 03 00 00
+[1.144s] cia402_device_1: writing 4 bytes to 0x1800/1: 82 01 00 80
+[1.144s] cia402_device_1: writing 1 bytes to 0x1A00/0: 00
+[1.144s] cia402_device_1: writing 4 bytes to 0x1A00/1: 10 00 41 60
+[1.145s] cia402_device_1: writing 4 bytes to 0x1A00/2: 08 00 61 60
+[1.145s] cia402_device_1: writing 1 bytes to 0x1A00/0: 02
+[1.145s] cia402_device_1: writing 4 bytes to 0x1800/1: 82 01 00 00
+[1.145s] cia402_device_1: writing 4 bytes to 0x1801/1: 82 02 00 80
+[1.145s] cia402_device_1: writing 1 bytes to 0x1A01/0: 00
+[1.145s] cia402_device_1: writing 4 bytes to 0x1A01/1: 20 00 64 60
+[1.145s] cia402_device_1: writing 4 bytes to 0x1A01/2: 20 00 6C 60
+[1.145s] cia402_device_1: writing 1 bytes to 0x1A01/0: 02
+[1.145s] cia402_device_1: writing 4 bytes to 0x1801/1: 82 02 00 00
+[1.145s] cia402_device_1: writing 4 bytes to 0x1802/1: 82 03 00 C0
+[1.145s] cia402_device_1: writing 1 bytes to 0x60C2/1: 32
+[1.145s] cia402_device_1: writing 1 bytes to 0x60C2/2: FD
+[1.151s] Built target simple
+[1.168s] Built target simple_lifecycle
+[1.169s] Built target canopen_system
+[1.180s] Built target cia402_lifecycle
+[1.269s] joint_1: writing 4 bytes to 0x1400/1: 02 02 00 80
+[1.269s] joint_1: writing 1 bytes to 0x1600/0: 00
+[1.269s] joint_1: writing 4 bytes to 0x1600/1: 10 00 40 60
+[1.269s] joint_1: writing 4 bytes to 0x1600/2: 08 00 60 60
+[1.269s] joint_1: writing 1 bytes to 0x1600/0: 02
+[1.269s] joint_1: writing 4 bytes to 0x1400/1: 02 02 00 00
+[1.269s] joint_1: writing 4 bytes to 0x1401/1: 02 03 00 80
+[1.269s] joint_1: writing 1 bytes to 0x1601/0: 00
+[1.269s] joint_1: writing 4 bytes to 0x1601/1: 20 00 7A 60
+[1.269s] joint_1: writing 1 bytes to 0x1601/0: 01
+[1.269s] joint_1: writing 4 bytes to 0x1401/1: 02 03 00 00
+[1.269s] joint_1: writing 4 bytes to 0x1800/1: 82 01 00 80
+[1.269s] joint_1: writing 1 bytes to 0x1800/2: 01
+[1.269s] joint_1: writing 1 bytes to 0x1A00/0: 00
+[1.270s] joint_1: writing 4 bytes to 0x1A00/1: 10 00 41 60
+[1.270s] joint_1: writing 4 bytes to 0x1A00/2: 08 00 61 60
+[1.270s] joint_1: writing 1 bytes to 0x1A00/0: 02
+[1.270s] joint_1: writing 4 bytes to 0x1800/1: 82 01 00 00
+[1.270s] joint_1: writing 4 bytes to 0x1801/1: 82 02 00 80
+[1.270s] joint_1: writing 1 bytes to 0x1801/2: 01
+[1.270s] joint_1: writing 1 bytes to 0x1A01/0: 00
+[1.270s] joint_1: writing 4 bytes to 0x1A01/1: 20 00 64 60
+[1.270s] joint_1: writing 4 bytes to 0x1A01/2: 20 00 6C 60
+[1.270s] joint_1: writing 1 bytes to 0x1A01/0: 02
+[1.270s] joint_1: writing 4 bytes to 0x1801/1: 82 02 00 00
+[1.270s] joint_1: writing 1 bytes to 0x60C2/1: 32
+[1.270s] joint_1: writing 1 bytes to 0x60C2/2: FD
+[1.270s] joint_1: writing 4 bytes to 0x6081/0: E8 03 00 00
+[1.270s] joint_1: writing 4 bytes to 0x6083/0: D0 07 00 00
+[1.270s] joint_1: writing 1 bytes to 0x6060/0: 07
+[1.270s] joint_2: writing 4 bytes to 0x1400/1: 03 02 00 80
+[1.270s] joint_2: writing 1 bytes to 0x1600/0: 00
+[1.270s] joint_2: writing 4 bytes to 0x1600/1: 10 00 40 60
+[1.270s] joint_2: writing 4 bytes to 0x1600/2: 08 00 60 60
+[1.270s] joint_2: writing 1 bytes to 0x1600/0: 02
+[1.270s] joint_2: writing 4 bytes to 0x1400/1: 03 02 00 00
+[1.270s] joint_2: writing 4 bytes to 0x1401/1: 03 03 00 80
+[1.270s] joint_2: writing 1 bytes to 0x1601/0: 00
+[1.270s] joint_2: writing 4 bytes to 0x1601/1: 20 00 7A 60
+[1.270s] joint_2: writing 1 bytes to 0x1601/0: 01
+[1.270s] joint_2: writing 4 bytes to 0x1401/1: 03 03 00 00
+[1.270s] joint_2: writing 4 bytes to 0x1800/1: 83 01 00 80
+[1.271s] joint_2: writing 1 bytes to 0x1800/2: 01
+[1.271s] joint_2: writing 1 bytes to 0x1A00/0: 00
+[1.271s] joint_2: writing 4 bytes to 0x1A00/1: 10 00 41 60
+[1.271s] joint_2: writing 4 bytes to 0x1A00/2: 08 00 61 60
+[1.271s] joint_2: writing 1 bytes to 0x1A00/0: 02
+[1.271s] joint_2: writing 4 bytes to 0x1800/1: 83 01 00 00
+[1.271s] joint_2: writing 4 bytes to 0x1801/1: 83 02 00 80
+[1.271s] joint_2: writing 1 bytes to 0x1801/2: 01
+[1.271s] joint_2: writing 1 bytes to 0x1A01/0: 00
+[1.271s] joint_2: writing 4 bytes to 0x1A01/1: 20 00 64 60
+[1.271s] joint_2: writing 4 bytes to 0x1A01/2: 20 00 6C 60
+[1.271s] joint_2: writing 1 bytes to 0x1A01/0: 02
+[1.271s] joint_2: writing 4 bytes to 0x1801/1: 83 02 00 00
+[1.271s] joint_2: writing 1 bytes to 0x60C2/1: 32
+[1.271s] joint_2: writing 1 bytes to 0x60C2/2: FD
+[1.271s] joint_2: writing 4 bytes to 0x6081/0: E8 03 00 00
+[1.271s] joint_2: writing 4 bytes to 0x6083/0: D0 07 00 00
+[1.271s] joint_2: writing 1 bytes to 0x6060/0: 07
+[1.290s] cia402_device_1: writing 1 bytes to 0x1600/0: 00
+[1.291s] cia402_device_1: writing 4 bytes to 0x1600/1: 10 00 40 60
+[1.291s] cia402_device_1: writing 4 bytes to 0x1600/2: 08 00 60 60
+[1.291s] cia402_device_1: writing 1 bytes to 0x1600/0: 02
+[1.291s] cia402_device_1: writing 4 bytes to 0x1400/1: 02 02 00 00
+[1.291s] cia402_device_1: writing 1 bytes to 0x1601/0: 00
+[1.291s] cia402_device_1: writing 4 bytes to 0x1601/1: 20 00 7A 60
+[1.291s] cia402_device_1: writing 4 bytes to 0x1601/2: 20 00 FF 60
+[1.291s] cia402_device_1: writing 1 bytes to 0x1601/0: 02
+[1.291s] cia402_device_1: writing 4 bytes to 0x1401/1: 02 03 00 00
+[1.291s] cia402_device_1: writing 1 bytes to 0x1A00/0: 00
+[1.291s] cia402_device_1: writing 4 bytes to 0x1A00/1: 10 00 41 60
+[1.291s] cia402_device_1: writing 4 bytes to 0x1A00/2: 08 00 61 60
+[1.291s] cia402_device_1: writing 1 bytes to 0x1A00/0: 02
+[1.291s] cia402_device_1: writing 4 bytes to 0x1800/1: 82 01 00 00
+[1.291s] cia402_device_1: writing 1 bytes to 0x1A01/0: 00
+[1.291s] cia402_device_1: writing 4 bytes to 0x1A01/1: 20 00 64 60
+[1.291s] cia402_device_1: writing 4 bytes to 0x1A01/2: 20 00 6C 60
+[1.292s] cia402_device_1: writing 1 bytes to 0x1A01/0: 02
+[1.292s] cia402_device_1: writing 4 bytes to 0x1801/1: 82 02 00 00
+[1.292s] cia402_device_1: writing 1 bytes to 0x60C2/1: 32
+[1.292s] cia402_device_1: writing 1 bytes to 0x60C2/2: FD
+[1.292s] cia402_device_1: writing 4 bytes to 0x6081/0: E8 03 00 00
+[1.292s] cia402_device_1: writing 4 bytes to 0x6083/0: D0 07 00 00
+[1.292s] Built target simple_diagnostics
+[1.301s] cia402_device_1: writing 1 bytes to 0x1600/0: 00
+[1.302s] cia402_device_1: writing 4 bytes to 0x1600/1: 10 00 40 60
+[1.302s] cia402_device_1: writing 4 bytes to 0x1600/2: 08 00 60 60
+[1.302s] cia402_device_1: writing 1 bytes to 0x1600/0: 02
+[1.302s] cia402_device_1: writing 4 bytes to 0x1400/1: 02 02 00 00
+[1.302s] cia402_device_1: writing 1 bytes to 0x1601/0: 00
+[1.302s] cia402_device_1: writing 4 bytes to 0x1601/1: 20 00 7A 60
+[1.302s] cia402_device_1: writing 4 bytes to 0x1601/2: 20 00 FF 60
+[1.302s] cia402_device_1: writing 1 bytes to 0x1601/0: 02
+[1.302s] cia402_device_1: writing 4 bytes to 0x1401/1: 02 03 00 00
+[1.302s] cia402_device_1: writing 1 bytes to 0x1A00/0: 00
+[1.302s] cia402_device_1: writing 4 bytes to 0x1A00/1: 10 00 41 60
+[1.302s] cia402_device_1: writing 4 bytes to 0x1A00/2: 08 00 61 60
+[1.302s] cia402_device_1: writing 1 bytes to 0x1A00/0: 02
+[1.302s] cia402_device_1: writing 4 bytes to 0x1800/1: 82 01 00 00
+[1.302s] cia402_device_1: writing 1 bytes to 0x1A01/0: 00
+[1.302s] cia402_device_1: writing 4 bytes to 0x1A01/1: 20 00 64 60
+[1.302s] cia402_device_1: writing 4 bytes to 0x1A01/2: 20 00 6C 60
+[1.302s] cia402_device_1: writing 1 bytes to 0x1A01/0: 02
+[1.303s] cia402_device_1: writing 4 bytes to 0x1801/1: 82 02 00 00
+[1.303s] cia402_device_1: writing 1 bytes to 0x60C2/1: 32
+[1.303s] cia402_device_1: writing 1 bytes to 0x60C2/2: FD
+[1.303s] cia402_device_1: writing 4 bytes to 0x6081/0: E8 03 00 00
+[1.303s] cia402_device_1: writing 4 bytes to 0x6083/0: D0 07 00 00
+[1.303s] Built target robot_control
+[1.316s] Built target cia402_system
+[1.322s] cia402_device_1: writing 1 bytes to 0x1600/0: 00
+[1.322s] cia402_device_1: writing 4 bytes to 0x1600/1: 10 00 40 60
+[1.322s] cia402_device_1: writing 4 bytes to 0x1600/2: 08 00 60 60
+[1.322s] cia402_device_1: writing 1 bytes to 0x1600/0: 02
+[1.322s] cia402_device_1: writing 4 bytes to 0x1400/1: 02 02 00 00
+[1.322s] cia402_device_1: writing 1 bytes to 0x1601/0: 00
+[1.322s] cia402_device_1: writing 4 bytes to 0x1601/1: 20 00 7A 60
+[1.322s] cia402_device_1: writing 4 bytes to 0x1601/2: 20 00 FF 60
+[1.322s] cia402_device_1: writing 1 bytes to 0x1601/0: 02
+[1.322s] cia402_device_1: writing 4 bytes to 0x1401/1: 02 03 00 00
+[1.322s] cia402_device_1: writing 1 bytes to 0x1A00/0: 00
+[1.322s] cia402_device_1: writing 4 bytes to 0x1A00/1: 10 00 41 60
+[1.323s] cia402_device_1: writing 4 bytes to 0x1A00/2: 08 00 61 60
+[1.323s] cia402_device_1: writing 1 bytes to 0x1A00/0: 02
+[1.323s] cia402_device_1: writing 4 bytes to 0x1800/1: 82 01 00 00
+[1.323s] cia402_device_1: writing 1 bytes to 0x1A01/0: 00
+[1.323s] cia402_device_1: writing 4 bytes to 0x1A01/1: 20 00 64 60
+[1.323s] cia402_device_1: writing 4 bytes to 0x1A01/2: 20 00 6C 60
+[1.323s] cia402_device_1: writing 1 bytes to 0x1A01/0: 02
+[1.323s] cia402_device_1: writing 4 bytes to 0x1801/1: 82 02 00 00
+[1.323s] cia402_device_1: writing 1 bytes to 0x60C2/1: 32
+[1.323s] cia402_device_1: writing 1 bytes to 0x60C2/2: FD
+[1.323s] cia402_device_1: writing 4 bytes to 0x6081/0: E8 03 00 00
+[1.323s] cia402_device_1: writing 4 bytes to 0x6083/0: D0 07 00 00
+[1.325s] Built target cia402_namespaced_system
+[1.344s] Built target cia402
+[1.353s] cia402_device_1: writing 1 bytes to 0x1600/0: 00
+[1.353s] cia402_device_1: writing 4 bytes to 0x1600/1: 10 00 40 60
+[1.353s] cia402_device_1: writing 4 bytes to 0x1600/2: 08 00 60 60
+[1.353s] cia402_device_1: writing 1 bytes to 0x1600/0: 02
+[1.353s] cia402_device_1: writing 4 bytes to 0x1400/1: 02 02 00 00
+[1.353s] cia402_device_1: writing 1 bytes to 0x1601/0: 00
+[1.353s] cia402_device_1: writing 4 bytes to 0x1601/1: 20 00 7A 60
+[1.353s] cia402_device_1: writing 4 bytes to 0x1601/2: 20 00 FF 60
+[1.353s] cia402_device_1: writing 1 bytes to 0x1601/0: 02
+[1.353s] cia402_device_1: writing 4 bytes to 0x1401/1: 02 03 00 00
+[1.353s] cia402_device_1: writing 1 bytes to 0x1A00/0: 00
+[1.353s] cia402_device_1: writing 4 bytes to 0x1A00/1: 10 00 41 60
+[1.353s] cia402_device_1: writing 4 bytes to 0x1A00/2: 08 00 61 60
+[1.353s] cia402_device_1: writing 1 bytes to 0x1A00/0: 02
+[1.353s] cia402_device_1: writing 4 bytes to 0x1800/1: 82 01 00 00
+[1.353s] cia402_device_1: writing 1 bytes to 0x1A01/0: 00
+[1.353s] cia402_device_1: writing 4 bytes to 0x1A01/1: 20 00 64 60
+[1.353s] cia402_device_1: writing 4 bytes to 0x1A01/2: 20 00 6C 60
+[1.353s] cia402_device_1: writing 1 bytes to 0x1A01/0: 02
+[1.353s] cia402_device_1: writing 4 bytes to 0x1801/1: 82 02 00 00
+[1.353s] cia402_device_1: writing 1 bytes to 0x60C2/1: 32
+[1.353s] cia402_device_1: writing 1 bytes to 0x60C2/2: FD
+[1.353s] cia402_device_1: writing 4 bytes to 0x6081/0: E8 03 00 00
+[1.353s] cia402_device_1: writing 4 bytes to 0x6083/0: D0 07 00 00
+[1.353s] cia402_device_2: writing 1 bytes to 0x1600/0: 00
+[1.353s] cia402_device_2: writing 4 bytes to 0x1600/1: 10 00 40 60
+[1.353s] cia402_device_2: writing 4 bytes to 0x1600/2: 08 00 60 60
+[1.354s] cia402_device_2: writing 1 bytes to 0x1600/0: 02
+[1.354s] cia402_device_2: writing 4 bytes to 0x1400/1: 03 02 00 00
+[1.354s] cia402_device_2: writing 1 bytes to 0x1601/0: 00
+[1.354s] cia402_device_2: writing 4 bytes to 0x1601/1: 20 00 7A 60
+[1.354s] cia402_device_2: writing 4 bytes to 0x1601/2: 20 00 FF 60
+[1.354s] cia402_device_2: writing 1 bytes to 0x1601/0: 02
+[1.354s] cia402_device_2: writing 4 bytes to 0x1401/1: 03 03 00 00
+[1.354s] cia402_device_2: writing 1 bytes to 0x1A00/0: 00
+[1.354s] cia402_device_2: writing 4 bytes to 0x1A00/1: 10 00 41 60
+[1.354s] cia402_device_2: writing 4 bytes to 0x1A00/2: 08 00 61 60
+[1.354s] cia402_device_2: writing 1 bytes to 0x1A00/0: 02
+[1.354s] cia402_device_2: writing 4 bytes to 0x1800/1: 83 01 00 00
+[1.354s] cia402_device_2: writing 1 bytes to 0x1A01/0: 00
+[1.354s] cia402_device_2: writing 4 bytes to 0x1A01/1: 20 00 64 60
+[1.354s] cia402_device_2: writing 4 bytes to 0x1A01/2: 20 00 6C 60
+[1.354s] cia402_device_2: writing 1 bytes to 0x1A01/0: 02
+[1.354s] cia402_device_2: writing 4 bytes to 0x1801/1: 83 02 00 00
+[1.354s] cia402_device_2: writing 1 bytes to 0x60C2/1: 32
+[1.354s] cia402_device_2: writing 1 bytes to 0x60C2/2: FD
+[1.354s] cia402_device_2: writing 4 bytes to 0x6081/0: E8 03 00 00
+[1.354s] cia402_device_2: writing 4 bytes to 0x6083/0: D0 07 00 00
+[1.354s] cia402_device_3: writing 1 bytes to 0x1600/0: 00
+[1.354s] cia402_device_3: writing 4 bytes to 0x1600/1: 10 00 40 60
+[1.354s] cia402_device_3: writing 4 bytes to 0x1600/2: 08 00 60 60
+[1.354s] cia402_device_3: writing 1 bytes to 0x1600/0: 02
+[1.354s] cia402_device_3: writing 4 bytes to 0x1400/1: 04 02 00 00
+[1.354s] cia402_device_3: writing 1 bytes to 0x1601/0: 00
+[1.354s] cia402_device_3: writing 4 bytes to 0x1601/1: 20 00 7A 60
+[1.354s] cia402_device_3: writing 4 bytes to 0x1601/2: 20 00 FF 60
+[1.354s] cia402_device_3: writing 1 bytes to 0x1601/0: 02
+[1.354s] cia402_device_3: writing 4 bytes to 0x1401/1: 04 03 00 00
+[1.354s] cia402_device_3: writing 1 bytes to 0x1A00/0: 00
+[1.354s] cia402_device_3: writing 4 bytes to 0x1A00/1: 10 00 41 60
+[1.354s] cia402_device_3: writing 4 bytes to 0x1A00/2: 08 00 61 60
+[1.354s] cia402_device_3: writing 1 bytes to 0x1A00/0: 02
+[1.354s] cia402_device_3: writing 4 bytes to 0x1800/1: 84 01 00 00
+[1.354s] cia402_device_3: writing 1 bytes to 0x1A01/0: 00
+[1.354s] cia402_device_3: writing 4 bytes to 0x1A01/1: 20 00 64 60
+[1.355s] cia402_device_3: writing 4 bytes to 0x1A01/2: 20 00 6C 60
+[1.355s] cia402_device_3: writing 1 bytes to 0x1A01/0: 02
+[1.355s] cia402_device_3: writing 4 bytes to 0x1801/1: 84 02 00 00
+[1.355s] cia402_device_3: writing 1 bytes to 0x60C2/1: 32
+[1.355s] cia402_device_3: writing 1 bytes to 0x60C2/2: FD
+[1.355s] cia402_device_3: writing 4 bytes to 0x6081/0: E8 03 00 00
+[1.355s] cia402_device_3: writing 4 bytes to 0x6083/0: D0 07 00 00
+[1.389s] Built target cia402_diagnostics
+[1.402s] Invoked command in '/home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_tests' returned '0': AMENT_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_ros2_controllers:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_402_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_base_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_fake_slaves:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_ros2_controllers:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_402_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_base_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_fake_slaves:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_ros2_controllers/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_402_driver/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_base_driver/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/bin:${PATH} PYTHONPATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib/python3.12/site-packages:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_tests -- -j16 -l16
+[1.404s] Invoking command in '/home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_tests': AMENT_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_ros2_controllers:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_402_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_base_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_fake_slaves:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_ros2_controllers:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_402_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_base_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_fake_slaves:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_ros2_controllers/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_402_driver/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_base_driver/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/bin:${PATH} PYTHONPATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib/python3.12/site-packages:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_tests
+[1.412s] -- Install configuration: ""
+[1.412s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple/
+[1.412s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple//simple.eds
+[1.412s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple/
+[1.413s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple//bus.yml
+[1.413s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple//master.dcf
+[1.413s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/canopen_system/
+[1.413s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/canopen_system//simple.eds
+[1.413s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/canopen_system//ros2_controllers.yaml
+[1.413s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/canopen_system/
+[1.413s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/canopen_system//bus.yml
+[1.413s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/canopen_system//master.dcf
+[1.413s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_system/
+[1.413s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_system//cia402_slave.eds
+[1.413s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_system//ros2_controllers.yaml
+[1.414s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_system/
+[1.414s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_system//bus.yml
+[1.414s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_system//preprocessed_bus.yml
+[1.414s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_system//master.dcf
+[1.414s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_system//cia402_device_1.bin
+[1.414s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_namespaced_system/
+[1.414s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_namespaced_system//cia402_slave.eds
+[1.414s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_namespaced_system//ros2_controllers.yaml
+[1.414s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_namespaced_system/
+[1.414s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_namespaced_system//bus.yml
+[1.414s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_namespaced_system//preprocessed_bus.yml
+[1.414s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_namespaced_system//master.dcf
+[1.415s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_namespaced_system//cia402_device_1.bin
+[1.415s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402/
+[1.415s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402//cia402_slave.eds
+[1.415s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402/
+[1.415s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402//bus.yml
+[1.415s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402//preprocessed_bus.yml
+[1.415s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402//master.dcf
+[1.415s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402//cia402_device_1.bin
+[1.415s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_lifecycle/
+[1.416s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_lifecycle//cia402_slave.eds
+[1.416s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_lifecycle/
+[1.416s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_lifecycle//bus.yml
+[1.416s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_lifecycle//master.dcf
+[1.416s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_lifecycle//cia402_device_1.bin
+[1.416s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_diagnostics/
+[1.416s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_diagnostics//cia402_slave.eds
+[1.416s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_diagnostics/
+[1.416s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_diagnostics//cia402_device_3.bin
+[1.416s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_diagnostics//bus.yml
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_diagnostics//preprocessed_bus.yml
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_diagnostics//cia402_device_2.bin
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_diagnostics//master.dcf
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/cia402_diagnostics//cia402_device_1.bin
+[1.417s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple_lifecycle/
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple_lifecycle//simple.eds
+[1.417s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple_lifecycle/
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple_lifecycle//bus.yml
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple_lifecycle//master.dcf
+[1.417s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple_diagnostics/
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple_diagnostics//simple.eds
+[1.417s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple_diagnostics/
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple_diagnostics//bus.yml
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple_diagnostics//preprocessed_bus.yml
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/simple_diagnostics//master.dcf
+[1.417s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/robot_control/
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/robot_control//prbt_0_1.dcf
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/robot_control//cia402_slave.eds
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/robot_control//ros2_controllers.yaml
+[1.417s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/robot_control/
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/robot_control//bus.yml
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/robot_control//joint_1.bin
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/robot_control//joint_2.bin
+[1.417s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/config/robot_control//master.dcf
+[1.418s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch
+[1.418s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch/cia402_namespaced_system.launch.py
+[1.418s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch/cia402_diagnostics_setup.launch.py
+[1.418s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch/cia402_lifecycle_setup.launch.py
+[1.418s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch/cia402_system.launch.py
+[1.418s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch/cia402_setup.launch.py
+[1.418s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch/canopen_system.launch.py
+[1.418s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch/proxy_setup.launch.py
+[1.418s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch/proxy_lifecycle_setup.launch.py
+[1.418s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch/proxy_diagnostics_setup.launch.py
+[1.418s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch/view_urdf.launch.py
+[1.418s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch/robot_control_setup.launch.py
+[1.418s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch/analyzers
+[1.418s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch/analyzers/cia402_diagnostic_analyzer.yaml
+[1.419s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch/analyzers/proxy_diagnostic_analyzer.yaml
+[1.419s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch/proxy_setup_namespaced.launch.py
+[1.419s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/rviz
+[1.419s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/rviz/robot_controller.rviz
+[1.419s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/urdf
+[1.420s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/urdf/cia402_system
+[1.420s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/urdf/cia402_system/cia402_system.urdf.xacro
+[1.420s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/urdf/cia402_system/cia402_system.ros2_control.xacro
+[1.420s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/urdf/robot_controller
+[1.420s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/urdf/robot_controller/robot_controller.urdf.xacro
+[1.420s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/urdf/robot_controller/robot_controller.ros2_control.xacro
+[1.420s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/urdf/robot_controller/robot_controller.macro.xacro
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/urdf/canopen_system
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/urdf/canopen_system/canopen_system.urdf.xacro
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/urdf/canopen_system/canopen_system.ros2_control.xacro
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch_tests
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch_tests/test_proxy_lifecycle_driver.py
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch_tests/test_cia402_driver.py
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch_tests/test_robot_control.py
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch_tests/test_proxy_driver.py
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/launch_tests/test_proxy_driver_namespaced.py
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/ament_index/resource_index/package_run_dependencies/canopen_tests
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/ament_index/resource_index/parent_prefix_path/canopen_tests
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/environment/ament_prefix_path.sh
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/environment/ament_prefix_path.dsv
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/environment/path.sh
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/environment/path.dsv
+[1.421s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/local_setup.bash
+[1.422s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/local_setup.sh
+[1.422s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/local_setup.zsh
+[1.422s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/local_setup.dsv
+[1.422s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/package.dsv
+[1.423s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/ament_index/resource_index/packages/canopen_tests
+[1.423s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/cmake/canopen_testsConfig.cmake
+[1.423s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/cmake/canopen_testsConfig-version.cmake
+[1.423s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_tests/share/canopen_tests/package.xml
+[1.423s] Invoked command in '/home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_tests' returned '0': AMENT_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_ros2_controllers:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_402_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_base_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_fake_slaves:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_ros2_controllers:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_402_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_base_driver:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_fake_slaves:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_ros2_controllers/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_402_driver/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_base_driver/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/bin:${PATH} PYTHONPATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib/python3.12/site-packages:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_tests

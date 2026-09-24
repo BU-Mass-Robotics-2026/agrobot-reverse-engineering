@@ -1,0 +1,23 @@
+[0.844s] Invoking command in '/home/gsylvia/agrobot-reverse-engineering/Agrobot/src/ros2_canopen/canopen_utils': AMENT_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_utils/lib/python3.12/site-packages:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/canopen_utils build --build-base /home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_utils/build install --record /home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_utils/install.log --install-scripts $base/lib/canopen_utils --single-version-externally-managed install_data
+[0.988s] running egg_info
+[1.006s] writing ../../../build/canopen_utils/canopen_utils.egg-info/PKG-INFO
+[1.007s] writing dependency_links to ../../../build/canopen_utils/canopen_utils.egg-info/dependency_links.txt
+[1.007s] writing entry points to ../../../build/canopen_utils/canopen_utils.egg-info/entry_points.txt
+[1.007s] writing requirements to ../../../build/canopen_utils/canopen_utils.egg-info/requires.txt
+[1.007s] writing top-level names to ../../../build/canopen_utils/canopen_utils.egg-info/top_level.txt
+[1.028s] reading manifest file '../../../build/canopen_utils/canopen_utils.egg-info/SOURCES.txt'
+[1.029s] adding license file 'LICENSE'
+[1.029s] writing manifest file '../../../build/canopen_utils/canopen_utils.egg-info/SOURCES.txt'
+[1.029s] running build
+[1.029s] running build_py
+[1.030s] running install
+[1.033s] running install_lib
+[1.044s] running install_data
+[1.044s] running install_egg_info
+[1.055s] removing '/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_utils/lib/python3.12/site-packages/canopen_utils-0.3.1-py3.12.egg-info' (and everything under it)
+[1.055s] Copying ../../../build/canopen_utils/canopen_utils.egg-info to /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_utils/lib/python3.12/site-packages/canopen_utils-0.3.1-py3.12.egg-info
+[1.056s] running install_scripts
+[1.132s] Installing cyclic_tester script to /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_utils/lib/canopen_utils
+[1.132s] Installing simple_tester script to /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_utils/lib/canopen_utils
+[1.132s] writing list of installed files to '/home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_utils/install.log'
+[1.151s] Invoked command in '/home/gsylvia/agrobot-reverse-engineering/Agrobot/src/ros2_canopen/canopen_utils' returned '0': AMENT_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_utils/lib/python3.12/site-packages:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/canopen_utils build --build-base /home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_utils/build install --record /home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_utils/install.log --install-scripts $base/lib/canopen_utils --single-version-externally-managed install_data

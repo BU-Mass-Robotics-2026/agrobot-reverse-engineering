@@ -1,0 +1,90 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found geometry_msgs: 5.3.8 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+-- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+-- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found moveit_ros_planning_interface: 2.12.4 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+-- Found tcb_span: 1.3.2 (/opt/ros/jazzy/share/tcb_span/cmake)
+-- Found rclcpp_lifecycle: 28.1.22 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+-- Found parameter_traits: 0.7.6 (/opt/ros/jazzy/share/parameter_traits/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+-- Found example_interfaces: 0.12.1 (/opt/ros/jazzy/share/example_interfaces/cmake)
+-- Found robot_interfaces: 0.0.0 (/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake)
+-- Configuring done (5.9s)
+-- Generating done (0.5s)
+-- Build files have been written to: /tmp/agrobot-next-build-ybgPHn/build/robot_commander
+[ 20%] Building CXX object CMakeFiles/cartesian_path.dir/src/tests/cartesian_path.cpp.o
+[ 20%] Building CXX object CMakeFiles/position_goal.dir/src/tests/position_goal.cpp.o
+[ 30%] Building CXX object CMakeFiles/commander.dir/src/commander.cpp.o
+[ 50%] Building CXX object CMakeFiles/named_goal.dir/src/tests/named_goal.cpp.o
+[ 40%] Building CXX object CMakeFiles/joint_goal.dir/src/tests/joint_goal.cpp.o
+[ 60%] Linking CXX executable joint_goal
+[ 70%] Linking CXX executable position_goal
+[ 70%] Built target joint_goal
+[ 70%] Built target position_goal
+[ 80%] Linking CXX executable named_goal
+[ 90%] Linking CXX executable cartesian_path
+[ 90%] Built target named_goal
+[ 90%] Built target cartesian_path
+[100%] Linking CXX executable commander
+[100%] Built target commander
+-- Install configuration: ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/named_goal
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/named_goal" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/joint_goal
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/joint_goal" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/position_goal
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/position_goal" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/cartesian_path
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/cartesian_path" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/commander
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/commander" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/tomato_picker.py
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/sequencer.py
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/test_multi_tomato.py
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/test_button_server.py
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander//launch
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander//launch/commander.launch.py
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/ament_index/resource_index/package_run_dependencies/robot_commander
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/ament_index/resource_index/parent_prefix_path/robot_commander
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/environment/ament_prefix_path.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/environment/ament_prefix_path.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/environment/path.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/environment/path.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/local_setup.bash
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/local_setup.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/local_setup.zsh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/local_setup.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/package.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/ament_index/resource_index/packages/robot_commander
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig-version.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/package.xml

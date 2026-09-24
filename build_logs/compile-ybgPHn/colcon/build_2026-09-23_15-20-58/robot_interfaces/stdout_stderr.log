@@ -1,0 +1,411 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found geometry_msgs: 5.3.8 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+-- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+-- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+-- Found PythonExtra: /usr/bin/python3  
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Configuring done (8.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/agrobot-next-build-ybgPHn/build/robot_interfaces
+[  2%] Generating type hashes for ROS interfaces
+[  2%] Generating Rust code for ROS interfaces
+[  2%] Built target ament_cmake_python_copy_robot_interfaces
+running egg_info
+creating robot_interfaces.egg-info
+writing robot_interfaces.egg-info/PKG-INFO
+writing dependency_links to robot_interfaces.egg-info/dependency_links.txt
+writing top-level names to robot_interfaces.egg-info/top_level.txt
+writing manifest file 'robot_interfaces.egg-info/SOURCES.txt'
+[  2%] Built target robot_interfaces__rosidl_generator_type_description
+[  4%] Generating C code for ROS interfaces
+[  5%] Generating C++ code for ROS interfaces
+[  5%] Built target robot_interfaces__rs
+reading manifest file 'robot_interfaces.egg-info/SOURCES.txt'
+writing manifest file 'robot_interfaces.egg-info/SOURCES.txt'
+[  5%] Built target ament_cmake_python_build_robot_interfaces_egg
+[  5%] Built target robot_interfaces__cpp
+[  8%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/joint_command__description.c.o
+[  8%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/pose_command__description.c.o
+[  9%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/pose_command__functions.c.o
+[ 10%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/joint_command__type_support.c.o
+[ 12%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/position_command__description.c.o
+[ 14%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/action/detail/pick_sequence__functions.c.o
+[ 13%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/joint_command__functions.c.o
+[ 16%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/action/detail/pick_sequence__description.c.o
+[ 17%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/position_command__type_support.c.o
+[ 18%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/pose_command__type_support.c.o
+[ 20%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/srv/detail/set_indicator__functions.c.o
+[ 21%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/msg/detail/position_command__functions.c.o
+[ 22%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/srv/detail/set_indicator__description.c.o
+[ 24%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/srv/detail/set_indicator__type_support.c.o
+[ 25%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/robot_interfaces/action/detail/pick_sequence__type_support.c.o
+[ 26%] Linking C shared library librobot_interfaces__rosidl_generator_c.so
+[ 26%] Built target robot_interfaces__rosidl_generator_c
+[ 28%] Generating C introspection for ROS interfaces
+[ 29%] Generating C type support dispatch for ROS interfaces
+[ 30%] Generating C type support for eProsima Fast-RTPS
+[ 32%] Generating C++ introspection for ROS interfaces
+[ 33%] Generating C++ type support dispatch for ROS interfaces
+[ 34%] Generating C++ type support for eProsima Fast-RTPS
+[ 36%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/msg/pose_command__type_support.cpp.o
+[ 37%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/msg/joint_command__type_support.cpp.o
+[ 40%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_interfaces/msg/joint_command__type_support.cpp.o
+[ 38%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/msg/position_command__type_support.cpp.o
+[ 41%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/action/pick_sequence__type_support.cpp.o
+[ 44%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_interfaces/action/pick_sequence__type_support.cpp.o
+[ 45%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_interfaces/srv/set_indicator__type_support.cpp.o
+[ 42%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_interfaces/msg/pose_command__type_support.cpp.o
+[ 46%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_interfaces/msg/position_command__type_support.cpp.o
+[ 48%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/srv/set_indicator__type_support.cpp.o
+[ 49%] Linking CXX shared library librobot_interfaces__rosidl_typesupport_c.so
+[ 50%] Building C object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_interfaces/msg/detail/pose_command__type_support.c.o
+[ 52%] Building C object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_interfaces/msg/detail/position_command__type_support.c.o
+[ 54%] Building C object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_interfaces/srv/detail/set_indicator__type_support.c.o
+[ 53%] Building C object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_interfaces/action/detail/pick_sequence__type_support.c.o
+[ 56%] Building C object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_interfaces/msg/detail/joint_command__type_support.c.o
+[ 57%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_interfaces/msg/detail/pose_command__type_support.cpp.o
+[ 58%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_interfaces/msg/detail/position_command__type_support.cpp.o
+[ 60%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_interfaces/msg/detail/joint_command__type_support.cpp.o
+[ 61%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_interfaces/action/detail/pick_sequence__type_support.cpp.o
+[ 62%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_interfaces/srv/detail/set_indicator__type_support.cpp.o
+[ 64%] Linking C shared library librobot_interfaces__rosidl_typesupport_introspection_c.so
+[ 64%] Built target robot_interfaces__rosidl_typesupport_c
+[ 65%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/srv/detail/set_indicator__type_support_c.cpp.o
+[ 68%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/action/detail/pick_sequence__type_support_c.cpp.o
+[ 68%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/joint_command__type_support_c.cpp.o
+[ 69%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/position_command__type_support_c.cpp.o
+[ 70%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/pose_command__type_support_c.cpp.o
+[ 72%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_interfaces/msg/detail/dds_fastrtps/position_command__type_support.cpp.o
+[ 73%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_interfaces/msg/detail/dds_fastrtps/joint_command__type_support.cpp.o
+[ 74%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_interfaces/srv/detail/dds_fastrtps/set_indicator__type_support.cpp.o
+[ 76%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_interfaces/msg/detail/dds_fastrtps/pose_command__type_support.cpp.o
+[ 77%] Building CXX object CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_interfaces/action/detail/dds_fastrtps/pick_sequence__type_support.cpp.o
+[ 77%] Built target robot_interfaces__rosidl_typesupport_introspection_c
+[ 78%] Linking CXX shared library librobot_interfaces__rosidl_typesupport_cpp.so
+[ 80%] Linking CXX shared library librobot_interfaces__rosidl_typesupport_fastrtps_c.so
+[ 80%] Built target robot_interfaces__rosidl_typesupport_cpp
+[ 81%] Linking CXX shared library librobot_interfaces__rosidl_typesupport_introspection_cpp.so
+[ 81%] Built target robot_interfaces__rosidl_typesupport_fastrtps_c
+[ 81%] Built target robot_interfaces__rosidl_typesupport_introspection_cpp
+[ 82%] Linking CXX shared library librobot_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[ 82%] Built target robot_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 82%] Built target robot_interfaces
+[ 84%] Generating Python code for ROS interfaces
+[ 84%] Built target robot_interfaces__py
+[ 89%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/robot_interfaces/msg/_pose_command_s.c.o
+[ 89%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/robot_interfaces/msg/_position_command_s.c.o
+[ 90%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/robot_interfaces/srv/_set_indicator_s.c.o
+[ 89%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/robot_interfaces/action/_pick_sequence_s.c.o
+[ 89%] Building C object CMakeFiles/robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/robot_interfaces/msg/_joint_command_s.c.o
+[ 92%] Linking C shared library librobot_interfaces__rosidl_generator_py.so
+[ 92%] Built target robot_interfaces__rosidl_generator_py
+[ 96%] Building C object CMakeFiles/robot_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[ 96%] Building C object CMakeFiles/robot_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o
+[ 96%] Building C object CMakeFiles/robot_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_c.c.o
+[ 98%] Linking C shared module rosidl_generator_py/robot_interfaces/robot_interfaces_s__rosidl_typesupport_c.so
+[ 98%] Linking C shared module rosidl_generator_py/robot_interfaces/robot_interfaces_s__rosidl_typesupport_introspection_c.so
+[100%] Linking C shared module rosidl_generator_py/robot_interfaces/robot_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[100%] Built target robot_interfaces_s__rosidl_typesupport_c
+[100%] Built target robot_interfaces_s__rosidl_typesupport_introspection_c
+[100%] Built target robot_interfaces_s__rosidl_typesupport_fastrtps_c
+-- Install configuration: ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/ament_index/resource_index/rosidl_interfaces/robot_interfaces
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/msg/JointCommand.json
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/msg/PoseCommand.json
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/msg/PositionCommand.json
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/action/PickSequence.json
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/srv/SetIndicator.json
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__struct.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__type_support.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__description.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__functions.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__type_support.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__functions.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/set_indicator.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__functions.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__functions.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__struct.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__type_support.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__description.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__type_support.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/pick_sequence.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/joint_command.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__type_support.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__type_support.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__struct.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__functions.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__functions.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__type_support.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__type_support.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__functions.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__description.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__type_support.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__functions.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__description.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__struct.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__description.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__struct.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__functions.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__functions.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__type_support.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/pose_command.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/position_command.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/environment/library_path.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/environment/library_path.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_generator_c.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_generator_c.so" to ""
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__rosidl_typesupport_fastrtps_c.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__rosidl_typesupport_fastrtps_c.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__rosidl_typesupport_fastrtps_c.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_fastrtps_c.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/set_indicator.hpp
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__struct.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__traits.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__type_support.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__builder.hpp
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/pick_sequence.hpp
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__type_support.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__struct.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__traits.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__builder.hpp
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__type_support.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__builder.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__traits.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__builder.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__traits.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__struct.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__builder.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__type_support.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__type_support.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__traits.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__struct.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__struct.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/position_command.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/joint_command.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/pose_command.hpp
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/dds_fastrtps
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/dds_fastrtps
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/dds_fastrtps
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_fastrtps_cpp.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__rosidl_typesupport_introspection_c.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__type_support.c
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__rosidl_typesupport_introspection_c.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__type_support.c
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__type_support.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__type_support.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__rosidl_typesupport_introspection_c.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__rosidl_typesupport_introspection_c.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__rosidl_typesupport_introspection_c.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__type_support.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_introspection_c.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_c.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_c.so" to ""
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/set_indicator__type_support.cpp
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__type_support.cpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/pick_sequence__rosidl_typesupport_introspection_cpp.hpp
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg
+-- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__type_support.cpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/position_command__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/joint_command__type_support.cpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/pose_command__type_support.cpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_introspection_cpp.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_cpp.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_cpp.so" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/environment/pythonpath.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/environment/pythonpath.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces-0.0.0-py3.12.egg-info
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_c.so
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_fastrtps_c.so
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_c.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/srv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/srv/_set_indicator_s.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/srv/__init__.py
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/srv/_set_indicator.py
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/action
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/action/__init__.py
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/action/_pick_sequence_s.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/action/_pick_sequence.py
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/__init__.py
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_introspection_c.so
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/msg
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/msg/_position_command.py
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/msg/_joint_command_s.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/msg/__init__.py
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/msg/_pose_command.py
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/msg/_position_command_s.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/msg/_pose_command_s.c
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/msg/_joint_command.py
+Listing '/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces'...
+Compiling '/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/__init__.py'...
+Listing '/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/action'...
+Compiling '/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/action/__init__.py'...
+Compiling '/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/action/_pick_sequence.py'...
+Listing '/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/msg'...
+Compiling '/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/msg/__init__.py'...
+Compiling '/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/msg/_joint_command.py'...
+Compiling '/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/msg/_pose_command.py'...
+Compiling '/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/msg/_position_command.py'...
+Listing '/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/srv'...
+Compiling '/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/srv/__init__.py'...
+Compiling '/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/srv/_set_indicator.py'...
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_fastrtps_c.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_introspection_c.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_c.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_c.so" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_generator_py.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/librobot_interfaces__rosidl_generator_py.so" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/rust
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/rust/build.rs
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/rust/Cargo.toml
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/rust/src
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/rust/src/msg.rs
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/rust/src/srv.rs
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/rust/src/srv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/rust/src/srv/rmw.rs
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/rust/src/action
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/rust/src/action/rmw.rs
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/rust/src/action.rs
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/rust/src/msg
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/rust/src/msg/rmw.rs
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/rust/src/lib.rs
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/msg/JointCommand.idl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/msg/PoseCommand.idl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/msg/PositionCommand.idl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/action/PickSequence.idl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/srv/SetIndicator.idl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/msg/JointCommand.msg
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/msg/PoseCommand.msg
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/msg/PositionCommand.msg
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/action/PickSequence.action
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/srv/SetIndicator.srv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/ament_index/resource_index/package_run_dependencies/robot_interfaces
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/ament_index/resource_index/parent_prefix_path/robot_interfaces
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/environment/ament_prefix_path.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/environment/ament_prefix_path.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/environment/path.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/environment/path.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/local_setup.bash
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/local_setup.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/local_setup.zsh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/local_setup.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/package.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/ament_index/resource_index/packages/robot_interfaces
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_cExport.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_cppExport.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cExport.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cppExport.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_pyExport.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_pyExport-noconfig.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/rosidl_cmake-extras.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfacesConfig.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfacesConfig-version.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/package.xml

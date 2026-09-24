@@ -1,0 +1,101 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+-- Found canopen_core: 0.3.1 (/tmp/agrobot-next-build-ybgPHn/install/canopen_core/share/canopen_core/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system thread 
+-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
+-- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Found Threads: TRUE  
+-- Configuring done (2.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/agrobot-next-build-ybgPHn/build/canopen_master_driver
+[  5%] Building CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[ 11%] Building CXX object CMakeFiles/lely_master_bridge.dir/src/lely_master_bridge.cpp.o
+[ 16%] Building CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 22%] Linking CXX static library libgtest_main.a
+[ 22%] Built target gtest_main
+[ 27%] Linking CXX shared library liblely_master_bridge.so
+[ 27%] Built target lely_master_bridge
+[ 33%] Building CXX object CMakeFiles/node_canopen_basic_master.dir/src/node_interfaces/node_canopen_basic_master.cpp.o
+[ 38%] Linking CXX static library libgtest.a
+[ 38%] Built target gtest
+[ 44%] Linking CXX shared library libnode_canopen_basic_master.so
+[ 44%] Built target node_canopen_basic_master
+[ 55%] Building CXX object CMakeFiles/lifecycle_master_driver.dir/src/lifecycle_master_driver.cpp.o
+[ 55%] Building CXX object CMakeFiles/master_driver.dir/src/master_driver.cpp.o
+[ 61%] Linking CXX shared library liblifecycle_master_driver.so
+[ 66%] Linking CXX shared library libmaster_driver.so
+[ 66%] Built target lifecycle_master_driver
+[ 66%] Built target master_driver
+[ 77%] Building CXX object test/CMakeFiles/test_node_canopen_basic_driver.dir/test_node_canopen_basic_master.cpp.o
+[ 77%] Building CXX object test/CMakeFiles/test_node_canopen_basic_driver_ros.dir/test_node_canopen_basic_master_ros.cpp.o
+[ 83%] Building CXX object test/CMakeFiles/test_master_driver_component.dir/test_master_driver_component.cpp.o
+[ 88%] Linking CXX executable test_master_driver_component
+[ 94%] Linking CXX executable test_node_canopen_basic_driver
+[ 94%] Built target test_master_driver_component
+[100%] Linking CXX executable test_node_canopen_basic_driver_ros
+[100%] Built target test_node_canopen_basic_driver
+[100%] Built target test_node_canopen_basic_driver_ros
+-- Install configuration: ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver/node_interfaces
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver/node_interfaces/node_canopen_basic_master.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver/node_interfaces/node_canopen_basic_master_impl.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver/lifecycle_master_driver.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver/visibility_control.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver/master_driver.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver/lely_master_bridge.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/liblifecycle_master_driver.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/liblifecycle_master_driver.so" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/libmaster_driver.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/libmaster_driver.so" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/libnode_canopen_basic_master.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/libnode_canopen_basic_master.so" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/liblely_master_bridge.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/liblely_master_bridge.so" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/environment/library_path.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/environment/library_path.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/ament_index/resource_index/package_run_dependencies/canopen_master_driver
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/ament_index/resource_index/parent_prefix_path/canopen_master_driver
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/environment/ament_prefix_path.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/environment/ament_prefix_path.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/environment/path.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/environment/path.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/local_setup.bash
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/local_setup.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/local_setup.zsh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/local_setup.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/package.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/ament_index/resource_index/packages/canopen_master_driver
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/ament_index/resource_index/rclcpp_components/canopen_master_driver
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/export_canopen_master_driverExport.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/export_canopen_master_driverExport-noconfig.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/canopen_master_driverConfig.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/canopen_master_driverConfig-version.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/package.xml

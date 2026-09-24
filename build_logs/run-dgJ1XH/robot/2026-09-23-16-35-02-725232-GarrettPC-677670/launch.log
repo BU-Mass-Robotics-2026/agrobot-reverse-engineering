@@ -1,0 +1,86 @@
+1790195702.7263050 [INFO] [launch]: All log files can be found below /home/gsylvia/agrobot-reverse-engineering/build_logs/run-dgJ1XH/robot/2026-09-23-16-35-02-725232-GarrettPC-677670
+1790195702.7264433 [INFO] [launch]: Default logging verbosity is set to INFO
+1790195703.1069951 [INFO] [static_transform_publisher-1]: process started with pid [677695]
+1790195703.1078844 [INFO] [robot_state_publisher-2]: process started with pid [677696]
+1790195703.1084006 [INFO] [move_group-3]: process started with pid [677697]
+1790195703.1087472 [INFO] [rviz2-4]: process started with pid [677698]
+1790195703.1089895 [INFO] [ros2_control_node-5]: process started with pid [677699]
+1790195703.1091828 [INFO] [spawner-6]: process started with pid [677700]
+1790195703.1092680 [INFO] [spawner-7]: process started with pid [677701]
+1790195703.1745887 [static_transform_publisher-1] [INFO] [1790195703.174145924] [static_transform_publisher0]: Spinning until stopped - publishing transform
+1790195703.1747792 [static_transform_publisher-1] translation: ('0.000000', '0.000000', '0.000000')
+1790195703.1748259 [static_transform_publisher-1] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+1790195703.1749597 [static_transform_publisher-1] from 'world' to 'world_frame'
+1790195703.1793933 [ros2_control_node-5] [INFO] [1790195703.179008552] [controller_manager]: Using Steady (Monotonic) clock for triggering controller manager cycles.
+1790195703.1927304 [ros2_control_node-5] [INFO] [1790195703.192428027] [controller_manager]: Subscribing to '/robot_description' topic for robot description.
+1790195703.1932664 [ros2_control_node-5] [INFO] [1790195703.192711476] [controller_manager]: update rate is 100 Hz
+1790195703.1933920 [ros2_control_node-5] [INFO] [1790195703.192737474] [controller_manager]: Overruns handling is : enabled
+1790195703.1934469 [ros2_control_node-5] [INFO] [1790195703.192743314] [controller_manager]: Spawning controller_manager RT thread with scheduler priority: 50
+1790195703.1934748 [ros2_control_node-5] [WARN] [1790195703.192942687] [controller_manager]: Could not enable FIFO RT scheduling policy: with error number <1>(Operation not permitted). See [https://control.ros.org/master/doc/ros2_control/controller_manager/doc/userdoc.html] for details on how to enable realtime scheduling.
+1790195703.2035429 [ros2_control_node-5] [INFO] [1790195703.203084754] [controller_manager]: Received robot description from topic.
+1790195703.2037463 [ros2_control_node-5] [INFO] [1790195703.203188218] [controller_manager]: Enforcing command limits is disabled. Command limits from URDF will be ignored.
+1790195703.2062545 [ros2_control_node-5] [INFO] [1790195703.205865007] [controller_manager]: Loading hardware 'arm' 
+1790195703.2072067 [ros2_control_node-5] [INFO] [1790195703.206939152] [controller_manager]: Loaded hardware 'arm' from plugin 'mock_components/GenericSystem'
+1790195703.2074406 [ros2_control_node-5] [INFO] [1790195703.207135344] [controller_manager]: Initialize hardware 'arm' 
+1790195703.2147524 [ros2_control_node-5] [INFO] [1790195703.214300413] [controller_manager]: Successful initialization of hardware 'arm'
+1790195703.2153046 [ros2_control_node-5] [INFO] [1790195703.215157128] [controller_manager]: Activating component 'arm'.
+1790195703.2154582 [ros2_control_node-5] [INFO] [1790195703.215331825] [resource_manager]: 'configure' hardware 'arm' 
+1790195703.2155015 [ros2_control_node-5] [INFO] [1790195703.215353568] [resource_manager]: Successful 'configure' of hardware 'arm'
+1790195703.2155252 [ros2_control_node-5] [INFO] [1790195703.215359139] [resource_manager]: 'activate' hardware 'arm' 
+1790195703.2155449 [ros2_control_node-5] [INFO] [1790195703.215386806] [resource_manager]: Successful 'activate' of hardware 'arm'
+1790195703.2156525 [ros2_control_node-5] [INFO] [1790195703.215592656] [controller_manager]: Registering statistics for : arm
+1790195703.2157683 [ros2_control_node-5] [INFO] [1790195703.215706640] [controller_manager]: Resource Manager has been successfully initialized. Starting Controller Manager services...
+1790195703.7722039 [ros2_control_node-5] [INFO] [1790195703.771856829] [controller_manager]: Loading controller : 'joint_state_broadcaster' of type 'joint_state_broadcaster/JointStateBroadcaster'
+1790195703.7723827 [ros2_control_node-5] [INFO] [1790195703.772004490] [controller_manager]: Loading controller 'joint_state_broadcaster'
+1790195703.7790661 [ros2_control_node-5] [INFO] [1790195703.778782123] [controller_manager]: Controller 'joint_state_broadcaster' node arguments: --ros-args --params-file /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/ros2_controllers.yaml 
+1790195703.7962244 [ros2_control_node-5] [INFO] [1790195703.796049002] [controller_manager]: Configuring controller: 'joint_state_broadcaster'
+1790195703.7964122 [ros2_control_node-5] [INFO] [1790195703.796314531] [joint_state_broadcaster]: 'joints' or 'interfaces' parameter is empty. All available state interfaces will be published
+1790195703.8157547 [ros2_control_node-5] [INFO] [1790195703.815480120] [controller_manager]: Activating controllers: [ joint_state_broadcaster ]
+1790195703.8240731 [ros2_control_node-5] [INFO] [1790195703.823770969] [controller_manager]: Successfully switched controllers!
+1790195703.9747922 [INFO] [spawner-7]: process has finished cleanly [pid 677701]
+1790195704.1860094 [ros2_control_node-5] [INFO] [1790195704.185777807] [controller_manager]: Loading controller : 'arm_controller' of type 'joint_trajectory_controller/JointTrajectoryController'
+1790195704.1861382 [ros2_control_node-5] [INFO] [1790195704.185823624] [controller_manager]: Loading controller 'arm_controller'
+1790195704.1898365 [ros2_control_node-5] [INFO] [1790195704.189606600] [controller_manager]: Controller 'arm_controller' node arguments: --ros-args --params-file /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/ros2_controllers.yaml 
+1790195704.2163303 [ros2_control_node-5] [INFO] [1790195704.216204519] [controller_manager]: Configuring controller: 'arm_controller'
+1790195704.2165704 [ros2_control_node-5] [INFO] [1790195704.216498424] [arm_controller]: No specific joint names are used for command interfaces. Using 'joints' parameter.
+1790195704.2166891 [ros2_control_node-5] [INFO] [1790195704.216570754] [arm_controller]: Command interfaces are [position] and state interfaces are [position velocity].
+1790195704.2167230 [ros2_control_node-5] [INFO] [1790195704.216615742] [arm_controller]: Using 'splines' interpolation method.
+1790195704.2189794 [ros2_control_node-5] [INFO] [1790195704.218830977] [arm_controller]: Action status changes will be monitored at 20.00 Hz.
+1790195704.2243803 [ros2_control_node-5] [INFO] [1790195704.224120531] [arm_controller]: Setting initial scaling factor to 1.000000
+1790195704.2245166 [ros2_control_node-5] [INFO] [1790195704.224158833] [arm_controller]: No scaling interface set. This controller will not read speed scaling from the hardware.
+1790195704.2357583 [ros2_control_node-5] [INFO] [1790195704.235451787] [controller_manager]: Activating controllers: [ arm_controller ]
+1790195704.2448642 [ros2_control_node-5] [INFO] [1790195704.244028645] [controller_manager]: Successfully switched controllers!
+1790195704.4152269 [INFO] [spawner-6]: process has finished cleanly [pid 677700]
+1790195704.4395447 [rviz2-4] [INFO] [1790195704.439143447] [rviz2]: Stereo is NOT SUPPORTED
+1790195704.4397650 [rviz2-4] [INFO] [1790195704.439259415] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)
+1790195704.4891245 [rviz2-4] [INFO] [1790195704.488809399] [rviz2]: Stereo is NOT SUPPORTED
+1790195704.5926573 [rviz2-4] Warning: class_loader.impl: SEVERE WARNING!!! A namespace collision has occurred with plugin factory for class rviz_default_plugins::displays::InteractiveMarkerDisplay. New factory will OVERWRITE existing one. This situation occurs when libraries containing plugins are directly linked against an executable (the one running right now generating this message). Please separate plugins out into their own library or just don't link against the library and use either class_loader::ClassLoader/MultiLibraryClassLoader to open.
+1790195704.5928545 [rviz2-4]          at line 321 in /opt/ros/jazzy/include/class_loader/class_loader/class_loader_core.hpp
+1790195707.6302226 [rviz2-4] [ERROR] [1790195707.629903167] [moveit_1554771720.moveit.ros.motion_planning_frame]: Action server: /recognize_objects not available
+1790195707.6437991 [rviz2-4] [INFO] [1790195707.643426983] [moveit_1554771720.moveit.ros.motion_planning_frame]: MoveGroup namespace changed: / -> . Reloading params.
+1790195707.7496648 [rviz2-4] [INFO] [1790195707.749246514] [moveit_1554771720.moveit.ros.rdf_loader]: Loaded robot model in 0.0464268 seconds
+1790195707.7511308 [rviz2-4] [INFO] [1790195707.749526435] [moveit_1554771720.moveit.core.robot_model]: Loading robot model 'robot'...
+1790195707.9362228 [rviz2-4] [INFO] [1790195707.935963388] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: IK Using joint base_link 0 1.565
+1790195707.9363475 [rviz2-4] [INFO] [1790195707.935991289] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: IK Using joint link1 -3.14159 3.14159
+1790195707.9363785 [rviz2-4] [INFO] [1790195707.935993405] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: IK Using joint link2 -1.57079 1.57079
+1790195707.9363995 [rviz2-4] [INFO] [1790195707.935995174] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: IK Using joint link3 -4.5 1.5
+1790195707.9364603 [rviz2-4] [INFO] [1790195707.935997063] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: IK Using joint link4 -3.14159 3.14159
+1790195707.9364836 [rviz2-4] [INFO] [1790195707.935998545] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: IK Using joint link5 -5 5
+1790195707.9365034 [rviz2-4] [INFO] [1790195707.936000233] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: IK Using joint link6 0 2.0944
+1790195707.9365203 [rviz2-4] [INFO] [1790195707.936001159] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: Using solve type Distance
+1790195708.4174497 [rviz2-4] [INFO] [1790195708.417160019] [moveit_1554771720.moveit.ros.planning_scene_monitor]: Starting planning scene monitor
+1790195708.4180391 [rviz2-4] [INFO] [1790195708.417795564] [moveit_1554771720.moveit.ros.planning_scene_monitor]: Listening to '/monitored_planning_scene'
+1790195708.9467118 [rviz2-4] [INFO] [1790195708.946336091] [interactive_marker_display_105998112633136]: Connected on namespace: /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic
+1790195708.9562721 [rviz2-4] [INFO] [1790195708.955957268] [moveit_1554771720.moveit.ros.motion_planning_frame]: group arm
+1790195708.9564145 [rviz2-4] [INFO] [1790195708.956015879] [moveit_1554771720.moveit.ros.motion_planning_frame]: Constructing new MoveGroup connection for group 'arm' in namespace ''
+1790195708.9703889 [rviz2-4] [INFO] [1790195708.970076035] [moveit_1554771720.moveit.ros.move_group_interface]: Ready to take commands for planning group arm.
+1790195708.9729400 [rviz2-4] [INFO] [1790195708.972560446] [moveit_1554771720.moveit.ros.motion_planning_frame]: group arm
+1790195708.9826601 [rviz2-4] [INFO] [1790195708.982313118] [interactive_marker_display_105998112633136]: Sending request for interactive markers
+1790195709.0152156 [rviz2-4] [INFO] [1790195709.014908490] [interactive_marker_display_105998112633136]: Service response received for initialization
+1790195732.3271353 [ros2_control_node-5] [WARN] [1790195732.303230678] [controller_manager]: Overrun detected! The controller manager missed its desired rate of 100 Hz. The loop took 12.037793 ms (missed cycles : 2).
+1790195732.3524814 [ros2_control_node-5] [WARN] [1790195732.337988772] [controller_manager]: Overrun might occur, Total time : 12800.558 us (Expected < 10000.000 us) --> Read time : 403.770 us, Update time : 12369.718 us, Write time : 27.070 us
+1790196128.3212860 [ros2_control_node-5] [WARN] [1790196128.316269430] [controller_manager]: Overrun might occur, Total time : 10622.153 us (Expected < 10000.000 us) --> Read time : 10364.999 us, Update time : 250.708 us, Write time : 6.446 us
+1790196128.3217945 [ros2_control_node-5] [WARN] [1790196128.317365628] [controller_manager]: Overrun detected! The controller manager missed its desired rate of 100 Hz. The loop took 12.249311 ms (missed cycles : 2).
+1790196409.5033510 [ros2_control_node-5] [WARN] [1790196409.502657260] [controller_manager]: Overrun detected! The controller manager missed its desired rate of 100 Hz. The loop took 10.977489 ms (missed cycles : 2).
+1790196519.6583097 [rviz2-4] [INFO] [1790196519.657865119] [moveit_1554771720.moveit.ros.planning_scene_monitor]: Stopping planning scene monitor
+1790196519.8271391 [INFO] [rviz2-4]: process has finished cleanly [pid 677698]

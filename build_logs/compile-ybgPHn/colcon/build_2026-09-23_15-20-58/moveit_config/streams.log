@@ -1,0 +1,62 @@
+[0.063s] Invoking command in '/tmp/agrobot-next-build-ybgPHn/build/moveit_config': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake /home/gsylvia/agrobot-reverse-engineering/Agrobot/src/moveit_config -DCMAKE_INSTALL_PREFIX=/tmp/agrobot-next-build-ybgPHn/install/moveit_config
+[0.186s] -- The C compiler identification is GNU 13.3.0
+[0.693s] -- The CXX compiler identification is GNU 13.3.0
+[1.182s] -- Detecting C compiler ABI info
+[1.501s] -- Detecting C compiler ABI info - done
+[1.505s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.506s] -- Detecting C compile features
+[1.506s] -- Detecting C compile features - done
+[1.623s] -- Detecting CXX compiler ABI info
+[2.305s] -- Detecting CXX compiler ABI info - done
+[2.305s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.305s] -- Detecting CXX compile features
+[2.309s] -- Detecting CXX compile features - done
+[2.447s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.540s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.787s] -- Configuring done (3.7s)
+[3.790s] -- Generating done (0.0s)
+[3.925s] -- Build files have been written to: /tmp/agrobot-next-build-ybgPHn/build/moveit_config
+[3.926s] Invoked command in '/tmp/agrobot-next-build-ybgPHn/build/moveit_config' returned '0': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake /home/gsylvia/agrobot-reverse-engineering/Agrobot/src/moveit_config -DCMAKE_INSTALL_PREFIX=/tmp/agrobot-next-build-ybgPHn/install/moveit_config
+[3.926s] Invoking command in '/tmp/agrobot-next-build-ybgPHn/build/moveit_config': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /tmp/agrobot-next-build-ybgPHn/build/moveit_config -- -j16 -l16
+[3.955s] Invoked command in '/tmp/agrobot-next-build-ybgPHn/build/moveit_config' returned '0': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /tmp/agrobot-next-build-ybgPHn/build/moveit_config -- -j16 -l16
+[3.956s] Invoking command in '/tmp/agrobot-next-build-ybgPHn/build/moveit_config': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --install /tmp/agrobot-next-build-ybgPHn/build/moveit_config
+[3.962s] -- Install configuration: ""
+[3.963s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/ament_index/resource_index/package_run_dependencies/moveit_config
+[3.963s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/ament_index/resource_index/parent_prefix_path/moveit_config
+[3.964s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/environment/ament_prefix_path.sh
+[3.964s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/environment/ament_prefix_path.dsv
+[3.965s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/environment/path.sh
+[3.965s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/environment/path.dsv
+[3.965s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/local_setup.bash
+[3.965s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/local_setup.sh
+[3.965s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/local_setup.zsh
+[3.965s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/local_setup.dsv
+[3.965s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/package.dsv
+[3.966s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/ament_index/resource_index/packages/moveit_config
+[3.966s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/cmake/moveit_configConfig.cmake
+[3.966s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/cmake/moveit_configConfig-version.cmake
+[3.966s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/package.xml
+[3.966s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/launch
+[3.966s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/launch/spawn_controllers.launch.py
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/launch/moveit_rviz.launch.py
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/launch/rsp.launch.py
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/launch/warehouse_db.launch.py
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/launch/static_virtual_joint_tfs.launch.py
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/launch/demo.launch.py
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/launch/move_group.launch.py
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/launch/setup_assistant.launch.py
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/robot.urdf.xacro
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/joint_limits.yaml.bak_joint0_limits_20260509_221213
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/robot.srdf
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/moveit_controllers.yaml.bak.1778687197
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/moveit.rviz
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/initial_positions.yaml
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/moveit_controllers.yaml
+[3.967s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/ros2_controllers.yaml
+[3.968s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/robot.ros2_control.xacro
+[3.968s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/kinematics.yaml
+[3.968s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/pilz_cartesian_limits.yaml
+[3.968s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/joint_limits.yaml
+[3.968s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/.setup_assistant
+[3.969s] Invoked command in '/tmp/agrobot-next-build-ybgPHn/build/moveit_config' returned '0': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --install /tmp/agrobot-next-build-ybgPHn/build/moveit_config

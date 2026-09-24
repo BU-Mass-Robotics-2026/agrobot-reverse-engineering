@@ -1,0 +1,4 @@
+[INFO] [1790195733.278749215] [static_transform_publisher_trTNJRSipsDYcBlV]: Spinning until stopped - publishing transform
+translation: ('0.000000', '0.200000', '0.000000')
+rotation: ('-0.707108', '0.000000', '0.000000', '0.707105')
+from 'linear_rail_link' to 'camera_color_optical_frame'

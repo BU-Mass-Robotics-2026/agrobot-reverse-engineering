@@ -1,0 +1,8 @@
+In file included from /home/gsylvia/agrobot-reverse-engineering/Agrobot/src/ros2_canopen/canopen_fake_slaves/src/basic_slave.cpp:15:
+/home/gsylvia/agrobot-reverse-engineering/Agrobot/src/ros2_canopen/canopen_fake_slaves/include/canopen_fake_slaves/basic_slave.hpp: In member function ‘uint32_t ros2_canopen::SimpleSlave::GetValue(uint16_t, uint8_t) const’:
+/home/gsylvia/agrobot-reverse-engineering/Agrobot/src/ros2_canopen/canopen_fake_slaves/include/canopen_fake_slaves/basic_slave.hpp:123:12: warning: possibly dangling reference to a temporary [-Wdangling-reference]
+  123 |     auto & type = (*this)[idx][subidx].Type();
+      |            ^~~~
+/home/gsylvia/agrobot-reverse-engineering/Agrobot/src/ros2_canopen/canopen_fake_slaves/include/canopen_fake_slaves/basic_slave.hpp:123:44: note: the temporary was destroyed at the end of the full expression ‘((const ros2_canopen::SimpleSlave*)this)->ros2_canopen::SimpleSlave::<anonymous>.lely::canopen::BasicSlave::operator[](((std::ptrdiff_t)((uint16_t)idx))).lely::canopen::BasicSlave::ConstObject::operator[](((int)((uint8_t)subidx))).lely::canopen::BasicSlave::ConstSubObject::Type()’
+  123 |     auto & type = (*this)[idx][subidx].Type();
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~~^~

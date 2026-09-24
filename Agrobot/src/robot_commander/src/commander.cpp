@@ -344,8 +344,8 @@ int main(int argc, char** argv)
 
     rclcpp::init(argc, argv); // Initialize ROS 2
 
-    auto node = std::make_shared<rclcpp::Node>("commander"); // Create a commander node
-    auto commander = std::make_shared<Commander>(node);      // Create an instance of the Commander class, passing the node as an argument
+    auto node = std::make_shared<rclcpp::Node>("commander"); // Create a commander node, and passes in a shared pointer to the actual ROS node
+    auto commander = std::make_shared<Commander>(node);      // Create an instance of the Commander class, passing the node shared pointer as an argument
 
     rclcpp::spin(node); // Spin the node to keep it alive and responsive to callbacks
 

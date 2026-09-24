@@ -1,0 +1,107 @@
+[0.349s] Invoking command in '/tmp/agrobot-next-build-ybgPHn/build/canopen_master_driver': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core/lib:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PATH=/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/bin:${PATH} PYTHONPATH=/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/gsylvia/agrobot-reverse-engineering/Agrobot/src/ros2_canopen/canopen_master_driver -DCMAKE_INSTALL_PREFIX=/tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver
+[0.450s] -- The C compiler identification is GNU 13.3.0
+[1.004s] -- The CXX compiler identification is GNU 13.3.0
+[1.500s] -- Detecting C compiler ABI info
+[1.736s] -- Detecting C compiler ABI info - done
+[1.741s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.741s] -- Detecting C compile features
+[1.742s] -- Detecting C compile features - done
+[1.828s] -- Detecting CXX compiler ABI info
+[2.039s] -- Detecting CXX compiler ABI info - done
+[2.044s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.045s] -- Detecting CXX compile features
+[2.045s] -- Detecting CXX compile features - done
+[2.047s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.150s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.236s] -- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[2.244s] -- Found canopen_core: 0.3.1 (/tmp/agrobot-next-build-ybgPHn/install/canopen_core/share/canopen_core/cmake)
+[2.397s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system thread 
+[2.520s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[2.529s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.541s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.555s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.647s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.649s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.702s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.842s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.947s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.131s] -- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
+[3.140s] -- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[3.142s] -- Found Threads: TRUE  
+[3.208s] -- Configuring done (2.9s)
+[3.249s] -- Generating done (0.0s)
+[3.258s] -- Build files have been written to: /tmp/agrobot-next-build-ybgPHn/build/canopen_master_driver
+[3.271s] Invoked command in '/tmp/agrobot-next-build-ybgPHn/build/canopen_master_driver' returned '0': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core/lib:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PATH=/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/bin:${PATH} PYTHONPATH=/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/gsylvia/agrobot-reverse-engineering/Agrobot/src/ros2_canopen/canopen_master_driver -DCMAKE_INSTALL_PREFIX=/tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver
+[3.272s] Invoking command in '/tmp/agrobot-next-build-ybgPHn/build/canopen_master_driver': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core/lib:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PATH=/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/bin:${PATH} PYTHONPATH=/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /tmp/agrobot-next-build-ybgPHn/build/canopen_master_driver -- -j16 -l16
+[3.312s] [  5%] Building CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[3.312s] [ 11%] Building CXX object CMakeFiles/lely_master_bridge.dir/src/lely_master_bridge.cpp.o
+[3.312s] [ 16%] Building CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[3.919s] [ 22%] Linking CXX static library libgtest_main.a
+[3.953s] [ 22%] Built target gtest_main
+[5.419s] [ 27%] Linking CXX shared library liblely_master_bridge.so
+[5.601s] [ 27%] Built target lely_master_bridge
+[5.620s] [ 33%] Building CXX object CMakeFiles/node_canopen_basic_master.dir/src/node_interfaces/node_canopen_basic_master.cpp.o
+[5.879s] [ 38%] Linking CXX static library libgtest.a
+[5.925s] [ 38%] Built target gtest
+[10.820s] [ 44%] Linking CXX shared library libnode_canopen_basic_master.so
+[11.063s] [ 44%] Built target node_canopen_basic_master
+[11.078s] [ 55%] Building CXX object CMakeFiles/lifecycle_master_driver.dir/src/lifecycle_master_driver.cpp.o
+[11.078s] [ 55%] Building CXX object CMakeFiles/master_driver.dir/src/master_driver.cpp.o
+[15.571s] [ 61%] Linking CXX shared library liblifecycle_master_driver.so
+[15.595s] [ 66%] Linking CXX shared library libmaster_driver.so
+[15.843s] [ 66%] Built target lifecycle_master_driver
+[15.853s] [ 66%] Built target master_driver
+[15.871s] [ 77%] Building CXX object test/CMakeFiles/test_node_canopen_basic_driver.dir/test_node_canopen_basic_master.cpp.o
+[15.871s] [ 77%] Building CXX object test/CMakeFiles/test_node_canopen_basic_driver_ros.dir/test_node_canopen_basic_master_ros.cpp.o
+[15.871s] [ 83%] Building CXX object test/CMakeFiles/test_master_driver_component.dir/test_master_driver_component.cpp.o
+[21.654s] [ 88%] Linking CXX executable test_master_driver_component
+[21.889s] [ 94%] Linking CXX executable test_node_canopen_basic_driver
+[21.933s] [ 94%] Built target test_master_driver_component
+[22.013s] [100%] Linking CXX executable test_node_canopen_basic_driver_ros
+[22.217s] [100%] Built target test_node_canopen_basic_driver
+[22.336s] [100%] Built target test_node_canopen_basic_driver_ros
+[22.346s] Invoked command in '/tmp/agrobot-next-build-ybgPHn/build/canopen_master_driver' returned '0': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core/lib:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PATH=/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/bin:${PATH} PYTHONPATH=/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /tmp/agrobot-next-build-ybgPHn/build/canopen_master_driver -- -j16 -l16
+[22.347s] Invoking command in '/tmp/agrobot-next-build-ybgPHn/build/canopen_master_driver': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core/lib:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PATH=/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/bin:${PATH} PYTHONPATH=/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /tmp/agrobot-next-build-ybgPHn/build/canopen_master_driver
+[22.354s] -- Install configuration: ""
+[22.355s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include
+[22.355s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver
+[22.355s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver/node_interfaces
+[22.355s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver/node_interfaces/node_canopen_basic_master.hpp
+[22.355s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver/node_interfaces/node_canopen_basic_master_impl.hpp
+[22.355s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver/lifecycle_master_driver.hpp
+[22.355s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver/visibility_control.h
+[22.356s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver/master_driver.hpp
+[22.356s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/include/canopen_master_driver/lely_master_bridge.hpp
+[22.356s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/liblifecycle_master_driver.so
+[22.356s] -- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/liblifecycle_master_driver.so" to ""
+[22.357s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/libmaster_driver.so
+[22.357s] -- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/libmaster_driver.so" to ""
+[22.357s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/libnode_canopen_basic_master.so
+[22.360s] -- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/libnode_canopen_basic_master.so" to ""
+[22.360s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/liblely_master_bridge.so
+[22.360s] -- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/lib/liblely_master_bridge.so" to ""
+[22.361s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/environment/library_path.sh
+[22.361s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/environment/library_path.dsv
+[22.361s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/ament_index/resource_index/package_run_dependencies/canopen_master_driver
+[22.361s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/ament_index/resource_index/parent_prefix_path/canopen_master_driver
+[22.362s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/environment/ament_prefix_path.sh
+[22.362s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/environment/ament_prefix_path.dsv
+[22.362s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/environment/path.sh
+[22.362s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/environment/path.dsv
+[22.362s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/local_setup.bash
+[22.362s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/local_setup.sh
+[22.362s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/local_setup.zsh
+[22.362s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/local_setup.dsv
+[22.362s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/package.dsv
+[22.362s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/ament_index/resource_index/packages/canopen_master_driver
+[22.363s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/ament_index/resource_index/rclcpp_components/canopen_master_driver
+[22.363s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/export_canopen_master_driverExport.cmake
+[22.363s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/export_canopen_master_driverExport-noconfig.cmake
+[22.363s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[22.364s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[22.364s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/ament_cmake_export_targets-extras.cmake
+[22.364s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[22.364s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/canopen_master_driverConfig.cmake
+[22.364s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/cmake/canopen_master_driverConfig-version.cmake
+[22.364s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_master_driver/share/canopen_master_driver/package.xml
+[22.366s] Invoked command in '/tmp/agrobot-next-build-ybgPHn/build/canopen_master_driver' returned '0': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/tmp/agrobot-next-build-ybgPHn/install/canopen_core/lib:/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PATH=/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/bin:${PATH} PYTHONPATH=/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages:/tmp/agrobot-next-build-ybgPHn/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /tmp/agrobot-next-build-ybgPHn/build/canopen_master_driver

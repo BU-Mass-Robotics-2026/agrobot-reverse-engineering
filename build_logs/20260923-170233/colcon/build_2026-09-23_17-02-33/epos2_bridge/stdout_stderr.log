@@ -1,0 +1,23 @@
+running egg_info
+writing ../../build/epos2_bridge/epos2_bridge.egg-info/PKG-INFO
+writing dependency_links to ../../build/epos2_bridge/epos2_bridge.egg-info/dependency_links.txt
+writing entry points to ../../build/epos2_bridge/epos2_bridge.egg-info/entry_points.txt
+writing requirements to ../../build/epos2_bridge/epos2_bridge.egg-info/requires.txt
+writing top-level names to ../../build/epos2_bridge/epos2_bridge.egg-info/top_level.txt
+reading manifest file '../../build/epos2_bridge/epos2_bridge.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/epos2_bridge/epos2_bridge.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/epos2_bridge/lib/python3.12/site-packages/epos2_bridge-0.0.1-py3.12.egg-info' (and everything under it)
+Copying ../../build/epos2_bridge/epos2_bridge.egg-info to /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/epos2_bridge/lib/python3.12/site-packages/epos2_bridge-0.0.1-py3.12.egg-info
+running install_scripts
+Installing epos2_arm_controller script to /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/epos2_bridge/lib/epos2_bridge
+Installing epos2_fjt_fanout script to /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/epos2_bridge/lib/epos2_bridge
+Installing epos2_j3_bridge script to /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/epos2_bridge/lib/epos2_bridge
+Installing epos2_joint_bridge script to /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/epos2_bridge/lib/epos2_bridge
+writing list of installed files to '/home/gsylvia/agrobot-reverse-engineering/Agrobot/build/epos2_bridge/install.log'

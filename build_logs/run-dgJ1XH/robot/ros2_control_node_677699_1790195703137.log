@@ -1,0 +1,43 @@
+[INFO] [1790195703.179008552] [controller_manager]: Using Steady (Monotonic) clock for triggering controller manager cycles.
+[INFO] [1790195703.192428027] [controller_manager]: Subscribing to '/robot_description' topic for robot description.
+[INFO] [1790195703.192711476] [controller_manager]: update rate is 100 Hz
+[INFO] [1790195703.192737474] [controller_manager]: Overruns handling is : enabled
+[INFO] [1790195703.192743314] [controller_manager]: Spawning controller_manager RT thread with scheduler priority: 50
+[WARN] [1790195703.192942687] [controller_manager]: Could not enable FIFO RT scheduling policy: with error number <1>(Operation not permitted). See [https://control.ros.org/master/doc/ros2_control/controller_manager/doc/userdoc.html] for details on how to enable realtime scheduling.
+[INFO] [1790195703.203084754] [controller_manager]: Received robot description from topic.
+[INFO] [1790195703.203188218] [controller_manager]: Enforcing command limits is disabled. Command limits from URDF will be ignored.
+[INFO] [1790195703.205865007] [controller_manager]: Loading hardware 'arm' 
+[INFO] [1790195703.206939152] [controller_manager]: Loaded hardware 'arm' from plugin 'mock_components/GenericSystem'
+[INFO] [1790195703.207135344] [controller_manager]: Initialize hardware 'arm' 
+[INFO] [1790195703.214300413] [controller_manager]: Successful initialization of hardware 'arm'
+[INFO] [1790195703.215157128] [controller_manager]: Activating component 'arm'.
+[INFO] [1790195703.215331825] [resource_manager]: 'configure' hardware 'arm' 
+[INFO] [1790195703.215353568] [resource_manager]: Successful 'configure' of hardware 'arm'
+[INFO] [1790195703.215359139] [resource_manager]: 'activate' hardware 'arm' 
+[INFO] [1790195703.215386806] [resource_manager]: Successful 'activate' of hardware 'arm'
+[INFO] [1790195703.215592656] [controller_manager]: Registering statistics for : arm
+[INFO] [1790195703.215706640] [controller_manager]: Resource Manager has been successfully initialized. Starting Controller Manager services...
+[INFO] [1790195703.771856829] [controller_manager]: Loading controller : 'joint_state_broadcaster' of type 'joint_state_broadcaster/JointStateBroadcaster'
+[INFO] [1790195703.772004490] [controller_manager]: Loading controller 'joint_state_broadcaster'
+[INFO] [1790195703.778782123] [controller_manager]: Controller 'joint_state_broadcaster' node arguments: --ros-args --params-file /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/ros2_controllers.yaml 
+[INFO] [1790195703.796049002] [controller_manager]: Configuring controller: 'joint_state_broadcaster'
+[INFO] [1790195703.796314531] [joint_state_broadcaster]: 'joints' or 'interfaces' parameter is empty. All available state interfaces will be published
+[INFO] [1790195703.815480120] [controller_manager]: Activating controllers: [ joint_state_broadcaster ]
+[INFO] [1790195703.823770969] [controller_manager]: Successfully switched controllers!
+[INFO] [1790195704.185777807] [controller_manager]: Loading controller : 'arm_controller' of type 'joint_trajectory_controller/JointTrajectoryController'
+[INFO] [1790195704.185823624] [controller_manager]: Loading controller 'arm_controller'
+[INFO] [1790195704.189606600] [controller_manager]: Controller 'arm_controller' node arguments: --ros-args --params-file /tmp/agrobot-next-build-ybgPHn/install/moveit_config/share/moveit_config/config/ros2_controllers.yaml 
+[INFO] [1790195704.216204519] [controller_manager]: Configuring controller: 'arm_controller'
+[INFO] [1790195704.216498424] [arm_controller]: No specific joint names are used for command interfaces. Using 'joints' parameter.
+[INFO] [1790195704.216570754] [arm_controller]: Command interfaces are [position] and state interfaces are [position velocity].
+[INFO] [1790195704.216615742] [arm_controller]: Using 'splines' interpolation method.
+[INFO] [1790195704.218830977] [arm_controller]: Action status changes will be monitored at 20.00 Hz.
+[INFO] [1790195704.224120531] [arm_controller]: Setting initial scaling factor to 1.000000
+[INFO] [1790195704.224158833] [arm_controller]: No scaling interface set. This controller will not read speed scaling from the hardware.
+[INFO] [1790195704.235451787] [controller_manager]: Activating controllers: [ arm_controller ]
+[INFO] [1790195704.244028645] [controller_manager]: Successfully switched controllers!
+[WARN] [1790195732.303230678] [controller_manager]: Overrun detected! The controller manager missed its desired rate of 100 Hz. The loop took 12.037793 ms (missed cycles : 2).
+[WARN] [1790195732.337988772] [controller_manager]: Overrun might occur, Total time : 12800.558 us (Expected < 10000.000 us) --> Read time : 403.770 us, Update time : 12369.718 us, Write time : 27.070 us
+[WARN] [1790196128.316269430] [controller_manager]: Overrun might occur, Total time : 10622.153 us (Expected < 10000.000 us) --> Read time : 10364.999 us, Update time : 250.708 us, Write time : 6.446 us
+[WARN] [1790196128.317365628] [controller_manager]: Overrun detected! The controller manager missed its desired rate of 100 Hz. The loop took 12.249311 ms (missed cycles : 2).
+[WARN] [1790196409.502657260] [controller_manager]: Overrun detected! The controller manager missed its desired rate of 100 Hz. The loop took 10.977489 ms (missed cycles : 2).

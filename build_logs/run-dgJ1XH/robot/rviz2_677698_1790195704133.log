@@ -1,0 +1,24 @@
+[INFO] [1790195704.439143447] [rviz2]: Stereo is NOT SUPPORTED
+[INFO] [1790195704.439259415] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)
+[INFO] [1790195704.488809399] [rviz2]: Stereo is NOT SUPPORTED
+[ERROR] [1790195707.629903167] [moveit_1554771720.moveit.ros.motion_planning_frame]: Action server: /recognize_objects not available
+[INFO] [1790195707.643426983] [moveit_1554771720.moveit.ros.motion_planning_frame]: MoveGroup namespace changed: / -> . Reloading params.
+[INFO] [1790195707.749246514] [moveit_1554771720.moveit.ros.rdf_loader]: Loaded robot model in 0.0464268 seconds
+[INFO] [1790195707.749526435] [moveit_1554771720.moveit.core.robot_model]: Loading robot model 'robot'...
+[INFO] [1790195707.935963388] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: IK Using joint base_link 0 1.565
+[INFO] [1790195707.935991289] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: IK Using joint link1 -3.14159 3.14159
+[INFO] [1790195707.935993405] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: IK Using joint link2 -1.57079 1.57079
+[INFO] [1790195707.935995174] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: IK Using joint link3 -4.5 1.5
+[INFO] [1790195707.935997063] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: IK Using joint link4 -3.14159 3.14159
+[INFO] [1790195707.935998545] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: IK Using joint link5 -5 5
+[INFO] [1790195707.936000233] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: IK Using joint link6 0 2.0944
+[INFO] [1790195707.936001159] [trac_ik_kinematics_plugin.trac_ik_kinematics_plugin]: Using solve type Distance
+[INFO] [1790195708.417160019] [moveit_1554771720.moveit.ros.planning_scene_monitor]: Starting planning scene monitor
+[INFO] [1790195708.417795564] [moveit_1554771720.moveit.ros.planning_scene_monitor]: Listening to '/monitored_planning_scene'
+[INFO] [1790195708.946336091] [interactive_marker_display_105998112633136]: Connected on namespace: /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic
+[INFO] [1790195708.955957268] [moveit_1554771720.moveit.ros.motion_planning_frame]: group arm
+[INFO] [1790195708.956015879] [moveit_1554771720.moveit.ros.motion_planning_frame]: Constructing new MoveGroup connection for group 'arm' in namespace ''
+[INFO] [1790195708.970076035] [moveit_1554771720.moveit.ros.move_group_interface]: Ready to take commands for planning group arm.
+[INFO] [1790195708.972560446] [moveit_1554771720.moveit.ros.motion_planning_frame]: group arm
+[INFO] [1790195708.982313118] [interactive_marker_display_105998112633136]: Sending request for interactive markers
+[INFO] [1790195709.014908490] [interactive_marker_display_105998112633136]: Service response received for initialization

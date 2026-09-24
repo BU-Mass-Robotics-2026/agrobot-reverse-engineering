@@ -1,0 +1,56 @@
+[ 28%] Built target gtest_main
+[ 28%] Built target gtest
+[ 35%] Building CXX object CMakeFiles/node_canopen_proxy_driver.dir/src/node_interfaces/node_canopen_proxy_driver.cpp.o
+[ 42%] Building CXX object test/CMakeFiles/test_driver_component.dir/test_driver_component.cpp.o
+[ 50%] Linking CXX executable test_driver_component
+[ 50%] Built target test_driver_component
+[ 57%] Linking CXX shared library libnode_canopen_proxy_driver.so
+[ 57%] Built target node_canopen_proxy_driver
+[ 71%] Building CXX object CMakeFiles/lifecycle_proxy_driver.dir/src/lifecycle_proxy_driver.cpp.o
+[ 78%] Building CXX object test/CMakeFiles/test_node_interface.dir/test_node_interface.cpp.o
+[ 71%] Building CXX object CMakeFiles/proxy_driver.dir/src/proxy_driver.cpp.o
+[ 85%] Linking CXX executable test_node_interface
+[ 92%] Linking CXX shared library libproxy_driver.so
+[100%] Linking CXX shared library liblifecycle_proxy_driver.so
+[100%] Built target test_node_interface
+[100%] Built target proxy_driver
+[100%] Built target lifecycle_proxy_driver
+-- Install configuration: ""
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/include
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/include/canopen_proxy_driver
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/include/canopen_proxy_driver/node_interfaces
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/include/canopen_proxy_driver/node_interfaces/node_canopen_proxy_driver_impl.hpp
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/include/canopen_proxy_driver/node_interfaces/node_canopen_proxy_driver.hpp
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/include/canopen_proxy_driver/proxy_driver.hpp
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/include/canopen_proxy_driver/visibility_control.h
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/include/canopen_proxy_driver/lifecycle_proxy_driver.hpp
+-- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/lib/liblifecycle_proxy_driver.so
+-- Set non-toolchain portion of runtime path of "/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/lib/liblifecycle_proxy_driver.so" to ""
+-- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/lib/libproxy_driver.so
+-- Set non-toolchain portion of runtime path of "/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/lib/libproxy_driver.so" to ""
+-- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/lib/libnode_canopen_proxy_driver.so
+-- Set non-toolchain portion of runtime path of "/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/lib/libnode_canopen_proxy_driver.so" to ""
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/environment/library_path.sh
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/environment/library_path.dsv
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/ament_index/resource_index/package_run_dependencies/canopen_proxy_driver
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/ament_index/resource_index/parent_prefix_path/canopen_proxy_driver
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/environment/ament_prefix_path.sh
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/environment/path.sh
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/environment/path.dsv
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/local_setup.bash
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/local_setup.sh
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/local_setup.zsh
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/local_setup.dsv
+-- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/package.dsv
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/ament_index/resource_index/packages/canopen_proxy_driver
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/ament_index/resource_index/rclcpp_components/canopen_proxy_driver
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/cmake/export_canopen_proxy_driverExport.cmake
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/cmake/export_canopen_proxy_driverExport-noconfig.cmake
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/cmake/canopen_proxy_driverConfig.cmake
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/cmake/canopen_proxy_driverConfig-version.cmake
+-- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_proxy_driver/share/canopen_proxy_driver/package.xml

@@ -1,0 +1,58 @@
+Cloning into 'upstream'...
+/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+HEAD is now at fb735b79 nmt: remove EMCY messages when life-guarding/heartbeat errors are resolved
+Checking patch configure.ac...
+Hunk #1 succeeded at 577 (offset 8 lines).
+Checking patch python/dcf-tools/Makefile.am...
+Applied patch configure.ac cleanly.
+Applied patch python/dcf-tools/Makefile.am cleanly.
+configure.ac:17: warning: The macro `AC_PROG_CC_STDC' is obsolete.
+configure.ac:17: You should run autoupdate.
+./lib/autoconf/c.m4:1666: AC_PROG_CC_STDC is expanded from...
+configure.ac:17: the top level
+configure.ac:442: warning: AC_CHECK_HEADERS($ixxat_header): you should use literals
+./lib/autoconf/headers.m4:217: AC_CHECK_HEADERS is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+configure.ac:442: the top level
+configure.ac:17: installing './compile'
+configure.ac:6: installing './config.guess'
+configure.ac:6: installing './config.sub'
+configure.ac:7: installing './install-sh'
+configure.ac:7: installing './missing'
+configure.ac:610: installing './tap-driver.sh'
+src/can/Makefile.am: installing './depcomp'
+parallel-tests: installing './test-driver'
+libtool: warning: relinking 'liblely-tap.la'
+libtool: warning: relinking 'liblely-util.la'
+libtool: warning: relinking 'liblely-can.la'
+libtool: warning: relinking 'liblely-co.la'
+libtool: warning: relinking 'liblely-io.la'
+libtool: warning: relinking 'liblely-ev.la'
+libtool: warning: relinking 'liblely-io2.la'
+libtool: warning: relinking 'liblely-coapp.la'
+/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()

@@ -1,0 +1,94 @@
+[0.230s] Invoking command in '/home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_core': AMENT_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/bin:${PATH} PYTHONPATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib/python3.12/site-packages:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_core -- -j16 -l16
+[0.275s] [  5%] Built target gmock_main
+[0.276s] [ 13%] Built target gmock
+[0.285s] [ 25%] Building CXX object CMakeFiles/node_canopen_master.dir/src/node_interfaces/node_canopen_master.cpp.o
+[0.285s] [ 25%] Building CXX object CMakeFiles/node_canopen_driver.dir/src/driver_node.cpp.o
+[0.285s] [ 25%] Building CXX object CMakeFiles/node_canopen_master.dir/src/master_node.cpp.o
+[0.285s] [ 25%] Building CXX object CMakeFiles/node_canopen_driver.dir/src/node_interfaces/node_canopen_driver.cpp.o
+[3.757s] [ 27%] Linking CXX shared library libnode_canopen_master.so
+[3.846s] [ 30%] Linking CXX shared library libnode_canopen_driver.so
+[3.941s] [ 33%] Built target node_canopen_master
+[3.969s] [ 41%] Building CXX object test/CMakeFiles/test_canopen_master.dir/test_canopen_master.cpp.o
+[3.970s] [ 41%] Building CXX object test/CMakeFiles/test_lifecycle_canopen_master.dir/test_lifecycle_canopen_master.cpp.o
+[3.970s] [ 41%] Building CXX object test/CMakeFiles/test_node_canopen_master.dir/test_node_canopen_master.cpp.o
+[4.038s] [ 44%] Built target node_canopen_driver
+[4.080s] [ 47%] Building CXX object test/CMakeFiles/test_node_canopen_driver.dir/test_node_canopen_driver.cpp.o
+[4.080s] [ 50%] Building CXX object test/CMakeFiles/test_lifecycle_canopen_driver.dir/test_lifecycle_canopen_driver.cpp.o
+[4.080s] [ 52%] Building CXX object test/CMakeFiles/test_canopen_driver.dir/test_canopen_driver.cpp.o
+[4.088s] [ 55%] Building CXX object CMakeFiles/device_container.dir/src/device_container.cpp.o
+[7.859s] [ 58%] Linking CXX executable test_canopen_master
+[8.194s] [ 58%] Built target test_canopen_master
+[8.206s] [ 61%] Linking CXX executable test_node_canopen_driver
+[8.310s] [ 63%] Linking CXX executable test_node_canopen_master
+[8.479s] [ 66%] Linking CXX executable test_lifecycle_canopen_master
+[8.564s] [ 66%] Built target test_node_canopen_driver
+[8.568s] [ 69%] Linking CXX executable test_canopen_driver
+[8.585s] [ 72%] Linking CXX shared library libdevice_container.so
+[8.655s] [ 75%] Linking CXX executable test_lifecycle_canopen_driver
+[8.661s] [ 75%] Built target test_node_canopen_master
+[8.785s] [ 75%] Built target test_lifecycle_canopen_master
+[8.847s] [ 83%] Built target device_container
+[8.870s] [ 83%] Built target test_canopen_driver
+[8.871s] [ 86%] Linking CXX executable test_errors
+[8.874s] [ 88%] Linking CXX executable test_lifecycle_manager
+[8.878s] [ 91%] Building CXX object CMakeFiles/device_container_node.dir/src/device_container_node.cpp.o
+[8.965s] [ 91%] Built target test_lifecycle_canopen_driver
+[9.145s] [ 94%] Built target test_errors
+[9.203s] [ 97%] Built target test_lifecycle_manager
+[12.143s] [100%] Linking CXX executable device_container_node
+[12.379s] [100%] Built target device_container_node
+[12.388s] Invoked command in '/home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_core' returned '0': AMENT_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/bin:${PATH} PYTHONPATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib/python3.12/site-packages:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_core -- -j16 -l16
+[12.389s] Invoking command in '/home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_core': AMENT_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/bin:${PATH} PYTHONPATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib/python3.12/site-packages:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_core
+[12.397s] -- Install configuration: ""
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core/device_container_error.hpp
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core/node_interfaces
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core/node_interfaces/node_canopen_driver.hpp
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core/node_interfaces/node_canopen_driver_interface.hpp
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core/node_interfaces/node_canopen_master.hpp
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core/node_interfaces/node_canopen_master_interface.hpp
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core/master_node.hpp
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core/device_container.hpp
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core/exchange.hpp
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core/visibility_control.h
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core/driver_node.hpp
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core/configuration_manager.hpp
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core/driver_error.hpp
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core/master_error.hpp
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/include/canopen_core/lifecycle_manager.hpp
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/launch/
+[12.397s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/launch//canopen.launch.py
+[12.398s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/lib/libnode_canopen_driver.so
+[12.399s] -- Set non-toolchain portion of runtime path of "/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/lib/libnode_canopen_driver.so" to ""
+[12.400s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/lib/libnode_canopen_master.so
+[12.400s] -- Set non-toolchain portion of runtime path of "/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/lib/libnode_canopen_master.so" to ""
+[12.401s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/lib/libdevice_container.so
+[12.403s] -- Set non-toolchain portion of runtime path of "/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/lib/libdevice_container.so" to ""
+[12.404s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/lib/canopen_core/device_container_node
+[12.405s] -- Set non-toolchain portion of runtime path of "/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/lib/canopen_core/device_container_node" to ""
+[12.405s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/environment/library_path.sh
+[12.405s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/environment/library_path.dsv
+[12.405s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/ament_index/resource_index/package_run_dependencies/canopen_core
+[12.405s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/ament_index/resource_index/parent_prefix_path/canopen_core
+[12.405s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/environment/ament_prefix_path.sh
+[12.405s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/environment/ament_prefix_path.dsv
+[12.405s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/environment/path.sh
+[12.405s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/environment/path.dsv
+[12.405s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/local_setup.bash
+[12.405s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/local_setup.sh
+[12.405s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/local_setup.zsh
+[12.405s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/local_setup.dsv
+[12.405s] -- Installing: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/package.dsv
+[12.406s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/ament_index/resource_index/packages/canopen_core
+[12.406s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/cmake/export_canopen_coreExport.cmake
+[12.407s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/cmake/export_canopen_coreExport-noconfig.cmake
+[12.407s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/cmake/ConfigExtras.cmake
+[12.407s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/cmake/ament_cmake_export_include_directories-extras.cmake
+[12.407s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/cmake/ament_cmake_export_libraries-extras.cmake
+[12.407s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/cmake/ament_cmake_export_targets-extras.cmake
+[12.407s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/cmake/ament_cmake_export_dependencies-extras.cmake
+[12.407s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/cmake/canopen_coreConfig.cmake
+[12.407s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/cmake/canopen_coreConfig-version.cmake
+[12.407s] -- Up-to-date: /home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_core/share/canopen_core/package.xml
+[12.409s] Invoked command in '/home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_core' returned '0': AMENT_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib:${LD_LIBRARY_PATH} PATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/bin:${PATH} PYTHONPATH=/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/lely_core_libraries/lib/python3.12/site-packages:/home/gsylvia/agrobot-reverse-engineering/Agrobot/install/canopen_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gsylvia/agrobot-reverse-engineering/Agrobot/build/canopen_core

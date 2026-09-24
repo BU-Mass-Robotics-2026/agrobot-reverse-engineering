@@ -1,0 +1,57 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Configuring done (1.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/agrobot-next-build-ybgPHn/build/robot_description
+-- Install configuration: ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/launch
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/launch/display.launch.xml
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/rviz
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/rviz/urdf_config.rviz
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/urdf
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/urdf/robot.urdf.xacro
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/urdf/robot.xacro
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/urdf/common_properties.xacro
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/urdf/robot.ros2_control.xacro
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Base Link Collision.stl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Gripper fin.stl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 4 Visual.stl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 5 Collision.stl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Base Link Visual.stl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 3 Collision.stl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 5 Visual.stl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 2 Collision.stl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 1 Collision.stl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 1 Visual.stl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/End Effector Geometry.stl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 3 Visual.stl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 2 Visual.stl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 4 Collision.stl
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/ament_index/resource_index/package_run_dependencies/robot_description
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/ament_index/resource_index/parent_prefix_path/robot_description
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/environment/ament_prefix_path.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/environment/ament_prefix_path.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/environment/path.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/environment/path.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/local_setup.bash
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/local_setup.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/local_setup.zsh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/local_setup.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/package.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/ament_index/resource_index/packages/robot_description
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/cmake/robot_descriptionConfig.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/cmake/robot_descriptionConfig-version.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/package.xml

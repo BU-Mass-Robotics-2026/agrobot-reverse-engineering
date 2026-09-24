@@ -1,0 +1,71 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ros2_control_test_assets: 4.48.0 (/opt/ros/jazzy/share/ros2_control_test_assets/cmake)
+-- Found ament_cmake_gmock: 2.5.6 (/opt/ros/jazzy/share/ament_cmake_gmock/cmake)
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found canopen_402_driver: 0.3.1 (/tmp/agrobot-next-build-ybgPHn/install/canopen_402_driver/share/canopen_402_driver/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system thread 
+-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
+-- Found hardware_interface: 4.48.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0")  
+-- Configuring done (3.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/agrobot-next-build-ybgPHn/build/canopen_ros2_control
+[ 75%] Building CXX object CMakeFiles/canopen_ros2_control.dir/src/cia402_system.cpp.o
+[ 75%] Building CXX object CMakeFiles/canopen_ros2_control.dir/src/canopen_system.cpp.o
+[ 75%] Building CXX object CMakeFiles/canopen_ros2_control.dir/src/robot_system.cpp.o
+[100%] Linking CXX shared library libcanopen_ros2_control.so
+[100%] Built target canopen_ros2_control
+-- Install configuration: ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/canopen_ros2_control.xml
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/lib/libcanopen_ros2_control.so
+-- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/lib/libcanopen_ros2_control.so" to ""
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/include
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/include/canopen_ros2_control
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/include/canopen_ros2_control/cia402_data.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/include/canopen_ros2_control/cia402_system.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/include/canopen_ros2_control/visibility_control.h
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/include/canopen_ros2_control/helpers.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/include/canopen_ros2_control/canopen_system.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/include/canopen_ros2_control/robot_system.hpp
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/environment/library_path.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/environment/library_path.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/ament_index/resource_index/package_run_dependencies/canopen_ros2_control
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/ament_index/resource_index/parent_prefix_path/canopen_ros2_control
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/environment/ament_prefix_path.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/environment/ament_prefix_path.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/environment/path.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/environment/path.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/local_setup.bash
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/local_setup.sh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/local_setup.zsh
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/local_setup.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/package.dsv
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/ament_index/resource_index/packages/canopen_ros2_control
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/canopen_ros2_control
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/cmake/canopen_ros2_controlConfig.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/cmake/canopen_ros2_controlConfig-version.cmake
+-- Installing: /tmp/agrobot-next-build-ybgPHn/install/canopen_ros2_control/share/canopen_ros2_control/package.xml

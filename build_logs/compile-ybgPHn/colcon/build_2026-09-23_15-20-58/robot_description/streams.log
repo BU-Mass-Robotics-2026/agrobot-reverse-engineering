@@ -1,0 +1,63 @@
+[0.009s] Invoking command in '/tmp/agrobot-next-build-ybgPHn/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/gsylvia/agrobot-reverse-engineering/Agrobot/src/robot_description -DCMAKE_INSTALL_PREFIX=/tmp/agrobot-next-build-ybgPHn/install/robot_description
+[0.116s] -- The C compiler identification is GNU 13.3.0
+[0.748s] -- The CXX compiler identification is GNU 13.3.0
+[1.228s] -- Detecting C compiler ABI info
+[1.403s] -- Detecting C compiler ABI info - done
+[1.407s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.407s] -- Detecting C compile features
+[1.407s] -- Detecting C compile features - done
+[1.469s] -- Detecting CXX compiler ABI info
+[1.649s] -- Detecting CXX compiler ABI info - done
+[1.654s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.654s] -- Detecting CXX compile features
+[1.654s] -- Detecting CXX compile features - done
+[1.657s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.758s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.891s] -- Configuring done (1.9s)
+[1.893s] -- Generating done (0.0s)
+[1.894s] -- Build files have been written to: /tmp/agrobot-next-build-ybgPHn/build/robot_description
+[1.898s] Invoked command in '/tmp/agrobot-next-build-ybgPHn/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/gsylvia/agrobot-reverse-engineering/Agrobot/src/robot_description -DCMAKE_INSTALL_PREFIX=/tmp/agrobot-next-build-ybgPHn/install/robot_description
+[1.899s] Invoking command in '/tmp/agrobot-next-build-ybgPHn/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /tmp/agrobot-next-build-ybgPHn/build/robot_description -- -j16 -l16
+[1.927s] Invoked command in '/tmp/agrobot-next-build-ybgPHn/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /tmp/agrobot-next-build-ybgPHn/build/robot_description -- -j16 -l16
+[1.934s] Invoking command in '/tmp/agrobot-next-build-ybgPHn/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /tmp/agrobot-next-build-ybgPHn/build/robot_description
+[1.940s] -- Install configuration: ""
+[1.940s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/launch
+[1.940s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/launch/display.launch.xml
+[1.940s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/rviz
+[1.940s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/rviz/urdf_config.rviz
+[1.940s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/urdf
+[1.941s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/urdf/robot.urdf.xacro
+[1.941s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/urdf/robot.xacro
+[1.941s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/urdf/common_properties.xacro
+[1.941s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/urdf/robot.ros2_control.xacro
+[1.941s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes
+[1.941s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Base Link Collision.stl
+[1.941s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Gripper fin.stl
+[1.941s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 4 Visual.stl
+[1.943s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 5 Collision.stl
+[1.943s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Base Link Visual.stl
+[1.943s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 3 Collision.stl
+[1.945s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 5 Visual.stl
+[1.948s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 2 Collision.stl
+[1.950s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 1 Collision.stl
+[1.951s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 1 Visual.stl
+[1.957s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/End Effector Geometry.stl
+[1.957s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 3 Visual.stl
+[1.963s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 2 Visual.stl
+[1.971s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/meshes/Link 4 Collision.stl
+[1.972s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/ament_index/resource_index/package_run_dependencies/robot_description
+[1.972s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/ament_index/resource_index/parent_prefix_path/robot_description
+[1.972s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/environment/ament_prefix_path.sh
+[1.972s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/environment/ament_prefix_path.dsv
+[1.973s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/environment/path.sh
+[1.973s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/environment/path.dsv
+[1.973s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/local_setup.bash
+[1.973s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/local_setup.sh
+[1.973s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/local_setup.zsh
+[1.973s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/local_setup.dsv
+[1.973s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/package.dsv
+[1.973s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/ament_index/resource_index/packages/robot_description
+[1.973s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/cmake/robot_descriptionConfig.cmake
+[1.974s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/cmake/robot_descriptionConfig-version.cmake
+[1.974s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_description/share/robot_description/package.xml
+[1.975s] Invoked command in '/tmp/agrobot-next-build-ybgPHn/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /tmp/agrobot-next-build-ybgPHn/build/robot_description

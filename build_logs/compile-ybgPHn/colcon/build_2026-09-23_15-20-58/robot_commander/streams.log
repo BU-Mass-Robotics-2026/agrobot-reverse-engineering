@@ -1,0 +1,96 @@
+[0.108s] Invoking command in '/tmp/agrobot-next-build-ybgPHn/build/robot_commander': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/gsylvia/agrobot-reverse-engineering/Agrobot/src/robot_commander -DCMAKE_INSTALL_PREFIX=/tmp/agrobot-next-build-ybgPHn/install/robot_commander
+[0.230s] -- The C compiler identification is GNU 13.3.0
+[0.766s] -- The CXX compiler identification is GNU 13.3.0
+[1.347s] -- Detecting C compiler ABI info
+[1.564s] -- Detecting C compiler ABI info - done
+[1.568s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.569s] -- Detecting C compile features
+[1.569s] -- Detecting C compile features - done
+[1.676s] -- Detecting CXX compiler ABI info
+[1.984s] -- Detecting CXX compiler ABI info - done
+[1.989s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.990s] -- Detecting CXX compile features
+[1.990s] -- Detecting CXX compile features - done
+[1.992s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.102s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.182s] -- Found geometry_msgs: 5.3.8 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[2.387s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[2.397s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.410s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.423s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.457s] -- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[2.472s] -- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[2.475s] -- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+[2.520s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.525s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.578s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.808s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.931s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.146s] -- Found moveit_ros_planning_interface: 2.12.4 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[3.314s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[3.483s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[5.387s] -- Found tcb_span: 1.3.2 (/opt/ros/jazzy/share/tcb_span/cmake)
+[5.394s] -- Found rclcpp_lifecycle: 28.1.22 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[5.422s] -- Found parameter_traits: 0.7.6 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[5.667s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[5.667s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[5.863s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[5.904s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[5.927s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[5.961s] -- Found example_interfaces: 0.12.1 (/opt/ros/jazzy/share/example_interfaces/cmake)
+[5.978s] -- Found robot_interfaces: 0.0.0 (/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/share/robot_interfaces/cmake)
+[6.062s] -- Configuring done (5.9s)
+[6.597s] -- Generating done (0.5s)
+[6.898s] -- Build files have been written to: /tmp/agrobot-next-build-ybgPHn/build/robot_commander
+[7.125s] Invoked command in '/tmp/agrobot-next-build-ybgPHn/build/robot_commander' returned '0': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/gsylvia/agrobot-reverse-engineering/Agrobot/src/robot_commander -DCMAKE_INSTALL_PREFIX=/tmp/agrobot-next-build-ybgPHn/install/robot_commander
+[7.127s] Invoking command in '/tmp/agrobot-next-build-ybgPHn/build/robot_commander': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /tmp/agrobot-next-build-ybgPHn/build/robot_commander -- -j16 -l16
+[7.175s] [ 20%] Building CXX object CMakeFiles/cartesian_path.dir/src/tests/cartesian_path.cpp.o
+[7.175s] [ 20%] Building CXX object CMakeFiles/position_goal.dir/src/tests/position_goal.cpp.o
+[7.176s] [ 30%] Building CXX object CMakeFiles/commander.dir/src/commander.cpp.o
+[7.176s] [ 50%] Building CXX object CMakeFiles/named_goal.dir/src/tests/named_goal.cpp.o
+[7.176s] [ 40%] Building CXX object CMakeFiles/joint_goal.dir/src/tests/joint_goal.cpp.o
+[17.086s] [ 60%] Linking CXX executable joint_goal
+[17.125s] [ 70%] Linking CXX executable position_goal
+[17.511s] [ 70%] Built target joint_goal
+[17.545s] [ 70%] Built target position_goal
+[17.594s] [ 80%] Linking CXX executable named_goal
+[17.813s] [ 90%] Linking CXX executable cartesian_path
+[17.951s] [ 90%] Built target named_goal
+[18.145s] [ 90%] Built target cartesian_path
+[31.696s] [100%] Linking CXX executable commander
+[33.079s] [100%] Built target commander
+[33.104s] Invoked command in '/tmp/agrobot-next-build-ybgPHn/build/robot_commander' returned '0': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /tmp/agrobot-next-build-ybgPHn/build/robot_commander -- -j16 -l16
+[33.105s] Invoking command in '/tmp/agrobot-next-build-ybgPHn/build/robot_commander': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /tmp/agrobot-next-build-ybgPHn/build/robot_commander
+[33.117s] -- Install configuration: ""
+[33.117s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/named_goal
+[33.118s] -- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/named_goal" to ""
+[33.118s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/joint_goal
+[33.119s] -- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/joint_goal" to ""
+[33.119s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/position_goal
+[33.121s] -- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/position_goal" to ""
+[33.121s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/cartesian_path
+[33.121s] -- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/cartesian_path" to ""
+[33.121s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/commander
+[33.129s] -- Set non-toolchain portion of runtime path of "/tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/commander" to ""
+[33.130s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/tomato_picker.py
+[33.131s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/sequencer.py
+[33.131s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/test_multi_tomato.py
+[33.131s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/lib/robot_commander/test_button_server.py
+[33.131s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander//launch
+[33.131s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander//launch/commander.launch.py
+[33.131s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/ament_index/resource_index/package_run_dependencies/robot_commander
+[33.131s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/ament_index/resource_index/parent_prefix_path/robot_commander
+[33.131s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/environment/ament_prefix_path.sh
+[33.132s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/environment/ament_prefix_path.dsv
+[33.132s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/environment/path.sh
+[33.132s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/environment/path.dsv
+[33.132s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/local_setup.bash
+[33.132s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/local_setup.sh
+[33.132s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/local_setup.zsh
+[33.133s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/local_setup.dsv
+[33.133s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/package.dsv
+[33.133s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/ament_index/resource_index/packages/robot_commander
+[33.133s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig.cmake
+[33.134s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/cmake/robot_commanderConfig-version.cmake
+[33.135s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/robot_commander/share/robot_commander/package.xml
+[33.136s] Invoked command in '/tmp/agrobot-next-build-ybgPHn/build/robot_commander' returned '0': AMENT_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/tmp/agrobot-next-build-ybgPHn/install/robot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /tmp/agrobot-next-build-ybgPHn/build/robot_commander

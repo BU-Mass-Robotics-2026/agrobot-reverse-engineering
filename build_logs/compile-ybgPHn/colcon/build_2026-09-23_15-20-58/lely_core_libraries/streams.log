@@ -1,0 +1,931 @@
+[0.009s] Invoking command in '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/gsylvia/agrobot-reverse-engineering/Agrobot/src/ros2_canopen/lely_core_libraries -DCMAKE_INSTALL_PREFIX=/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries
+[0.111s] -- The C compiler identification is GNU 13.3.0
+[0.674s] -- The CXX compiler identification is GNU 13.3.0
+[1.196s] -- Detecting C compiler ABI info
+[1.405s] -- Detecting C compiler ABI info - done
+[1.409s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.409s] -- Detecting C compile features
+[1.409s] -- Detecting C compile features - done
+[1.471s] -- Detecting CXX compiler ABI info
+[1.651s] -- Detecting CXX compiler ABI info - done
+[1.657s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.657s] -- Detecting CXX compile features
+[1.657s] -- Detecting CXX compile features - done
+[1.659s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.759s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.992s] -- Configuring done (2.0s)
+[1.996s] -- Generating done (0.0s)
+[1.997s] -- Build files have been written to: /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries
+[2.002s] Invoked command in '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/gsylvia/agrobot-reverse-engineering/Agrobot/src/ros2_canopen/lely_core_libraries -DCMAKE_INSTALL_PREFIX=/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries
+[2.002s] Invoking command in '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries -- -j16 -l16
+[2.038s] [ 12%] Creating directories for 'upstr_lely_core_libraries'
+[2.044s] [ 12%] Built target ament_cmake_python_copy_cogen_setup
+[2.044s] [ 12%] Built target ament_cmake_python_copy_cogen
+[2.058s] [ 25%] Performing download step (git clone) for 'upstr_lely_core_libraries'
+[2.073s] Cloning into 'upstream'...
+[2.173s] running egg_info
+[2.173s] creating cogen.egg-info
+[2.180s] running install_scripts
+[2.185s] writing cogen.egg-info/PKG-INFO
+[2.185s] writing dependency_links to cogen.egg-info/dependency_links.txt
+[2.185s] writing entry points to cogen.egg-info/entry_points.txt
+[2.185s] writing top-level names to cogen.egg-info/top_level.txt
+[2.185s] writing manifest file 'cogen.egg-info/SOURCES.txt'
+[2.202s] /usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[2.202s] !!
+[2.202s] 
+[2.202s]         ********************************************************************************
+[2.202s]         Please avoid running ``setup.py`` directly.
+[2.202s]         Instead, use pypa/build, pypa/installer or other
+[2.202s]         standards-based tools.
+[2.202s] 
+[2.202s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[2.202s]         ********************************************************************************
+[2.203s] 
+[2.203s] !!
+[2.203s]   self.initialize_options()
+[2.206s] running egg_info
+[2.218s] reading manifest file 'cogen.egg-info/SOURCES.txt'
+[2.218s] writing manifest file 'cogen.egg-info/SOURCES.txt'
+[2.230s] writing cogen.egg-info/PKG-INFO
+[2.230s] writing dependency_links to cogen.egg-info/dependency_links.txt
+[2.230s] writing entry points to cogen.egg-info/entry_points.txt
+[2.230s] writing top-level names to cogen.egg-info/top_level.txt
+[2.240s] [ 25%] Built target ament_cmake_python_build_cogen_egg
+[2.252s] reading manifest file 'cogen.egg-info/SOURCES.txt'
+[2.252s] writing manifest file 'cogen.egg-info/SOURCES.txt'
+[2.321s] Installing cogen script to scripts
+[2.348s] [ 25%] Built target ament_cmake_python_build_cogen_scripts
+[3.825s] HEAD is now at fb735b79 nmt: remove EMCY messages when life-guarding/heartbeat errors are resolved
+[3.872s] [ 37%] Performing update step for 'upstr_lely_core_libraries'
+[3.898s] HEAD is now at fb735b79 nmt: remove EMCY messages when life-guarding/heartbeat errors are resolved
+[3.901s] Checking patch configure.ac...
+[3.901s] Hunk #1 succeeded at 577 (offset 8 lines).
+[3.901s] Checking patch python/dcf-tools/Makefile.am...
+[3.901s] Applied patch configure.ac cleanly.
+[3.901s] Applied patch python/dcf-tools/Makefile.am cleanly.
+[3.908s] [ 50%] No patch step for 'upstr_lely_core_libraries'
+[3.931s] [ 62%] Performing configure step for 'upstr_lely_core_libraries'
+[9.284s] libtoolize: putting auxiliary files in '.'.
+[9.285s] libtoolize: copying file './ltmain.sh'
+[9.423s] libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+[9.423s] libtoolize: copying file 'm4/libtool.m4'
+[9.514s] libtoolize: copying file 'm4/ltoptions.m4'
+[9.567s] libtoolize: copying file 'm4/ltsugar.m4'
+[9.648s] libtoolize: copying file 'm4/ltversion.m4'
+[9.704s] libtoolize: copying file 'm4/lt~obsolete.m4'
+[10.648s] configure.ac:17: warning: The macro `AC_PROG_CC_STDC' is obsolete.
+[10.648s] configure.ac:17: You should run autoupdate.
+[10.648s] ./lib/autoconf/c.m4:1666: AC_PROG_CC_STDC is expanded from...
+[10.648s] configure.ac:17: the top level
+[10.648s] configure.ac:442: warning: AC_CHECK_HEADERS($ixxat_header): you should use literals
+[10.648s] ./lib/autoconf/headers.m4:217: AC_CHECK_HEADERS is expanded from...
+[10.649s] lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+[10.649s] lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+[10.649s] configure.ac:442: the top level
+[11.249s] configure.ac:17: installing './compile'
+[11.252s] configure.ac:6: installing './config.guess'
+[11.253s] configure.ac:6: installing './config.sub'
+[11.256s] configure.ac:7: installing './install-sh'
+[11.258s] configure.ac:7: installing './missing'
+[11.260s] configure.ac:610: installing './tap-driver.sh'
+[11.462s] src/can/Makefile.am: installing './depcomp'
+[11.957s] parallel-tests: installing './test-driver'
+[13.400s] checking build system type... x86_64-pc-linux-gnu
+[13.400s] checking host system type... x86_64-pc-linux-gnu
+[13.400s] checking target system type... x86_64-pc-linux-gnu
+[13.400s] checking for a BSD-compatible install... /usr/bin/install -c
+[13.400s] checking whether build environment is sane... yes
+[13.400s] checking for a race-free mkdir -p... /usr/bin/mkdir -p
+[13.400s] checking for gawk... gawk
+[13.409s] checking whether make sets $(MAKE)... yes
+[13.420s] checking whether make supports nested variables... yes
+[13.547s] checking whether to enable maintainer-specific portions of Makefiles... yes
+[13.547s] checking whether make supports nested variables... (cached) yes
+[13.553s] checking for a sed that does not truncate output... /usr/bin/sed
+[13.554s] checking whether to build with code coverage support... no
+[13.616s] checking for valgrind... no
+[13.624s] checking whether make supports the include directive... yes (GNU style)
+[13.625s] checking for gcc... gcc
+[13.799s] checking whether the C compiler works... yes
+[13.800s] checking for C compiler default output file name... a.out
+[13.868s] checking for suffix of executables... 
+[13.970s] checking whether we are cross compiling... no
+[13.983s] checking for suffix of object files... o
+[13.995s] checking whether the compiler supports GNU C... yes
+[14.008s] checking whether gcc accepts -g... yes
+[14.043s] checking for gcc option to enable C11 features... none needed
+[14.065s] checking whether gcc understands -c and -o together... yes
+[14.087s] checking dependency style of gcc... gcc3
+[14.102s] checking for stdio.h... yes
+[14.261s] checking for stdlib.h... yes
+[14.261s] checking for string.h... yes
+[14.262s] checking for inttypes.h... yes
+[14.262s] checking for stdint.h... yes
+[14.262s] checking for strings.h... yes
+[14.262s] checking for sys/stat.h... yes
+[14.262s] checking for sys/types.h... yes
+[14.262s] checking for unistd.h... yes
+[14.274s] checking for wchar.h... yes
+[14.296s] checking for minix/config.h... no
+[14.319s] checking whether it is safe to define __EXTENSIONS__... yes
+[14.336s] checking whether _XOPEN_SOURCE should be defined... no
+[14.336s] checking for g++... g++
+[14.366s] checking whether the compiler supports GNU C++... yes
+[14.379s] checking whether g++ accepts -g... yes
+[14.430s] checking for g++ option to enable C++11 features... none needed
+[14.453s] checking dependency style of g++... gcc3
+[14.480s] checking whether g++ supports C++11 features with -std=gnu++11... yes
+[14.525s] checking how to print strings... printf
+[14.525s] checking for a sed that does not truncate output... (cached) /usr/bin/sed
+[14.528s] checking for grep that handles long lines and -e... /usr/bin/grep
+[14.530s] checking for egrep... /usr/bin/grep -E
+[14.531s] checking for fgrep... /usr/bin/grep -F
+[14.536s] checking for ld used by gcc... /usr/bin/ld
+[14.538s] checking if the linker (/usr/bin/ld) is GNU ld... yes
+[14.540s] checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+[14.558s] checking the name lister (/usr/bin/nm -B) interface... BSD nm
+[14.558s] checking whether ln -s works... yes
+[14.562s] checking the maximum length of command line arguments... 1572864
+[14.564s] checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+[14.564s] checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+[14.565s] checking for /usr/bin/ld option to reload object files... -r
+[14.565s] checking for file... file
+[14.565s] checking for objdump... objdump
+[14.565s] checking how to recognize dependent libraries... pass_all
+[14.617s] checking for dlltool... no
+[14.617s] checking how to associate runtime and link libraries... printf %s\n
+[14.617s] checking for ar... ar
+[14.638s] checking for archiver @FILE support... @
+[14.638s] checking for strip... strip
+[14.638s] checking for ranlib... ranlib
+[14.789s] checking command to parse /usr/bin/nm -B output from gcc object... ok
+[14.791s] checking for sysroot... no
+[14.796s] checking for a working dd... /usr/bin/dd
+[14.800s] checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+[14.851s] checking for mt... no
+[14.853s] checking if : is a manifest tool... no
+[14.883s] checking for dlfcn.h... yes
+[14.885s] checking for objdir... .libs
+[15.029s] checking if gcc supports -fno-rtti -fno-exceptions... no
+[15.030s] checking for gcc option to produce PIC... -fPIC -DPIC
+[15.046s] checking if gcc PIC flag -fPIC -DPIC works... yes
+[15.174s] checking if gcc static flag -static works... yes
+[15.195s] checking if gcc supports -c -o file.o... yes
+[15.195s] checking if gcc supports -c -o file.o... (cached) yes
+[15.202s] checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+[15.310s] checking whether -lc should be explicitly linked in... no
+[15.411s] checking dynamic linker characteristics... GNU/Linux ld.so
+[15.411s] checking how to hardcode library paths into programs... immediate
+[15.412s] checking whether stripping libraries is possible... yes
+[15.412s] checking if libtool supports shared libraries... yes
+[15.413s] checking whether to build shared libraries... yes
+[15.413s] checking whether to build static libraries... no
+[15.434s] checking how to run the C++ preprocessor... g++ -std=gnu++11 -E
+[15.609s] checking for ld used by g++ -std=gnu++11... /usr/bin/ld -m elf_x86_64
+[15.611s] checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+[15.617s] checking whether the g++ -std=gnu++11 linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+[15.755s] checking for g++ -std=gnu++11 option to produce PIC... -fPIC -DPIC
+[15.769s] checking if g++ -std=gnu++11 PIC flag -fPIC -DPIC works... yes
+[15.882s] checking if g++ -std=gnu++11 static flag -static works... yes
+[15.904s] checking if g++ -std=gnu++11 supports -c -o file.o... yes
+[15.904s] checking if g++ -std=gnu++11 supports -c -o file.o... (cached) yes
+[15.905s] checking whether the g++ -std=gnu++11 linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+[15.908s] checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+[15.908s] checking how to hardcode library paths into programs... immediate
+[15.945s] checking for windres... no
+[16.155s] checking for timer_create in -lrt... yes
+[16.174s] checking how to run the C preprocessor... gcc -E
+[16.201s] checking whether gcc is Clang... no
+[16.307s] checking whether pthreads work with "-pthread" and "-lpthread"... yes
+[16.399s] checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+[16.399s] checking whether more special flags are required for pthreads... no
+[16.508s] checking for PTHREAD_PRIO_INHERIT... yes
+[16.509s] checking for pkg-config... /usr/bin/pkg-config
+[16.510s] checking pkg-config is at least version 0.9.0... yes
+[16.521s] checking for cpputest >= 4... no
+[16.548s] checking for valgrind/valgrind.h... no
+[16.578s] checking for linux/can.h... yes
+[16.608s] checking for linux/can/error.h... yes
+[16.621s] checking for bluetooth/bluetooth.h... no
+[16.634s] checking for bluetooth/rfcomm.h... no
+[16.851s] checking for library containing str2ba... no
+[16.888s] checking for ifaddrs.h... yes
+[16.912s] checking for linux/can/netlink.h... yes
+[16.940s] checking for linux/can/raw.h... yes
+[16.977s] checking for linux/rtnetlink.h... yes
+[17.007s] checking for sys/epoll.h... yes
+[17.036s] checking for sys/ioctl.h... yes
+[17.159s] checking for a Python interpreter with version >= 3.3... python3
+[17.159s] checking for python3... /usr/bin/python3
+[17.174s] checking for python3 version... 3.12
+[17.187s] checking for python3 platform... linux
+[17.187s] checking for GNU default python3 prefix... ${prefix}
+[17.187s] checking for GNU default python3 exec_prefix... ${exec_prefix}
+[17.209s] checking for python3 script directory (pythondir)... ${PYTHON_PREFIX}/lib/python3.12/site-packages
+[17.232s] checking for python3 extension module directory (pyexecdir)... ${PYTHON_EXEC_PREFIX}/lib/python3.12/site-packages
+[17.232s] checking for gawk... (cached) gawk
+[17.248s] checking that generated files are newer than configure... done
+[17.248s] configure: creating ./config.status
+[17.852s] config.status: creating doc/Doxyfile
+[17.867s] config.status: creating doc/Makefile
+[17.878s] config.status: creating include/Makefile
+[17.892s] config.status: creating pkgconfig/liblely-can.pc
+[17.905s] config.status: creating pkgconfig/liblely-co.pc
+[17.916s] config.status: creating pkgconfig/liblely-coapp.pc
+[17.931s] config.status: creating pkgconfig/liblely-ev.pc
+[17.943s] config.status: creating pkgconfig/liblely-io.pc
+[17.955s] config.status: creating pkgconfig/liblely-io2.pc
+[17.967s] config.status: creating pkgconfig/liblely-libc.pc
+[17.979s] config.status: creating pkgconfig/liblely-libc_rt.pc
+[17.992s] config.status: creating pkgconfig/liblely-tap.pc
+[18.004s] config.status: creating pkgconfig/liblely-util.pc
+[18.017s] config.status: creating pkgconfig/Makefile
+[18.029s] config.status: creating python/can/Makefile
+[18.041s] config.status: creating python/dcf-tools/Makefile
+[18.053s] config.status: creating python/io/Makefile
+[18.065s] config.status: creating python/Makefile
+[18.076s] config.status: creating src/can/Makefile
+[18.090s] config.status: creating src/co/Makefile
+[18.103s] config.status: creating src/co/version.rc
+[18.116s] config.status: creating src/coapp/Makefile
+[18.128s] config.status: creating src/coapp/version.rc
+[18.139s] config.status: creating src/ev/Makefile
+[18.152s] config.status: creating src/ev/version.rc
+[18.164s] config.status: creating src/io/Makefile
+[18.177s] config.status: creating src/io2/Makefile
+[18.191s] config.status: creating src/io2/version.rc
+[18.202s] config.status: creating src/libc/Makefile
+[18.214s] config.status: creating src/libc/version.rc
+[18.226s] config.status: creating src/tap/Makefile
+[18.239s] config.status: creating src/tap/version.rc
+[18.253s] config.status: creating src/util/Makefile
+[18.265s] config.status: creating src/util/version.rc
+[18.277s] config.status: creating src/Makefile
+[18.289s] config.status: creating tools/Makefile
+[18.302s] config.status: creating tools/version.dcf2c.rc
+[18.314s] config.status: creating test/co-nmt-master.dcf
+[18.328s] config.status: creating test/Makefile
+[18.342s] config.status: creating unit-tests/Makefile
+[18.355s] config.status: creating exec-wrapper.sh
+[18.364s] config.status: creating lcov-wrapper.sh
+[18.373s] config.status: creating Makefile
+[18.382s] config.status: creating config.h
+[18.389s] config.status: executing depfiles commands
+[19.025s] config.status: executing libtool commands
+[19.069s] [ 75%] Performing build step for 'upstr_lely_core_libraries'
+[19.078s] Making all in doc
+[19.080s] Making all in include
+[19.083s] Making all in src
+[19.088s] Making all in libc
+[19.091s]   CC       liblely_libc_la-clock.lo
+[19.091s]   CC       liblely_libc_la-getopt.lo
+[19.091s]   CC       liblely_libc_la-stdatomic.lo
+[19.092s]   CC       liblely_libc_la-stdio.lo
+[19.092s]   CC       liblely_libc_la-stdlib.lo
+[19.093s]   CC       liblely_libc_la-string.lo
+[19.093s]   CC       liblely_libc_la-strings.lo
+[19.093s]   CC       liblely_libc_la-threads-pthread.lo
+[19.093s]   CC       liblely_libc_la-sleep.lo
+[19.094s]   CC       liblely_libc_la-time.lo
+[19.153s]   CCLD     liblely-libc.la
+[19.330s] Making all in tap
+[19.332s]   CC       liblely_tap_la-tap.lo
+[19.399s]   CCLD     liblely-tap.la
+[19.545s] Making all in util
+[19.547s]   CC       liblely_util_la-bimap.lo
+[19.547s]   CC       liblely_util_la-mkjmp.lo
+[19.548s]   CC       liblely_util_la-sllist.lo
+[19.548s]   CC       liblely_util_la-spscring.lo
+[19.548s]   CC       liblely_util_la-bits.lo
+[19.549s]   CC       liblely_util_la-bitset.lo
+[19.549s]   CC       liblely_util_la-cmp.lo
+[19.550s]   CC       liblely_util_la-config.lo
+[19.550s]   CC       liblely_util_la-config_ini.lo
+[19.550s]   CC       liblely_util_la-daemon.lo
+[19.551s]   CC       liblely_util_la-diag.lo
+[19.552s]   CC       liblely_util_la-dllist.lo
+[19.553s]   CC       liblely_util_la-endian.lo
+[19.553s]   CC       liblely_util_la-errnum.lo
+[19.553s]   CXX      liblely_util_la-exception.lo
+[19.553s]   CC       liblely_util_la-fiber.lo
+[19.654s]   CC       liblely_util_la-frbuf.lo
+[19.666s]   CC       liblely_util_la-fwbuf.lo
+[19.687s]   CC       liblely_util_la-lex.lo
+[19.690s]   CC       liblely_util_la-membuf.lo
+[19.690s]   CC       liblely_util_la-pheap.lo
+[19.708s]   CC       liblely_util_la-print.lo
+[19.710s]   CC       liblely_util_la-rbtree.lo
+[19.720s]   CC       liblely_util_la-stop.lo
+[19.725s]   CC       liblely_util_la-time.lo
+[19.734s]   CC       liblely_util_la-ustring.lo
+[19.994s]   CXXLD    liblely-util.la
+[20.246s] Making all in can
+[20.248s]   CC       liblely_can_la-buf.lo
+[20.249s]   CC       liblely_can_la-msg.lo
+[20.249s]   CC       liblely_can_la-net.lo
+[20.249s]   CC       liblely_can_la-socket.lo
+[20.391s]   CCLD     liblely-can.la
+[20.574s] Making all in co
+[20.576s]   CC       liblely_co_la-crc.lo
+[20.577s]   CC       liblely_co_la-csdo.lo
+[20.577s]   CC       liblely_co_la-dcf.lo
+[20.577s]   CC       liblely_co_la-dev.lo
+[20.577s]   CC       liblely_co_la-emcy.lo
+[20.578s]   CC       liblely_co_la-gw_txt.lo
+[20.578s]   CC       liblely_co_la-gw.lo
+[20.578s]   CC       liblely_co_la-nmt.lo
+[20.579s]   CC       liblely_co_la-lss.lo
+[20.579s]   CC       liblely_co_la-nmt_boot.lo
+[20.580s]   CC       liblely_co_la-nmt_cfg.lo
+[20.580s]   CC       liblely_co_la-nmt_hb.lo
+[20.585s]   CC       liblely_co_la-nmt_srv.lo
+[20.585s]   CC       liblely_co_la-obj.lo
+[20.585s]   CC       liblely_co_la-pdo.lo
+[20.585s]   CC       liblely_co_la-rpdo.lo
+[20.661s]   CC       liblely_co_la-sdev.lo
+[20.767s]   CC       liblely_co_la-sdo.lo
+[20.778s]   CC       liblely_co_la-ssdo.lo
+[20.811s]   CC       liblely_co_la-sync.lo
+[20.862s]   CC       liblely_co_la-time.lo
+[20.900s]   CC       liblely_co_la-tpdo.lo
+[20.905s]   CC       liblely_co_la-type.lo
+[20.988s]   CC       liblely_co_la-val.lo
+[21.065s]   CC       liblely_co_la-wtm.lo
+[21.395s]   CCLD     liblely-co.la
+[22.653s] Making all in io
+[22.655s]   CC       liblely_io_la-addr.lo
+[22.656s]   CC       liblely_io_la-attr.lo
+[22.656s]   CC       liblely_io_la-can.lo
+[22.656s]   CC       liblely_io_la-file.lo
+[22.657s]   CC       liblely_io_la-handle.lo
+[22.657s]   CC       liblely_io_la-if.lo
+[22.657s]   CC       liblely_io_la-io.lo
+[22.658s]   CC       liblely_io_la-pipe.lo
+[22.658s]   CC       liblely_io_la-poll.lo
+[22.660s]   CC       liblely_io_la-rtnl.lo
+[22.661s]   CC       liblely_io_la-serial.lo
+[22.662s]   CC       liblely_io_la-sock.lo
+[23.011s]   CCLD     liblely-io.la
+[23.276s] Making all in ev
+[23.279s]   CC       liblely_ev_la-exec.lo
+[23.279s]   CC       liblely_ev_la-fiber_exec.lo
+[23.280s]   CC       liblely_ev_la-loop.lo
+[23.280s]   CC       liblely_ev_la-future.lo
+[23.280s]   CC       liblely_ev_la-poll.lo
+[23.280s]   CC       liblely_ev_la-std_exec.lo
+[23.280s]   CC       liblely_ev_la-strand.lo
+[23.281s]   CC       liblely_ev_la-task.lo
+[23.281s]   CC       liblely_ev_la-thrd_loop.lo
+[23.587s]   CCLD     liblely-ev.la
+[23.789s] Making all in io2
+[23.796s]   CC       liblely_io2_la-can.lo
+[23.797s]   CC       liblely_io2_la-can_net.lo
+[23.797s]   CC       liblely_io2_la-can_rt.lo
+[23.797s]   CC       liblely_io2_la-clock.lo
+[23.797s]   CC       liblely_io2_la-ctx.lo
+[23.798s]   CC       liblely_io2_la-dev.lo
+[23.799s]   CC       liblely_io2_la-timer.lo
+[23.799s]   CC       liblely_io2_la-sigset.lo
+[23.801s]   CC       liblely_io2_la-vcan.lo
+[23.801s]   CC       liblely_io2_la-tqueue.lo
+[23.896s]   CC       linux/liblely_io2_la-can_chan.lo
+[23.900s]   CC       linux/liblely_io2_la-can_ctrl.lo
+[23.900s]   CC       can/liblely_io2_la-msg.lo
+[23.901s]   CC       linux/liblely_io2_la-timer.lo
+[23.904s]   CC       posix/liblely_io2_la-fd.lo
+[23.912s]   CC       linux/liblely_io2_la-poll.lo
+[23.913s]   CC       posix/liblely_io2_la-io.lo
+[23.917s]   CC       posix/liblely_io2_la-sigset.lo
+[23.919s]   CC       sys/liblely_io2_la-io.lo
+[23.927s]   CC       sys/liblely_io2_la-clock.lo
+[23.984s]   CC       user/liblely_io2_la-can.lo
+[23.985s]   CC       user/liblely_io2_la-timer.lo
+[24.703s]   CCLD     liblely-io2.la
+[25.845s] Making all in coapp
+[25.848s]   CXX      liblely_coapp_la-device.lo
+[25.849s]   CXX      liblely_coapp_la-driver.lo
+[25.849s]   CXX      liblely_coapp_la-fiber_driver.lo
+[25.849s]   CXX      liblely_coapp_la-logical_driver.lo
+[25.849s]   CXX      liblely_coapp_la-loop_driver.lo
+[25.851s]   CXX      liblely_coapp_la-master.lo
+[25.851s]   CXX      liblely_coapp_la-node.lo
+[25.851s]   CXX      liblely_coapp_la-sdo.lo
+[25.851s]   CXX      liblely_coapp_la-lss_master.lo
+[25.851s]   CXX      liblely_coapp_la-slave.lo
+[25.853s]   CXX      liblely_coapp_la-sdo_error.lo
+[25.853s]   CXX      liblely_coapp_la-type_traits.lo
+[32.058s]   CXXLD    liblely-coapp.la
+[32.529s] Making all in python
+[32.535s] Making all in dcf-tools
+[32.539s] Making all in pkgconfig
+[32.562s] [ 87%] No install step for 'upstr_lely_core_libraries'
+[32.584s] [100%] Completed 'upstr_lely_core_libraries'
+[32.613s] [100%] Built target upstr_lely_core_libraries
+[32.633s] Invoked command in '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries -- -j16 -l16
+[32.635s] Invoking command in '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries
+[32.641s] -- Install configuration: ""
+[32.647s] Making install in doc
+[32.649s] gmake[1]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/doc'
+[32.651s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/doc'
+[32.652s] gmake[2]: Nothing to be done for 'install-exec-am'.
+[32.652s] gmake[2]: Nothing to be done for 'install-data-am'.
+[32.652s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/doc'
+[32.652s] gmake[1]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/doc'
+[32.652s] Making install in include
+[32.655s] gmake[1]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/include'
+[32.658s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/include'
+[32.658s] gmake[2]: Nothing to be done for 'install-exec-am'.
+[32.661s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include'
+[32.668s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/co'
+[32.670s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/co.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/crc.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/csdo.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/csdo.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/dcf.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/dcf.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/dev.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/dev.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/emcy.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/emcy.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/gw.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/gw.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/gw_txt.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/gw_txt.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/lss.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/lss.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/nmt.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/nmt.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/obj.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/obj.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/pdo.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/rpdo.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/rpdo.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/sdev.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/sdev.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/sdo.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/ssdo.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/ssdo.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/sync.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/sync.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/time.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/time.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/tpdo.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/tpdo.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/type.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/type.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/val.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/val.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/wtm.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/wtm.hpp '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/co'
+[32.672s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/libc'
+[32.674s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/chrono.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/functional.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/stdatomic.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/stddef.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/stdint.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/stdio.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/stdlib.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/string.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/strings.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/threads.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/time.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/type_traits.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/uchar.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/unistd.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/utility.hpp '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/libc'
+[32.676s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/ev'
+[32.678s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/co_task.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/ev.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/exec.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/exec.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/fiber_exec.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/fiber_exec.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/future.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/future.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/loop.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/loop.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/poll.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/poll.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/std_exec.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/strand.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/strand.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/task.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/task.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/thrd_loop.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/ev/thrd_loop.hpp '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/ev'
+[32.680s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/coapp'
+[32.681s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/coapp/type_traits.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/coapp/device.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/coapp/driver.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/coapp/fiber_driver.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/coapp/logical_driver.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/coapp/loop_driver.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/coapp/lss_master.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/coapp/master.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/coapp/node.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/coapp/sdo.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/coapp/sdo_error.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/coapp/slave.hpp '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/coapp'
+[32.684s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/can'
+[32.685s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/can/buf.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/can/buf.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/can/err.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/can/msg.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/can/net.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/can/net.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/can/socket.h '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/can'
+[32.687s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/io2/linux'
+[32.689s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/linux/can.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/linux/can.hpp '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/io2/linux'
+[32.690s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/io2/sys'
+[32.691s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/sys/clock.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/sys/clock.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/sys/io.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/sys/io.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/sys/sigset.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/sys/sigset.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/sys/timer.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/sys/timer.hpp '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/io2/sys'
+[32.693s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/util'
+[32.695s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/bimap.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/coroutine.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/coroutine.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/mkjmp.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/sllist.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/spscring.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/bits.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/bitset.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/c_call.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/c_type.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/chrono.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/cmp.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/config.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/daemon.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/diag.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/dllist.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/endian.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/errnum.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/error.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/exception.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/fiber.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/fiber.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/float.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/frbuf.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/fwbuf.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/invoker.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/lex.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/membuf.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/mutex.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/pheap.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/print.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/rbtree.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/result.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/stop.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/stop.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/time.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/ustring.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/util.h '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/util'
+[32.698s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/co/detail'
+[32.700s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/detail/dev.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/detail/obj.h '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/co/detail'
+[32.701s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/io2/posix'
+[32.703s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/posix/poll.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/posix/poll.hpp '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/io2/posix'
+[32.704s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/util/def'
+[32.706s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/util/def/type.def '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/util/def'
+[32.707s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/io2/user'
+[32.709s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/user/can.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/user/can.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/user/timer.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/user/timer.hpp '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/io2/user'
+[32.710s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/io2/can'
+[32.712s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/can/err.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/can/err.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/can/msg.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/can/msg.hpp '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/io2/can'
+[32.713s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/co/def'
+[32.715s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/def/array.def /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/def/basic.def /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/def/cxx.def /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/def/time.def /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/co/def/type.def '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/co/def'
+[32.718s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/io'
+[32.719s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/addr.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/attr.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/can.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/can.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/file.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/file.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/if.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/io.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/io.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/pipe.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/pipe.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/poll.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/poll.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/serial.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/serial.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/sock.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io/sock.hpp '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/io'
+[32.722s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/tap'
+[32.724s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/tap/tap.h '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/tap'
+[32.726s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/libc/sys'
+[32.727s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/libc/sys/types.h '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/libc/sys'
+[32.731s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/io2'
+[32.732s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/can.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/can.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/can_net.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/can_net.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/can_rt.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/can_rt.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/clock.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/clock.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/co_can.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/co_can_rt.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/co_sigset.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/co_timer.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/co_tqueue.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/ctx.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/ctx.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/dev.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/dev.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/event.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/event.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/io2.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/sigset.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/sigset.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/timer.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/timer.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/tqueue.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/tqueue.hpp /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/vcan.h /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/io2/vcan.hpp '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely/io2'
+[32.736s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely'
+[32.738s]  /usr/bin/install -c -m 644  /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/upstream/include/lely/features.h '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/include/lely'
+[32.741s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/include'
+[32.741s] gmake[1]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/include'
+[32.742s] Making install in src
+[32.744s] gmake[1]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src'
+[32.748s] Making install in libc
+[32.755s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/libc'
+[32.764s] gmake[3]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/libc'
+[32.766s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[32.768s]  /bin/bash ../../libtool   --mode=install /usr/bin/install -c   liblely-libc.la '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[32.798s] libtool: install: /usr/bin/install -c .libs/liblely-libc.so.2.4.0 /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-libc.so.2.4.0
+[32.802s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-libc.so.2.4.0 liblely-libc.so.2 || { rm -f liblely-libc.so.2 && ln -s liblely-libc.so.2.4.0 liblely-libc.so.2; }; })
+[32.807s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-libc.so.2.4.0 liblely-libc.so || { rm -f liblely-libc.so && ln -s liblely-libc.so.2.4.0 liblely-libc.so; }; })
+[32.813s] libtool: install: /usr/bin/install -c .libs/liblely-libc.lai /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-libc.la
+[32.841s] libtool: finish: PATH="/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.vscode-server/bin/7debcd0e2acdea1c52de81bf9ee1620444407dda/bin/remote-cli:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MATLAB/R2025a/bin:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/Mullvad VPN/resources:/mnt/c/Users/grsga/AppData/Local/Programs/OpenAI/Codex/bin:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/grsga/.cargo/bin:/mnt/c/Users/grsga/.local/bin:/mnt/c/Users/grsga/scoop/apps/mpv/current:/mnt/c/Users/grsga/scoop/shims:/mnt/c/Users/grsga/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/grsga/AppData/Local/Programs/Ollama:/mnt/c/Users/grsga/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/DenoLand.Deno_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-N-124716-g054dffd133-win64-gpl/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Program Files/qemu:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/BurntSushi.ripgrep.MSVC_Microsoft.Winget.Source_8wekyb3d8bbwe/ripgrep-15.2.0-x86_64-pc-windows-msvc:/mnt/c/Users/grsga/AppData/Local/Programs/Cua/cua-driver/bin:/snap/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/sbin" ldconfig -n /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[32.843s] ----------------------------------------------------------------------
+[32.843s] Libraries have been installed in:
+[32.843s]    /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[32.843s] 
+[32.843s] If you ever happen to want to link against installed libraries
+[32.843s] in a given directory, LIBDIR, you must either use libtool, and
+[32.843s] specify the full pathname of the library, or use the '-LLIBDIR'
+[32.843s] flag during linking and do at least one of the following:
+[32.843s]    - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+[32.843s]      during execution
+[32.843s]    - add LIBDIR to the 'LD_RUN_PATH' environment variable
+[32.843s]      during linking
+[32.843s]    - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+[32.843s]    - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+[32.843s] 
+[32.843s] See any operating system documentation about shared libraries for
+[32.844s] more information, such as the ld(1) and ld.so(8) manual pages.
+[32.844s] ----------------------------------------------------------------------
+[32.847s] gmake[3]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/libc'
+[32.847s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/libc'
+[32.847s] Making install in tap
+[32.851s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/tap'
+[32.857s] gmake[3]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/tap'
+[32.858s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[32.860s]  /bin/bash ../../libtool   --mode=install /usr/bin/install -c   liblely-tap.la '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[32.885s] libtool: warning: relinking 'liblely-tap.la'
+[32.887s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/tap; /bin/bash "/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/libtool"  --silent --tag CC --mode=relink gcc -Wall -Wextra -pedantic -Werror -Wno-static-in-inline -pthread -g -O2 -no-undefined -version-number 2:4:0 -Wl,--as-needed -o liblely-tap.la -rpath /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib liblely_tap_la-tap.lo ../../src/libc/liblely-libc.la -lpthread )
+[33.056s] libtool: install: /usr/bin/install -c .libs/liblely-tap.so.2.4.0T /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-tap.so.2.4.0
+[33.060s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-tap.so.2.4.0 liblely-tap.so.2 || { rm -f liblely-tap.so.2 && ln -s liblely-tap.so.2.4.0 liblely-tap.so.2; }; })
+[33.063s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-tap.so.2.4.0 liblely-tap.so || { rm -f liblely-tap.so && ln -s liblely-tap.so.2.4.0 liblely-tap.so; }; })
+[33.069s] libtool: install: /usr/bin/install -c .libs/liblely-tap.lai /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-tap.la
+[33.094s] libtool: finish: PATH="/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.vscode-server/bin/7debcd0e2acdea1c52de81bf9ee1620444407dda/bin/remote-cli:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MATLAB/R2025a/bin:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/Mullvad VPN/resources:/mnt/c/Users/grsga/AppData/Local/Programs/OpenAI/Codex/bin:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/grsga/.cargo/bin:/mnt/c/Users/grsga/.local/bin:/mnt/c/Users/grsga/scoop/apps/mpv/current:/mnt/c/Users/grsga/scoop/shims:/mnt/c/Users/grsga/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/grsga/AppData/Local/Programs/Ollama:/mnt/c/Users/grsga/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/DenoLand.Deno_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-N-124716-g054dffd133-win64-gpl/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Program Files/qemu:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/BurntSushi.ripgrep.MSVC_Microsoft.Winget.Source_8wekyb3d8bbwe/ripgrep-15.2.0-x86_64-pc-windows-msvc:/mnt/c/Users/grsga/AppData/Local/Programs/Cua/cua-driver/bin:/snap/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/sbin" ldconfig -n /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[33.096s] ----------------------------------------------------------------------
+[33.096s] Libraries have been installed in:
+[33.096s]    /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[33.096s] 
+[33.096s] If you ever happen to want to link against installed libraries
+[33.096s] in a given directory, LIBDIR, you must either use libtool, and
+[33.096s] specify the full pathname of the library, or use the '-LLIBDIR'
+[33.096s] flag during linking and do at least one of the following:
+[33.096s]    - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+[33.096s]      during execution
+[33.096s]    - add LIBDIR to the 'LD_RUN_PATH' environment variable
+[33.096s]      during linking
+[33.096s]    - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+[33.096s]    - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+[33.097s] 
+[33.097s] See any operating system documentation about shared libraries for
+[33.097s] more information, such as the ld(1) and ld.so(8) manual pages.
+[33.097s] ----------------------------------------------------------------------
+[33.100s] gmake[3]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/tap'
+[33.100s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/tap'
+[33.100s] Making install in util
+[33.117s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/util'
+[33.134s] gmake[3]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/util'
+[33.135s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[33.136s]  /bin/bash ../../libtool   --mode=install /usr/bin/install -c   liblely-util.la '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[33.163s] libtool: warning: relinking 'liblely-util.la'
+[33.165s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/util; /bin/bash "/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/libtool"  --silent --tag CXX --mode=relink g++ -std=gnu++11 -Wall -Wextra -pedantic -Werror -g -O2 -no-undefined -version-number 2:4:0 -Wl,--as-needed -o liblely-util.la -rpath /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib liblely_util_la-bimap.lo liblely_util_la-mkjmp.lo liblely_util_la-sllist.lo liblely_util_la-spscring.lo liblely_util_la-bits.lo liblely_util_la-bitset.lo liblely_util_la-cmp.lo liblely_util_la-config.lo liblely_util_la-config_ini.lo liblely_util_la-daemon.lo liblely_util_la-diag.lo liblely_util_la-dllist.lo liblely_util_la-endian.lo liblely_util_la-errnum.lo liblely_util_la-exception.lo liblely_util_la-fiber.lo liblely_util_la-frbuf.lo liblely_util_la-fwbuf.lo liblely_util_la-lex.lo liblely_util_la-membuf.lo liblely_util_la-pheap.lo liblely_util_la-print.lo liblely_util_la-rbtree.lo liblely_util_la-stop.lo liblely_util_la-time.lo liblely_util_la-ustring.lo ../../src/libc/liblely-libc.la -lm -lpthread )
+[33.389s] libtool: install: /usr/bin/install -c .libs/liblely-util.so.2.4.0T /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-util.so.2.4.0
+[33.392s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-util.so.2.4.0 liblely-util.so.2 || { rm -f liblely-util.so.2 && ln -s liblely-util.so.2.4.0 liblely-util.so.2; }; })
+[33.396s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-util.so.2.4.0 liblely-util.so || { rm -f liblely-util.so && ln -s liblely-util.so.2.4.0 liblely-util.so; }; })
+[33.403s] libtool: install: /usr/bin/install -c .libs/liblely-util.lai /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-util.la
+[33.427s] libtool: finish: PATH="/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.vscode-server/bin/7debcd0e2acdea1c52de81bf9ee1620444407dda/bin/remote-cli:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MATLAB/R2025a/bin:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/Mullvad VPN/resources:/mnt/c/Users/grsga/AppData/Local/Programs/OpenAI/Codex/bin:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/grsga/.cargo/bin:/mnt/c/Users/grsga/.local/bin:/mnt/c/Users/grsga/scoop/apps/mpv/current:/mnt/c/Users/grsga/scoop/shims:/mnt/c/Users/grsga/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/grsga/AppData/Local/Programs/Ollama:/mnt/c/Users/grsga/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/DenoLand.Deno_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-N-124716-g054dffd133-win64-gpl/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Program Files/qemu:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/BurntSushi.ripgrep.MSVC_Microsoft.Winget.Source_8wekyb3d8bbwe/ripgrep-15.2.0-x86_64-pc-windows-msvc:/mnt/c/Users/grsga/AppData/Local/Programs/Cua/cua-driver/bin:/snap/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/sbin" ldconfig -n /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[33.429s] ----------------------------------------------------------------------
+[33.429s] Libraries have been installed in:
+[33.429s]    /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[33.429s] 
+[33.429s] If you ever happen to want to link against installed libraries
+[33.429s] in a given directory, LIBDIR, you must either use libtool, and
+[33.429s] specify the full pathname of the library, or use the '-LLIBDIR'
+[33.429s] flag during linking and do at least one of the following:
+[33.429s]    - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+[33.429s]      during execution
+[33.429s]    - add LIBDIR to the 'LD_RUN_PATH' environment variable
+[33.429s]      during linking
+[33.429s]    - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+[33.429s]    - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+[33.429s] 
+[33.429s] See any operating system documentation about shared libraries for
+[33.429s] more information, such as the ld(1) and ld.so(8) manual pages.
+[33.429s] ----------------------------------------------------------------------
+[33.431s] gmake[3]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/util'
+[33.432s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/util'
+[33.432s] Making install in can
+[33.438s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/can'
+[33.445s] gmake[3]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/can'
+[33.446s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[33.447s]  /bin/bash ../../libtool   --mode=install /usr/bin/install -c   liblely-can.la '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[33.471s] libtool: warning: relinking 'liblely-can.la'
+[33.472s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/can; /bin/bash "/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/libtool"  --silent --tag CC --mode=relink gcc -Wall -Wextra -pedantic -Werror -Wno-static-in-inline -pthread -g -O2 -no-undefined -version-number 1:9:2 -Wl,--as-needed -o liblely-can.la -rpath /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib liblely_can_la-buf.lo liblely_can_la-msg.lo liblely_can_la-net.lo liblely_can_la-socket.lo ../../src/libc/liblely-libc.la ../../src/util/liblely-util.la -lpthread )
+[33.643s] libtool: install: /usr/bin/install -c .libs/liblely-can.so.1.9.2T /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-can.so.1.9.2
+[33.646s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-can.so.1.9.2 liblely-can.so.1 || { rm -f liblely-can.so.1 && ln -s liblely-can.so.1.9.2 liblely-can.so.1; }; })
+[33.648s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-can.so.1.9.2 liblely-can.so || { rm -f liblely-can.so && ln -s liblely-can.so.1.9.2 liblely-can.so; }; })
+[33.653s] libtool: install: /usr/bin/install -c .libs/liblely-can.lai /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-can.la
+[33.676s] libtool: finish: PATH="/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.vscode-server/bin/7debcd0e2acdea1c52de81bf9ee1620444407dda/bin/remote-cli:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MATLAB/R2025a/bin:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/Mullvad VPN/resources:/mnt/c/Users/grsga/AppData/Local/Programs/OpenAI/Codex/bin:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/grsga/.cargo/bin:/mnt/c/Users/grsga/.local/bin:/mnt/c/Users/grsga/scoop/apps/mpv/current:/mnt/c/Users/grsga/scoop/shims:/mnt/c/Users/grsga/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/grsga/AppData/Local/Programs/Ollama:/mnt/c/Users/grsga/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/DenoLand.Deno_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-N-124716-g054dffd133-win64-gpl/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Program Files/qemu:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/BurntSushi.ripgrep.MSVC_Microsoft.Winget.Source_8wekyb3d8bbwe/ripgrep-15.2.0-x86_64-pc-windows-msvc:/mnt/c/Users/grsga/AppData/Local/Programs/Cua/cua-driver/bin:/snap/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/sbin" ldconfig -n /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[33.677s] ----------------------------------------------------------------------
+[33.677s] Libraries have been installed in:
+[33.677s]    /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[33.677s] 
+[33.677s] If you ever happen to want to link against installed libraries
+[33.677s] in a given directory, LIBDIR, you must either use libtool, and
+[33.677s] specify the full pathname of the library, or use the '-LLIBDIR'
+[33.678s] flag during linking and do at least one of the following:
+[33.678s]    - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+[33.678s]      during execution
+[33.678s]    - add LIBDIR to the 'LD_RUN_PATH' environment variable
+[33.678s]      during linking
+[33.678s]    - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+[33.678s]    - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+[33.678s] 
+[33.678s] See any operating system documentation about shared libraries for
+[33.678s] more information, such as the ld(1) and ld.so(8) manual pages.
+[33.678s] ----------------------------------------------------------------------
+[33.681s] gmake[3]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/can'
+[33.681s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/can'
+[33.681s] Making install in co
+[33.694s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/co'
+[33.707s] gmake[3]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/co'
+[33.708s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[33.709s]  /bin/bash ../../libtool   --mode=install /usr/bin/install -c   liblely-co.la '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[33.735s] libtool: warning: relinking 'liblely-co.la'
+[33.736s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/co; /bin/bash "/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/libtool"  --silent --tag CC --mode=relink gcc -Wall -Wextra -pedantic -Werror -Wno-static-in-inline -pthread -g -O2 -no-undefined -version-number 2:4:0 -Wl,--as-needed -o liblely-co.la -rpath /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib liblely_co_la-crc.lo liblely_co_la-csdo.lo liblely_co_la-dcf.lo liblely_co_la-dev.lo liblely_co_la-emcy.lo liblely_co_la-gw.lo liblely_co_la-gw_txt.lo liblely_co_la-lss.lo liblely_co_la-nmt.lo liblely_co_la-nmt_boot.lo liblely_co_la-nmt_cfg.lo liblely_co_la-nmt_hb.lo liblely_co_la-nmt_srv.lo liblely_co_la-obj.lo liblely_co_la-pdo.lo liblely_co_la-rpdo.lo liblely_co_la-sdev.lo liblely_co_la-sdo.lo liblely_co_la-ssdo.lo liblely_co_la-sync.lo liblely_co_la-time.lo liblely_co_la-tpdo.lo liblely_co_la-type.lo liblely_co_la-val.lo liblely_co_la-wtm.lo ../../src/libc/liblely-libc.la ../../src/util/liblely-util.la ../../src/can/liblely-can.la -lpthread )
+[33.962s] libtool: install: /usr/bin/install -c .libs/liblely-co.so.2.4.0T /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-co.so.2.4.0
+[33.965s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-co.so.2.4.0 liblely-co.so.2 || { rm -f liblely-co.so.2 && ln -s liblely-co.so.2.4.0 liblely-co.so.2; }; })
+[33.967s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-co.so.2.4.0 liblely-co.so || { rm -f liblely-co.so && ln -s liblely-co.so.2.4.0 liblely-co.so; }; })
+[33.973s] libtool: install: /usr/bin/install -c .libs/liblely-co.lai /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-co.la
+[33.995s] libtool: finish: PATH="/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.vscode-server/bin/7debcd0e2acdea1c52de81bf9ee1620444407dda/bin/remote-cli:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MATLAB/R2025a/bin:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/Mullvad VPN/resources:/mnt/c/Users/grsga/AppData/Local/Programs/OpenAI/Codex/bin:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/grsga/.cargo/bin:/mnt/c/Users/grsga/.local/bin:/mnt/c/Users/grsga/scoop/apps/mpv/current:/mnt/c/Users/grsga/scoop/shims:/mnt/c/Users/grsga/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/grsga/AppData/Local/Programs/Ollama:/mnt/c/Users/grsga/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/DenoLand.Deno_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-N-124716-g054dffd133-win64-gpl/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Program Files/qemu:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/BurntSushi.ripgrep.MSVC_Microsoft.Winget.Source_8wekyb3d8bbwe/ripgrep-15.2.0-x86_64-pc-windows-msvc:/mnt/c/Users/grsga/AppData/Local/Programs/Cua/cua-driver/bin:/snap/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/sbin" ldconfig -n /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[33.996s] ----------------------------------------------------------------------
+[33.996s] Libraries have been installed in:
+[33.996s]    /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[33.996s] 
+[33.997s] If you ever happen to want to link against installed libraries
+[33.997s] in a given directory, LIBDIR, you must either use libtool, and
+[33.997s] specify the full pathname of the library, or use the '-LLIBDIR'
+[33.997s] flag during linking and do at least one of the following:
+[33.997s]    - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+[33.997s]      during execution
+[33.997s]    - add LIBDIR to the 'LD_RUN_PATH' environment variable
+[33.997s]      during linking
+[33.997s]    - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+[33.997s]    - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+[33.997s] 
+[33.997s] See any operating system documentation about shared libraries for
+[33.997s] more information, such as the ld(1) and ld.so(8) manual pages.
+[33.997s] ----------------------------------------------------------------------
+[33.999s] gmake[3]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/co'
+[33.999s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/co'
+[33.999s] Making install in io
+[34.010s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/io'
+[34.021s] gmake[3]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/io'
+[34.022s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[34.023s]  /bin/bash ../../libtool   --mode=install /usr/bin/install -c   liblely-io.la '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[34.047s] libtool: warning: relinking 'liblely-io.la'
+[34.049s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/io; /bin/bash "/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/libtool"  --silent --tag CC --mode=relink gcc -Wall -Wextra -pedantic -Werror -Wno-static-in-inline -pthread -g -O2 -no-undefined -version-number 1:9:2 -Wl,--as-needed -o liblely-io.la -rpath /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib liblely_io_la-addr.lo liblely_io_la-attr.lo liblely_io_la-can.lo liblely_io_la-file.lo liblely_io_la-handle.lo liblely_io_la-if.lo liblely_io_la-io.lo liblely_io_la-pipe.lo liblely_io_la-poll.lo liblely_io_la-rtnl.lo liblely_io_la-serial.lo liblely_io_la-sock.lo ../../src/libc/liblely-libc.la ../../src/util/liblely-util.la ../../src/can/liblely-can.la -lpthread )
+[34.253s] libtool: install: /usr/bin/install -c .libs/liblely-io.so.1.9.2T /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-io.so.1.9.2
+[34.256s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-io.so.1.9.2 liblely-io.so.1 || { rm -f liblely-io.so.1 && ln -s liblely-io.so.1.9.2 liblely-io.so.1; }; })
+[34.259s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-io.so.1.9.2 liblely-io.so || { rm -f liblely-io.so && ln -s liblely-io.so.1.9.2 liblely-io.so; }; })
+[34.264s] libtool: install: /usr/bin/install -c .libs/liblely-io.lai /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-io.la
+[34.288s] libtool: finish: PATH="/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.vscode-server/bin/7debcd0e2acdea1c52de81bf9ee1620444407dda/bin/remote-cli:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MATLAB/R2025a/bin:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/Mullvad VPN/resources:/mnt/c/Users/grsga/AppData/Local/Programs/OpenAI/Codex/bin:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/grsga/.cargo/bin:/mnt/c/Users/grsga/.local/bin:/mnt/c/Users/grsga/scoop/apps/mpv/current:/mnt/c/Users/grsga/scoop/shims:/mnt/c/Users/grsga/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/grsga/AppData/Local/Programs/Ollama:/mnt/c/Users/grsga/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/DenoLand.Deno_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-N-124716-g054dffd133-win64-gpl/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Program Files/qemu:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/BurntSushi.ripgrep.MSVC_Microsoft.Winget.Source_8wekyb3d8bbwe/ripgrep-15.2.0-x86_64-pc-windows-msvc:/mnt/c/Users/grsga/AppData/Local/Programs/Cua/cua-driver/bin:/snap/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/sbin" ldconfig -n /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[34.289s] ----------------------------------------------------------------------
+[34.289s] Libraries have been installed in:
+[34.289s]    /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[34.289s] 
+[34.289s] If you ever happen to want to link against installed libraries
+[34.289s] in a given directory, LIBDIR, you must either use libtool, and
+[34.289s] specify the full pathname of the library, or use the '-LLIBDIR'
+[34.289s] flag during linking and do at least one of the following:
+[34.289s]    - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+[34.289s]      during execution
+[34.290s]    - add LIBDIR to the 'LD_RUN_PATH' environment variable
+[34.290s]      during linking
+[34.290s]    - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+[34.290s]    - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+[34.290s] 
+[34.290s] See any operating system documentation about shared libraries for
+[34.290s] more information, such as the ld(1) and ld.so(8) manual pages.
+[34.290s] ----------------------------------------------------------------------
+[34.292s] gmake[3]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/io'
+[34.292s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/io'
+[34.293s] Making install in ev
+[34.299s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/ev'
+[34.305s] gmake[3]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/ev'
+[34.306s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[34.307s]  /bin/bash ../../libtool   --mode=install /usr/bin/install -c   liblely-ev.la '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[34.333s] libtool: warning: relinking 'liblely-ev.la'
+[34.334s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/ev; /bin/bash "/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/libtool"  --silent --tag CC --mode=relink gcc -Wall -Wextra -pedantic -Werror -Wno-static-in-inline -pthread -g -O2 -no-undefined -version-number 2:4:0 -Wl,--as-needed -o liblely-ev.la -rpath /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib liblely_ev_la-exec.lo liblely_ev_la-fiber_exec.lo liblely_ev_la-future.lo liblely_ev_la-loop.lo liblely_ev_la-poll.lo liblely_ev_la-std_exec.lo liblely_ev_la-strand.lo liblely_ev_la-task.lo liblely_ev_la-thrd_loop.lo ../../src/libc/liblely-libc.la ../../src/util/liblely-util.la -lpthread )
+[34.534s] libtool: install: /usr/bin/install -c .libs/liblely-ev.so.2.4.0T /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-ev.so.2.4.0
+[34.537s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-ev.so.2.4.0 liblely-ev.so.2 || { rm -f liblely-ev.so.2 && ln -s liblely-ev.so.2.4.0 liblely-ev.so.2; }; })
+[34.539s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-ev.so.2.4.0 liblely-ev.so || { rm -f liblely-ev.so && ln -s liblely-ev.so.2.4.0 liblely-ev.so; }; })
+[34.544s] libtool: install: /usr/bin/install -c .libs/liblely-ev.lai /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-ev.la
+[34.567s] libtool: finish: PATH="/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.vscode-server/bin/7debcd0e2acdea1c52de81bf9ee1620444407dda/bin/remote-cli:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MATLAB/R2025a/bin:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/Mullvad VPN/resources:/mnt/c/Users/grsga/AppData/Local/Programs/OpenAI/Codex/bin:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/grsga/.cargo/bin:/mnt/c/Users/grsga/.local/bin:/mnt/c/Users/grsga/scoop/apps/mpv/current:/mnt/c/Users/grsga/scoop/shims:/mnt/c/Users/grsga/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/grsga/AppData/Local/Programs/Ollama:/mnt/c/Users/grsga/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/DenoLand.Deno_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-N-124716-g054dffd133-win64-gpl/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Program Files/qemu:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/BurntSushi.ripgrep.MSVC_Microsoft.Winget.Source_8wekyb3d8bbwe/ripgrep-15.2.0-x86_64-pc-windows-msvc:/mnt/c/Users/grsga/AppData/Local/Programs/Cua/cua-driver/bin:/snap/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/sbin" ldconfig -n /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[34.568s] ----------------------------------------------------------------------
+[34.568s] Libraries have been installed in:
+[34.568s]    /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[34.568s] 
+[34.568s] If you ever happen to want to link against installed libraries
+[34.568s] in a given directory, LIBDIR, you must either use libtool, and
+[34.568s] specify the full pathname of the library, or use the '-LLIBDIR'
+[34.568s] flag during linking and do at least one of the following:
+[34.568s]    - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+[34.568s]      during execution
+[34.568s]    - add LIBDIR to the 'LD_RUN_PATH' environment variable
+[34.568s]      during linking
+[34.568s]    - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+[34.568s]    - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+[34.568s] 
+[34.568s] See any operating system documentation about shared libraries for
+[34.568s] more information, such as the ld(1) and ld.so(8) manual pages.
+[34.568s] ----------------------------------------------------------------------
+[34.571s] gmake[3]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/ev'
+[34.571s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/ev'
+[34.571s] Making install in io2
+[34.584s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/io2'
+[34.596s] gmake[3]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/io2'
+[34.597s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[34.598s]  /bin/bash ../../libtool   --mode=install /usr/bin/install -c   liblely-io2.la '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[34.622s] libtool: warning: relinking 'liblely-io2.la'
+[34.624s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/io2; /bin/bash "/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/libtool"  --silent --tag CC --mode=relink gcc -Wall -Wextra -pedantic -Werror -Wno-static-in-inline -pthread -g -O2 -no-undefined -version-number 2:4:0 -Wl,--as-needed -o liblely-io2.la -rpath /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib can/liblely_io2_la-msg.lo linux/liblely_io2_la-can_chan.lo linux/liblely_io2_la-can_ctrl.lo linux/liblely_io2_la-poll.lo linux/liblely_io2_la-timer.lo posix/liblely_io2_la-fd.lo posix/liblely_io2_la-io.lo posix/liblely_io2_la-sigset.lo sys/liblely_io2_la-clock.lo sys/liblely_io2_la-io.lo user/liblely_io2_la-can.lo user/liblely_io2_la-timer.lo liblely_io2_la-can.lo liblely_io2_la-can_net.lo liblely_io2_la-can_rt.lo liblely_io2_la-clock.lo liblely_io2_la-ctx.lo liblely_io2_la-dev.lo liblely_io2_la-sigset.lo liblely_io2_la-timer.lo liblely_io2_la-tqueue.lo liblely_io2_la-vcan.lo ../../src/libc/liblely-libc.la ../../src/util/liblely-util.la ../../src/can/liblely-can.la ../../src/ev/liblely-ev.la -lrt -lpthread )
+[34.848s] libtool: install: /usr/bin/install -c .libs/liblely-io2.so.2.4.0T /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-io2.so.2.4.0
+[34.851s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-io2.so.2.4.0 liblely-io2.so.2 || { rm -f liblely-io2.so.2 && ln -s liblely-io2.so.2.4.0 liblely-io2.so.2; }; })
+[34.854s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-io2.so.2.4.0 liblely-io2.so || { rm -f liblely-io2.so && ln -s liblely-io2.so.2.4.0 liblely-io2.so; }; })
+[34.860s] libtool: install: /usr/bin/install -c .libs/liblely-io2.lai /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-io2.la
+[34.883s] libtool: finish: PATH="/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.vscode-server/bin/7debcd0e2acdea1c52de81bf9ee1620444407dda/bin/remote-cli:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MATLAB/R2025a/bin:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/Mullvad VPN/resources:/mnt/c/Users/grsga/AppData/Local/Programs/OpenAI/Codex/bin:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/grsga/.cargo/bin:/mnt/c/Users/grsga/.local/bin:/mnt/c/Users/grsga/scoop/apps/mpv/current:/mnt/c/Users/grsga/scoop/shims:/mnt/c/Users/grsga/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/grsga/AppData/Local/Programs/Ollama:/mnt/c/Users/grsga/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/DenoLand.Deno_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-N-124716-g054dffd133-win64-gpl/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Program Files/qemu:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/BurntSushi.ripgrep.MSVC_Microsoft.Winget.Source_8wekyb3d8bbwe/ripgrep-15.2.0-x86_64-pc-windows-msvc:/mnt/c/Users/grsga/AppData/Local/Programs/Cua/cua-driver/bin:/snap/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/sbin" ldconfig -n /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[34.885s] ----------------------------------------------------------------------
+[34.885s] Libraries have been installed in:
+[34.885s]    /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[34.885s] 
+[34.885s] If you ever happen to want to link against installed libraries
+[34.885s] in a given directory, LIBDIR, you must either use libtool, and
+[34.885s] specify the full pathname of the library, or use the '-LLIBDIR'
+[34.885s] flag during linking and do at least one of the following:
+[34.885s]    - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+[34.885s]      during execution
+[34.885s]    - add LIBDIR to the 'LD_RUN_PATH' environment variable
+[34.885s]      during linking
+[34.885s]    - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+[34.885s]    - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+[34.885s] 
+[34.885s] See any operating system documentation about shared libraries for
+[34.885s] more information, such as the ld(1) and ld.so(8) manual pages.
+[34.885s] ----------------------------------------------------------------------
+[34.887s] gmake[3]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/io2'
+[34.888s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/io2'
+[34.888s] Making install in coapp
+[34.902s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/coapp'
+[34.917s] gmake[3]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/coapp'
+[34.918s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[34.919s]  /bin/bash ../../libtool   --mode=install /usr/bin/install -c   liblely-coapp.la '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib'
+[34.943s] libtool: warning: relinking 'liblely-coapp.la'
+[34.945s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/coapp; /bin/bash "/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/libtool"  --silent --tag CXX --mode=relink g++ -std=gnu++11 -Wall -Wextra -pedantic -Werror -g -O2 -no-undefined -version-number 2:4:0 -Wl,--as-needed -o liblely-coapp.la -rpath /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib liblely_coapp_la-device.lo liblely_coapp_la-driver.lo liblely_coapp_la-fiber_driver.lo liblely_coapp_la-logical_driver.lo liblely_coapp_la-loop_driver.lo liblely_coapp_la-lss_master.lo liblely_coapp_la-master.lo liblely_coapp_la-node.lo liblely_coapp_la-sdo.lo liblely_coapp_la-sdo_error.lo liblely_coapp_la-slave.lo liblely_coapp_la-type_traits.lo ../../src/libc/liblely-libc.la ../../src/util/liblely-util.la ../../src/can/liblely-can.la ../../src/ev/liblely-ev.la ../../src/io2/liblely-io2.la ../../src/co/liblely-co.la -lpthread )
+[35.259s] libtool: install: /usr/bin/install -c .libs/liblely-coapp.so.2.4.0T /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-coapp.so.2.4.0
+[35.264s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-coapp.so.2.4.0 liblely-coapp.so.2 || { rm -f liblely-coapp.so.2 && ln -s liblely-coapp.so.2.4.0 liblely-coapp.so.2; }; })
+[35.266s] libtool: install: (cd /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib && { ln -s -f liblely-coapp.so.2.4.0 liblely-coapp.so || { rm -f liblely-coapp.so && ln -s liblely-coapp.so.2.4.0 liblely-coapp.so; }; })
+[35.272s] libtool: install: /usr/bin/install -c .libs/liblely-coapp.lai /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/liblely-coapp.la
+[35.296s] libtool: finish: PATH="/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/home/gsylvia/.vscode-server/bin/7debcd0e2acdea1c52de81bf9ee1620444407dda/bin/remote-cli:/home/gsylvia/.local/bin:/home/gsylvia/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MATLAB/R2025a/bin:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/Mullvad VPN/resources:/mnt/c/Users/grsga/AppData/Local/Programs/OpenAI/Codex/bin:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/grsga/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/grsga/.cargo/bin:/mnt/c/Users/grsga/.local/bin:/mnt/c/Users/grsga/scoop/apps/mpv/current:/mnt/c/Users/grsga/scoop/shims:/mnt/c/Users/grsga/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/grsga/AppData/Local/Programs/Ollama:/mnt/c/Users/grsga/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/DenoLand.Deno_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-N-124716-g054dffd133-win64-gpl/bin:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.yt-dlp_Microsoft.Winget.Source_8wekyb3d8bbwe:/mnt/c/Program Files/qemu:/mnt/c/Users/grsga/AppData/Local/Microsoft/WinGet/Packages/BurntSushi.ripgrep.MSVC_Microsoft.Winget.Source_8wekyb3d8bbwe/ripgrep-15.2.0-x86_64-pc-windows-msvc:/mnt/c/Users/grsga/AppData/Local/Programs/Cua/cua-driver/bin:/snap/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/home/gsylvia/.lmstudio/bin:/sbin" ldconfig -n /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[35.297s] ----------------------------------------------------------------------
+[35.297s] Libraries have been installed in:
+[35.297s]    /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib
+[35.297s] 
+[35.297s] If you ever happen to want to link against installed libraries
+[35.297s] in a given directory, LIBDIR, you must either use libtool, and
+[35.297s] specify the full pathname of the library, or use the '-LLIBDIR'
+[35.297s] flag during linking and do at least one of the following:
+[35.297s]    - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+[35.297s]      during execution
+[35.297s]    - add LIBDIR to the 'LD_RUN_PATH' environment variable
+[35.297s]      during linking
+[35.297s]    - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+[35.297s]    - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+[35.297s] 
+[35.298s] See any operating system documentation about shared libraries for
+[35.298s] more information, such as the ld(1) and ld.so(8) manual pages.
+[35.298s] ----------------------------------------------------------------------
+[35.300s] gmake[3]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/coapp'
+[35.300s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src/coapp'
+[35.302s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src'
+[35.306s] gmake[3]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src'
+[35.306s] gmake[3]: Nothing to be done for 'install-exec-am'.
+[35.306s] gmake[3]: Nothing to be done for 'install-data-am'.
+[35.306s] gmake[3]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src'
+[35.306s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src'
+[35.306s] gmake[1]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/src'
+[35.306s] Making install in python
+[35.308s] gmake[1]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/python'
+[35.312s] Making install in dcf-tools
+[35.313s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/python/dcf-tools'
+[35.315s] gmake[3]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/python/dcf-tools'
+[35.466s] running egg_info
+[35.466s] creating dcf_tools.egg-info
+[35.476s] writing dcf_tools.egg-info/PKG-INFO
+[35.476s] writing dependency_links to dcf_tools.egg-info/dependency_links.txt
+[35.476s] writing entry points to dcf_tools.egg-info/entry_points.txt
+[35.476s] writing requirements to dcf_tools.egg-info/requires.txt
+[35.476s] writing top-level names to dcf_tools.egg-info/top_level.txt
+[35.476s] writing manifest file 'dcf_tools.egg-info/SOURCES.txt'
+[35.498s] reading manifest file 'dcf_tools.egg-info/SOURCES.txt'
+[35.498s] writing manifest file 'dcf_tools.egg-info/SOURCES.txt'
+[35.498s] running build
+[35.498s] running build_py
+[35.498s] creating build
+[35.498s] creating build/lib
+[35.498s] creating build/lib/dcfgen
+[35.499s] copying dcfgen/cli.py -> build/lib/dcfgen
+[35.499s] copying dcfgen/__init__.py -> build/lib/dcfgen
+[35.499s] creating build/lib/dcf2dev
+[35.499s] copying dcf2dev/cdevice.py -> build/lib/dcf2dev
+[35.499s] copying dcf2dev/cli.py -> build/lib/dcf2dev
+[35.500s] copying dcf2dev/__init__.py -> build/lib/dcf2dev
+[35.500s] creating build/lib/dcf
+[35.500s] copying dcf/lint.py -> build/lib/dcf
+[35.500s] copying dcf/print.py -> build/lib/dcf
+[35.500s] copying dcf/cli.py -> build/lib/dcf
+[35.500s] copying dcf/device.py -> build/lib/dcf
+[35.500s] copying dcf/__init__.py -> build/lib/dcf
+[35.500s] copying dcf/parse.py -> build/lib/dcf
+[35.500s] creating build/lib/dcfgen/data
+[35.501s] copying dcfgen/data/master.dcf.em -> build/lib/dcfgen/data
+[35.501s] creating build/lib/dcf2dev/data
+[35.501s] copying dcf2dev/data/dev.c.em -> build/lib/dcf2dev/data
+[35.501s] copying dcf2dev/data/dev.h.em -> build/lib/dcf2dev/data
+[35.501s] running install
+[35.501s] /usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[35.501s] !!
+[35.501s] 
+[35.501s]         ********************************************************************************
+[35.501s]         Please avoid running ``setup.py`` directly.
+[35.501s]         Instead, use pypa/build, pypa/installer or other
+[35.501s]         standards-based tools.
+[35.501s] 
+[35.501s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[35.501s]         ********************************************************************************
+[35.501s] 
+[35.501s] !!
+[35.501s]   self.initialize_options()
+[35.505s] running install_lib
+[35.516s] creating /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12
+[35.516s] creating /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages
+[35.516s] creating /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcfgen
+[35.516s] creating /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcfgen/data
+[35.516s] copying build/lib/dcfgen/data/master.dcf.em -> /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcfgen/data
+[35.517s] copying build/lib/dcfgen/cli.py -> /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcfgen
+[35.517s] copying build/lib/dcfgen/__init__.py -> /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcfgen
+[35.517s] creating /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf2dev
+[35.517s] copying build/lib/dcf2dev/cdevice.py -> /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf2dev
+[35.517s] creating /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf2dev/data
+[35.517s] copying build/lib/dcf2dev/data/dev.c.em -> /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf2dev/data
+[35.517s] copying build/lib/dcf2dev/data/dev.h.em -> /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf2dev/data
+[35.517s] copying build/lib/dcf2dev/cli.py -> /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf2dev
+[35.518s] copying build/lib/dcf2dev/__init__.py -> /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf2dev
+[35.518s] creating /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf
+[35.518s] copying build/lib/dcf/lint.py -> /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf
+[35.518s] copying build/lib/dcf/print.py -> /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf
+[35.518s] copying build/lib/dcf/cli.py -> /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf
+[35.518s] copying build/lib/dcf/device.py -> /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf
+[35.518s] copying build/lib/dcf/__init__.py -> /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf
+[35.519s] copying build/lib/dcf/parse.py -> /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf
+[35.520s] byte-compiling /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcfgen/cli.py to cli.cpython-312.pyc
+[35.526s] byte-compiling /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcfgen/__init__.py to __init__.cpython-312.pyc
+[35.526s] byte-compiling /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf2dev/cdevice.py to cdevice.cpython-312.pyc
+[35.527s] byte-compiling /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf2dev/cli.py to cli.cpython-312.pyc
+[35.528s] byte-compiling /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf2dev/__init__.py to __init__.cpython-312.pyc
+[35.528s] byte-compiling /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf/lint.py to lint.cpython-312.pyc
+[35.531s] byte-compiling /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf/print.py to print.cpython-312.pyc
+[35.531s] byte-compiling /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf/cli.py to cli.cpython-312.pyc
+[35.531s] byte-compiling /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf/device.py to device.cpython-312.pyc
+[35.534s] byte-compiling /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf/__init__.py to __init__.cpython-312.pyc
+[35.539s] byte-compiling /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf/parse.py to parse.cpython-312.pyc
+[35.544s] running install_egg_info
+[35.563s] Copying dcf_tools.egg-info to /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/dcf_tools-2.4.0.egg-info
+[35.564s] running install_scripts
+[35.642s] Installing dcf2dev script to /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/bin/
+[35.642s] Installing dcfchk script to /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/bin/
+[35.642s] Installing dcfgen script to /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/bin/
+[35.643s] writing list of installed files to 'install.log'
+[35.662s] gmake[3]: Nothing to be done for 'install-data-am'.
+[35.662s] gmake[3]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/python/dcf-tools'
+[35.662s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/python/dcf-tools'
+[35.663s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/python'
+[35.665s] gmake[3]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/python'
+[35.665s] gmake[3]: Nothing to be done for 'install-exec-am'.
+[35.665s] gmake[3]: Nothing to be done for 'install-data-am'.
+[35.665s] gmake[3]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/python'
+[35.665s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/python'
+[35.665s] gmake[1]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/python'
+[35.665s] Making install in pkgconfig
+[35.668s] gmake[1]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/pkgconfig'
+[35.670s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/pkgconfig'
+[35.670s] gmake[2]: Nothing to be done for 'install-exec-am'.
+[35.670s]  /usr/bin/mkdir -p '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/pkgconfig'
+[35.672s]  /usr/bin/install -c -m 644 liblely-can.pc liblely-co.pc liblely-coapp.pc liblely-ev.pc liblely-io.pc liblely-io2.pc liblely-libc.pc liblely-libc_rt.pc liblely-tap.pc liblely-util.pc '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/pkgconfig'
+[35.674s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/pkgconfig'
+[35.674s] gmake[1]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build/pkgconfig'
+[35.675s] gmake[1]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build'
+[35.679s] gmake[2]: Entering directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build'
+[35.679s] gmake[2]: Nothing to be done for 'install-exec-am'.
+[35.679s] gmake[2]: Nothing to be done for 'install-data-am'.
+[35.679s] gmake[2]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build'
+[35.679s] gmake[1]: Leaving directory '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries/build'
+[35.680s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/cmake
+[35.680s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/cmake/lely_core_libraries-extras.cmake
+[35.681s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/environment/pythonpath.sh
+[35.681s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/environment/pythonpath.dsv
+[35.681s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/cogen-0.3.1-py3.12.egg-info
+[35.681s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/cogen-0.3.1-py3.12.egg-info/PKG-INFO
+[35.681s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/cogen-0.3.1-py3.12.egg-info/dependency_links.txt
+[35.681s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/cogen-0.3.1-py3.12.egg-info/entry_points.txt
+[35.681s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/cogen-0.3.1-py3.12.egg-info/top_level.txt
+[35.682s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/cogen-0.3.1-py3.12.egg-info/SOURCES.txt
+[35.682s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/cogen/
+[35.682s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/cogen//cogen
+[35.682s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/cogen
+[35.682s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/cogen/cogen.py
+[35.682s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/cogen/__init__.py
+[35.709s] Listing '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/cogen'...
+[35.709s] Compiling '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/cogen/__init__.py'...
+[35.709s] Compiling '/tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/lib/python3.12/site-packages/cogen/cogen.py'...
+[35.714s] -- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/bin/
+[35.714s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/bin//cogen
+[35.714s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/environment/library_path.sh
+[35.714s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/environment/library_path.dsv
+[35.715s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/ament_index/resource_index/package_run_dependencies/lely_core_libraries
+[35.715s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/ament_index/resource_index/parent_prefix_path/lely_core_libraries
+[35.715s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/environment/ament_prefix_path.sh
+[35.715s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/environment/ament_prefix_path.dsv
+[35.715s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/environment/path.sh
+[35.715s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/environment/path.dsv
+[35.716s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/local_setup.bash
+[35.716s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/local_setup.sh
+[35.716s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/local_setup.zsh
+[35.716s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/local_setup.dsv
+[35.716s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/package.dsv
+[35.716s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/ament_index/resource_index/packages/lely_core_libraries
+[35.716s] -- Up-to-date: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/cmake/lely_core_libraries-extras.cmake
+[35.716s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/cmake/ament_cmake_export_include_directories-extras.cmake
+[35.716s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/cmake/ament_cmake_export_libraries-extras.cmake
+[35.716s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/cmake/lely_core_librariesConfig.cmake
+[35.716s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/cmake/lely_core_librariesConfig-version.cmake
+[35.716s] -- Installing: /tmp/agrobot-next-build-ybgPHn/install/lely_core_libraries/share/lely_core_libraries/package.xml
+[35.717s] Invoked command in '/tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /tmp/agrobot-next-build-ybgPHn/build/lely_core_libraries
