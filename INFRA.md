@@ -93,6 +93,45 @@ ros2 launch moveit_config demo.launch.py
 
 [demo.launch.py](Agrobot/src/moveit_config/launch/demo.launch.py) calls MoveIt's `generate_demo_launch()`. The [configuration](Agrobot/src/moveit_config/config/ros2_controllers.yaml) uses mock hardware (`mock_components/GenericSystem`); this launch does not start EPOS2 or drive real motors.
 
+The trees show main nodes and topics from the launch configuration and saved runtime inspection. `pub` means publishes; `sub` means subscribes. Common logging/parameter topics and action/service endpoints are omitted. Generated name suffixes are shown as `…`.
+
+```text
+demo.launch.py
+├── /static_transform_publisher0
+│   └── pub /tf_static
+├── /robot_state_publisher
+│   ├── sub /joint_states
+│   └── pub /robot_description, /tf, /tf_static
+├── MoveIt process
+│   ├── /move_group
+│   │   ├── sub /trajectory_execution_event
+│   │   └── pub /robot_description_semantic, /display_planned_path,
+│   │           /display_contacts, /pipeline_state
+│   ├── /move_group_private_… (planning scene)
+│   │   ├── sub /joint_states, /planning_scene, /planning_scene_world,
+│   │   │       /collision_object, /attached_collision_object
+│   │   └── pub /monitored_planning_scene
+│   └── /transform_listener_impl_…
+│       └── sub /tf, /tf_static
+├── RViz process
+│   ├── /rviz
+│   │   ├── sub /display_planned_path
+│   │   └── pub /planning_scene, /planning_scene_world,
+│   │           /attached_collision_object, /trajectory_execution_event
+│   └── /rviz_private_…
+│       └── sub /monitored_planning_scene
+└── ros2_control process
+    ├── /controller_manager
+    │   ├── sub /robot_description
+    │   └── pub /controller_manager/activity, /diagnostics
+    ├── /arm_controller
+    │   ├── sub /arm_controller/joint_trajectory,
+    │   │       /arm_controller/speed_scaling_input
+    │   └── pub /arm_controller/controller_state
+    └── /joint_state_broadcaster
+        └── pub /joint_states, /dynamic_joint_states
+```
+
 | Node / component | Package / executable or plugin | Role |
 | --- | --- | --- |
 | /static_transform_publisher0 | tf2_ros / static_transform_publisher | Fixed `world → world_frame` transform. |
@@ -114,6 +153,24 @@ ros2 launch robot_commander commander.launch.py
 ```
 
 [commander.launch.py](Agrobot/src/robot_commander/launch/commander.launch.py) starts three processes and does not include the demo launch:
+
+```text
+commander.launch.py
+├── /commander
+│   ├── sub /agrobot/pose_cmd       (robot_interfaces/msg/PoseCommand)
+│   ├── sub /agrobot/joint_cmd      (robot_interfaces/msg/JointCommand)
+│   ├── sub /agrobot/position_cmd   (robot_interfaces/msg/PositionCommand)
+│   ├── sub /agrobot/proceed        (std_msgs/msg/Bool)
+│   └── pub /attached_collision_object, /trajectory_execution_event
+│           (MoveIt interface endpoints; unused by current callbacks)
+├── /tomato_picker
+│   ├── sub /agrobot/tomato_spatial (std_msgs/msg/String)
+│   ├── sub /agrobot/safe_to_pick   (std_msgs/msg/Bool)
+│   ├── sub /tf, /tf_static        (tf2_msgs/msg/TFMessage)
+│   └── pub /agrobot/pick_targets  (geometry_msgs/msg/PoseArray)
+└── /static_transform_publisher_…
+    └── pub /tf_static             (tf2_msgs/msg/TFMessage)
+```
 
 | Node | Package / executable | Role |
 | --- | --- | --- |

@@ -1,8 +1,0 @@
-In file included from /home/gsylvia/agrobot-reverse-engineering/Agrobot/src/ros2_canopen/canopen_ros2_control/src/canopen_system.cpp:24:
-/home/gsylvia/agrobot-reverse-engineering/Agrobot/src/ros2_canopen/canopen_ros2_control/include/canopen_ros2_control/canopen_system.hpp: In member function ‘void canopen_ros2_control::Ros2ControlEmcyData::set_emcy(ros2_canopen::COEmcy)’:
-/home/gsylvia/agrobot-reverse-engineering/Agrobot/src/ros2_canopen/canopen_ros2_control/include/canopen_ros2_control/canopen_system.hpp:264:16: warning: ‘void* memcpy(void*, const void*, size_t)’ reading 2 bytes from a region of size 1 [-Wstringop-overread]
-  264 |     std::memcpy(&msef_data, &e.msef[4], sizeof(uint16_t));
-      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/gsylvia/agrobot-reverse-engineering/Agrobot/src/ros2_canopen/canopen_ros2_control/include/canopen_ros2_control/canopen_system.hpp:243:38: note: at offset 7 into source object ‘e’ of size 8
-  243 |   void set_emcy(ros2_canopen::COEmcy e)
-      |                 ~~~~~~~~~~~~~~~~~~~~~^

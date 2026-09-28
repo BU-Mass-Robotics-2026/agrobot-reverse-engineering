@@ -1,4 +1,0 @@
-[INFO] [1790195703.174145924] [static_transform_publisher0]: Spinning until stopped - publishing transform
-translation: ('0.000000', '0.000000', '0.000000')
-rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
-from 'world' to 'world_frame'
